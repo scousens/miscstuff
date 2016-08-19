@@ -134,108 +134,6 @@
   <field-label lang="zh_CN"><![CDATA[????]]></field-label>
   <field-description><![CDATA[Job Code]]></field-description>
   </field-definition>
-  <field-definition id="customString9" type="jobCode" required="true" custom="false">
-  <field-label><![CDATA[Pay Grade]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Gehaltsgruppe]]></field-label>
-  <field-label lang="en_US"><![CDATA[Pay Grade]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Categoría salarial]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Catégorie de rémunération]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[????]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[?? ??]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Faixa salarial]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[?????? ????????]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[????]]></field-label>
-  <field-description><![CDATA[Job Grade]]></field-description>
-  </field-definition>
-  <field-definition id="customString2" type="jobCode" required="true" custom="false">
-  <field-label><![CDATA[Job Level]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Stellenebene]]></field-label>
-  <field-label lang="en_US"><![CDATA[Job Level]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Nivel de trabajo]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Niveau du poste]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[?????]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[?? ??]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Nível do cargo]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[??????????? ???????]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[??]]></field-label>
-  <field-description><![CDATA[Job Level]]></field-description>
-  </field-definition>
-  <field-definition id="customString5" type="jobCode" required="true" custom="false">
-  <field-label><![CDATA[Reg/Temp]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Unbefristet/Befristet]]></field-label>
-  <field-label lang="en_US"><![CDATA[Reg/Temp]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Regular/Temporal]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Permanent/Temporaire]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[??/???]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[??/??]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Registrado/Temporário]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[?????????/????????]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[??/??]]></field-label>
-  <field-description><![CDATA[Regular or Temp]]></field-description>
-  </field-definition>
-  <field-definition id="customString6" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[Employee Class]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Mitarbeiterklasse]]></field-label>
-  <field-label lang="en_US"><![CDATA[Employee Class]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Clase de empleado]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Classe de l’employé]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[?????]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[?? ???]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Classe do colaborador]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[????? ??????????]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[????]]></field-label>
-  </field-definition>
-  <field-definition id="customString7" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[Is Full Time employee]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Arbeitet Vollzeit]]></field-label>
-  <field-label lang="en_US"><![CDATA[Is Full Time employee]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Es empleado de tiempo completo]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Est employé à plein temps]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[????]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[?? ?? ??]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Colaborador em tempo integral]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[?????????, ??????? ?????? ??????? ?????]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[?????]]></field-label>
-  </field-definition>
-  <field-definition id="customString11" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[EEO Job Category]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Stellenkategorie Gleichstellung]]></field-label>
-  <field-label lang="en_US"><![CDATA[EEO Job Category]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Categoría del trabajo de EEO]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Catégorie de poste EAE]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[EEO ??????]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[EEO ?? ??]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Categoria do cargo na igualdade de oportunidades]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[????????? ????????? ???]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[EEO ????]]></field-label>
-  <field-description><![CDATA[eeo job category]]></field-description>
-  </field-definition>
-  <field-definition id="customString13" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[Salary Range - Low]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Vergütungsbereich - gering]]></field-label>
-  <field-label lang="en_US"><![CDATA[Salary Range – Low]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Margen salarial: bajo]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Fourchette de salaire - Basse]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[???? – ?]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[?? ?? – ??]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Margem salarial – baixa]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[???????? ???????? - ??????]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[???? – ?]]></field-label>
-  <field-description><![CDATA[]]></field-description>
-  </field-definition>
-  <field-definition id="customString12" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[Salary Range - High]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Vergütungsbereich - hoch]]></field-label>
-  <field-label lang="en_US"><![CDATA[Salary Range – High]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Margen salarial: alto]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Fourchette de salaire - Haute]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[???? – ?]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[?? ?? – ??]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Margem salarial – alta]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[???????? ???????? - ???????]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[???? – ?]]></field-label>
-  <field-description><![CDATA[]]></field-description>
-  </field-definition>
   <field-definition id="budgeted" type="picklist" required="false" custom="true">
   <field-label><![CDATA[Position Budgeted]]></field-label>
   <field-label lang="de_DE"><![CDATA[Planstelle geplant]]></field-label>
@@ -927,14 +825,6 @@
     <field refid="title"/>
     <field refid="extTitle"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
-    <field refid="customString6"/>
-    <field refid="customString7"/>
-    <field refid="customString11"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="budgeted"/>
     <field refid="currency"/>
     <field refid="erpAmount"/>
@@ -998,14 +888,6 @@
     <field refid="title"/>
     <field refid="extTitle"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
-    <field refid="customString6"/>
-    <field refid="customString7"/>
-    <field refid="customString11"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="budgeted"/>
     <field refid="currency"/>
     <field refid="erpAmount"/>
@@ -1069,14 +951,6 @@
     <field refid="title"/>
     <field refid="extTitle"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
-    <field refid="customString6"/>
-    <field refid="customString7"/>
-    <field refid="customString11"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="budgeted"/>
     <field refid="currency"/>
     <field refid="erpAmount"/>
@@ -1155,9 +1029,6 @@
     <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
     <field refid="extListingLayout"/>
@@ -1173,9 +1044,6 @@
     <field refid="location"/>
     <field refid="department"/>
     <field refid="division"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
     <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
@@ -1197,8 +1065,6 @@
     <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="salaryBase"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
@@ -1225,9 +1091,6 @@
     <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="numberOpenings"/>
     <field refid="hiringManagerName"/>
@@ -1264,9 +1127,6 @@
     <field refid="status"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
     <field refid="extListingLayout"/>
@@ -1283,9 +1143,6 @@
     <field refid="externalPrivatePosting"/>
     <field refid="location"/>
     <field refid="department"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
     <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
@@ -1308,8 +1165,6 @@
     <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="salaryBase"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
@@ -1338,9 +1193,6 @@
     <field refid="status"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
     <field refid="extListingLayout"/>
@@ -1357,9 +1209,6 @@
     <field refid="externalPrivatePosting"/>
     <field refid="location"/>
     <field refid="department"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
     <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
@@ -1382,8 +1231,6 @@
     <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="salaryBase"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
@@ -1435,9 +1282,6 @@
     <field refid="hiringManagerName"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="recruiterName"/>
     <field refid="sourcerName"/>
@@ -1464,8 +1308,6 @@
     <field refid="currency"/>
     <field refid="erpAmount"/>
     <field refid="salaryBase"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
@@ -1482,9 +1324,6 @@
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="country"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in closed reqs]]></description>
@@ -1501,9 +1340,6 @@
     <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
     <field refid="extListingLayout"/>
@@ -1520,9 +1356,6 @@
     <field refid="externalPrivatePosting"/>
     <field refid="location"/>
     <field refid="department"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
     <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
@@ -1560,9 +1393,6 @@
     <field refid="cust-intro-req"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
-    <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="start"/>
     <field refid="end"/>
@@ -1578,8 +1408,6 @@
     <field refid="currency"/>
     <field refid="salaryBase"/>
     <field refid="erpAmount"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
@@ -1619,8 +1447,6 @@
 <offer-letter-fields>
     <field refid="title"/>
     <field refid="salaryBase"/>
-    <field refid="customString13"/>
-    <field refid="customString12"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
