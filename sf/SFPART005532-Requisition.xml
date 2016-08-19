@@ -200,7 +200,7 @@
   <field-label lang="pt_BR"><![CDATA[Descrição interna do cargo]]></field-label>
   <field-label lang="ru_RU"><![CDATA[?????????? ???????? ?????????]]></field-label>
   <field-label lang="zh_CN"><![CDATA[??????]]></field-label>
-  <field-description><![CDATA[]]></field-description>
+  <field-description><![CDATA[This is a job description - internal]]></field-description>
   </field-definition>
   <field-definition id="extListingLayout" type="richText" required="false" custom="false">
   <field-label><![CDATA[External Job Description]]></field-label>
@@ -685,7 +685,7 @@
   <field-description><![CDATA[onboarding package Id]]></field-description>
     <picklist-id>ONBOARDINGPKGID</picklist-id>
   </field-definition>
-  <field-definition id="customassess" type="text" required="false" custom="false">
+  <field-definition id="customassess" type="text" required="false" custom="true">
   <field-label><![CDATA[Assessment Package]]></field-label>
   <field-label lang="de_DE"><![CDATA[Beurteilungspaket]]></field-label>
   <field-label lang="en_US"><![CDATA[Assessment Package]]></field-label>
@@ -815,10 +815,9 @@
   <field-label lang="zh_CN"><![CDATA[?????]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
-
   <field-definition id="instrScoutLink" type="instruction" required="false" header="false" custom="true">
   <field-label mime-type="text-html" screenreader-text=""><![CDATA[Go to <a href="https://staging.talentpx.com/sf/login" target="_blank"><font face="Arial, Helvetica, sans-serif" color="blue">Scout</font></a> to post on Scout's Marketplace]]></field-label>
-  <field-description><![CDATA[Requisition]]></field-description>
+  <field-description><![CDATA[Scout Requisition]]></field-description>
   </field-definition>
 
   <field-permission type="read">
@@ -883,7 +882,6 @@
     <field refid="vpOfStaffingTeam"/>
     <field refid="secondRecruiterTeam"/>
     <field refid="vTeam"/>
-    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
@@ -947,7 +945,6 @@
     <field refid="vpOfStaffingTeam"/>
     <field refid="secondRecruiterTeam"/>
     <field refid="vTeam"/>
-    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
@@ -1011,7 +1008,6 @@
     <field refid="vpOfStaffingTeam"/>
     <field refid="secondRecruiterTeam"/>
     <field refid="vTeam"/>
-    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in pre-approved reqs]]></description>
@@ -1065,7 +1061,6 @@
     <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
-    <field refid="listingLayout"/>
     <field refid="questions"/>
     <field refid="competencies"/>
     <field refid="costOfHire"/>
@@ -1117,7 +1112,6 @@
     <field refid="division"/>
     <field refid="budgeted"/>
     <field refid="comments"/>
-
     <field refid="listingLayout"/>
     <field refid="extListingLayout"/>
     <field refid="sourcerName"/>
@@ -1147,7 +1141,6 @@
     <field refid="bgiAccountId"/>
     <field refid="onboardingPackageId"/>
     <field refid="customassess"/>
-
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in closed reqs]]></description>
@@ -1196,7 +1189,6 @@
     <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
-    <field refid="listingLayout"/>
     <field refid="questions"/>
     <field refid="competencies"/>
     <field refid="costOfHire"/>
@@ -1214,7 +1206,6 @@
     <field refid="bgiAccountId"/>
     <field refid="onboardingPackageId"/>
     <field refid="customassess"/>
-    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in approved reqs]]></description>
@@ -1263,7 +1254,6 @@
     <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
-    <field refid="listingLayout"/>
     <field refid="questions"/>
     <field refid="competencies"/>
     <field refid="costOfHire"/>
@@ -1281,7 +1271,6 @@
     <field refid="bgiAccountId"/>
     <field refid="onboardingPackageId"/>
     <field refid="customassess"/>
-    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in closed reqs]]></description>
@@ -1308,7 +1297,6 @@
     <field refid="listingLayout"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="write">
     <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in approved reqs]]></description>
@@ -1412,7 +1400,6 @@
     <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
-    <field refid="listingLayout"/>
     <field refid="questions"/>
     <field refid="competencies"/>
     <field refid="costOfHire"/>
@@ -1422,7 +1409,6 @@
     <field refid="bgiAccountId"/>
     <field refid="onboardingPackageId"/>
     <field refid="customassess"/>
-    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="write">
     <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in closed reqs]]></description>
@@ -1440,6 +1426,7 @@
     <field refid="extTitle"/>
     <field refid="start"/>
     <field refid="end"/>
+    <field refid="listingLayout"/>
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
@@ -1457,6 +1444,43 @@
     <field refid="stock"/>
     <field refid="relocationPack"/>
   </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in closed reqs]]></description>
+    <role-name><![CDATA[R]]></role-name>
+    <role-name><![CDATA[S]]></role-name>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[GM]]></role-name>
+    <role-name><![CDATA[J]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <status><![CDATA[pre-approved]]></status>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in closed reqs]]></description>
+    <role-name><![CDATA[R]]></role-name>
+    <role-name><![CDATA[S]]></role-name>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[GM]]></role-name>
+    <role-name><![CDATA[J]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <status><![CDATA[approved]]></status>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in closed reqs]]></description>
+    <role-name><![CDATA[R]]></role-name>
+    <role-name><![CDATA[S]]></role-name>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[GM]]></role-name>
+    <role-name><![CDATA[J]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <status><![CDATA[closed]]></status>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+
   <button-permission>
     <description><![CDATA[]]></description>
     <role-name><![CDATA[O]]></role-name>
