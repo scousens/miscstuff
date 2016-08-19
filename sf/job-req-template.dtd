@@ -1,0 +1,577 @@
+<!--
+
+$Id$
+
+SuccessFactors confidential and proprietary.
+
+Copyright 2005 SuccessFactors, Inc. 999 Baker Way Suite 500
+San Mateo, CA 94404, U.S.A.  All rights reserved.
+
+This product or document is protected by copyright and distributed
+under licenses restricting its use, copying, distribution, and
+decompilation.  No part of this product or documentation may be
+reproduced in any form by any means without prior written
+authorization of SuccessFactors and its licensors, if any.
+
+DOCUMENTATION IS PROVIDED "AS IS" AND ALL EXPRESS OR IMPLIED
+CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING ANY
+IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE OR NON-INFRINGEMENT, ARE DISCLAIMED, EXCEPT
+TO THE EXTENT THAT SUCH DISCLAIMERS ARE HELD TO BE LEGALLY
+INVALID.
+
+_________________________________________________________________________
+
+Copyright 2005 SuccessFactors, Inc. 999 Baker Way Suite 500
+San Mateo, CA 94404, Etats-Unis.  Tous droits re'serve's.
+
+Ce produit ou document est prote'ge' par un copyright et distribue'
+avec des licences qui en restreignent l'utilisation, la copie, la
+distribution, et la de'compilation.  Aucune partie de ce produit ou de
+sa documentation associe'e ne peut e^tre reproduite sous aucune forme,
+par quelque moyen que ce soit, sans l'autorisation pre'alable et
+e'crite de SuccessFactors et de ses bailleurs de licence, s'il y en a.
+
+LA DOCUMENTATION EST FOURNIE "EN L'ETAT" ET TOUTES AUTRES CONDITIONS,
+DECLARATIONS ET GARANTIES EXPRESSES OU TACITES SONT FORMELLEMENT EXCLUES,
+DANS LA MESURE AUTORISEE PAR LA LOI APPLICABLE, Y COMPRIS NOTAMMENT
+TOUTE GARANTIE IMPLICITE RELATIVE A LA QUALITE MARCHANDE, A L'APTITUDE
+A UNE UTILISATION PARTICULIERE OU A L'ABSENCE DE CONTREFACON.
+-->
+<!--
+
+This is the XML DTD for the SuccessFactors Job Requisition
+deployment descriptor.  All such deployment descriptors must include a
+DOCTYPE of the following format:
+
+  <!DOCTYPE job-req-template PUBLIC
+	"-//SuccessFactors, Inc.//DTD Job Requisition Template//EN"
+        "http://cvs/viewcvs/V4/src/com/sf/dtd/job-req-template.dtd">
+
+The following DTD declaration is also valid, but is not preferred:
+
+  <!DOCTYPE job-req-template SYSTEM "job-req-template.dtd">
+
+-->
+<!--
+The job-req-template element is the root element of the job req
+template descriptor.  It contains:
+
+  - an id
+  - a name
+  - an optional description
+  - a last-modified date
+  - an optional question library
+  - a list of field definitions
+  - a list of job req field permissions
+
+
+Spell checking is optional. Default is no spell checking.  Use spell-check="true" to turn on.
+Job Req Template type is optional.  Default is Job Requisition instead of Recruiting Event.  The type attribute is only available in Recruiting V2.
+min-posting-days is optional. Checks min posting for int and ext post.
+min-internal-lead-days is optional. Checks int post start lead days for ext post.
+Use integer value for no of days.
+
+-->
+<!ELEMENT job-req-template (template-name+, template-desc?, template-lastmodified?, supported-languages?, default-listing-layout-id?, field-definition+, field-permission*, button-permission*, job-req-section-name*, signature-section-name*, listing-fields+, mobile-fields?, offer-letter-fields?, overall-assessment-scale?, assessment-scale?, application-status-config?, job-event-compact-view-fields?, application-template-name?,candidate-email-permission?,candidate-sms-permission?)>
+<!ATTLIST job-req-template
+	spell-check (true | false) "false"
+	min-posting-days CDATA #IMPLIED
+	min-internal-lead-days CDATA #IMPLIED
+	type (jobReq | recruitingEvent) "jobReq"
+>
+
+<!--
+The database id of the job req template.
+
+XXX/JGI - ask Ben for the semantics of this field
+
+Used in: job-req-template
+-->
+<!--
+The name of the job req template.  This is used by other
+applications in the suite to reference the job req template by
+name.
+
+Used in: job-req-template
+-->
+<!ELEMENT template-name (#PCDATA)>
+<!ATTLIST template-name
+	lang CDATA #IMPLIED
+>
+<!--
+A template-desc element is used to provide text describing the
+job req list.  This is an area to provide information that may be
+presented in tools for administration of job reqs.
+
+Use this element instead of comments as appropriate.
+
+Used in: job-req-template
+-->
+<!ELEMENT template-desc (#PCDATA)>
+<!--
+The last modification date of the job req list
+
+Used in: job-req-template
+-->
+<!ELEMENT template-lastmodified (#PCDATA)>
+
+<!--
+Supported languages tag holds multiple locales used to specify accepting languages for the job req.
+
+Used in: job-req-template
+-->
+<!ELEMENT supported-languages (lang+)>
+
+<!--
+Lang tag used to define an accepting language in the job req.
+
+Used in: job-req-template
+-->
+<!ELEMENT lang (#PCDATA)>
+
+<!--
+The default rich text layout to use for the job listing
+
+Used in: job-req-template
+-->
+<!ELEMENT default-listing-layout-id (#PCDATA)>
+
+
+<!--
+The field-definition element provides a data definition for a field of
+a job req.  Fields have a type, label, description, row-label,
+default value, and type-specific data definitions.
+
+The "id" attribute defines the internal name for the field.
+
+The "type" attribute defines the type of the field.  This is a
+combination of the stored-data type and UI hints.  The possible values
+for type attribute are:
+
+  text      - a single line of text (non-typed)
+  textarea  - multiple lines of text (non-typed)
+  date      - a date (typed)
+  percent   - a percent value (typed)
+  bool      - true or false (shown as a checkbox)
+  enum      - an enumerated type (shown as a pull-down list)
+  picklist  - field options come from an sf picklist (shown as a pull down list)
+  number    - a number value (typed)
+  currency  - a curency value (typed)
+  instruction - This type is for adding a instruction, no value should be attached to this field.
+  multiattachment - Indicates a field that can have multiple documents uploaded and attached to it. -
+
+  (non-typed means the user's text is stored as entered)
+
+  (typed means the data is stored in an internal format and will be
+  entered by the user and presented to the user in a localized format)
+
+The "required" attribute specifies whether or not a field is required.
+If not required, the field may be left empty.
+
+The "label" attribute is used only for custom fields.  System fields defined below
+will use field labels from provisioning
+
+The width attribute specifies the width of the field in characters.
+It is an optional parameter. If not mentioned default value will be used.
+
+Default values are as follows:
+
+  text	- 25
+
+Fields labeled as textarea below have a max length of 256.
+They can be drwan as a text field with max length of 100 with no errors
+
+Fields labeled as text below have a max length of 100.
+They can NOT be drawn as a textarea or field validation will be incorrect and values longer
+than 100 chars will be truncated.
+
+Please reference JobReqFieldEnum.java for standard fields within the code.
+
+Please reference the Confluence page for corresponding documention:
+http://confluence/display/PRODINFO/Standard+Field+Guide+for+Job+Req+Template
+
+If you are adding a new standard field, you will need to add it to the Enum above and update
+the documentation in confluence.
+
+  (text* - fields may be defined to be of text, textarea, or enum.
+  Use enum with care.)
+
+  (enum* - fields may be defined to be of type enum, text, or
+  textarea.  Use text and textarea with care.)
+
+  (questions - the field is used to configure the permission for questions, there can be only one)
+
+  (competencies - the field is used to configure the permission for competencies, there can be only one)
+
+  (derived - these fields are not editable regardles of permission, they are derived from the value of the operator name field and cannot be custom)
+
+  (operator - these fields are find user fields and cannot be custom)
+  
+  (operatorTeam - this field is used to configure the permission applicable to all members of a recruiting team (eg hiring manager team, recruiter team etc)
+
+  (picklist - this is like an enum field but has a picklist id from the system picklist table, no
+      validaton is done for a valid picklist id, it is up to you to make sure it is correct)
+
+	  (richText - this is the rich text editor field used to define the listing layout, there can be only one and it cannot be a custom field)
+-->
+<!ELEMENT field-definition (field-label+, field-description*, enum-value*, default-value?, field-format?, picklist-id?)>
+<!ATTLIST field-definition
+	id ID #REQUIRED
+	type (text | textarea | date | percent | bool | enum | number | picklist | questions | competencies | operator | operatorTeam | derived | richText | instruction | currency | multiattachment| jobCode | jobRole) #REQUIRED
+	required (true | false) "false"
+	custom (true | false) "false"
+	multiselect (true | false) "false"
+	width CDATA #IMPLIED
+	group-name CDATA #IMPLIED
+    header (true | false) "false"
+>
+
+
+<!--
+
+The field-permission element defines the access permissions to
+specific fields of a job req.  The type of access is one of:
+
+  "none"  - no access to field by the specified roles is allowed.
+  "read"  - the field can be read by internal and external users in the specified roles, only applicable to open reqs
+  "write" - the user may both read and write the fields, this is after the req is open
+
+Each type of access can apply based on the status of the req. Status is one of
+
+   "pre-approved" - The req has been created but is not approved for posting
+   "approved"     - The req has been approved for posting
+
+Field permissions are scanned in XML source order.  The last
+applicable permission is the one used.  For example, it is not
+uncommon to restrict access to all fields and then selectively allow
+permissions.
+
+
+Used in: job-req-template
+-->
+<!ELEMENT field-permission (description?, role-name+, status+, field+)>
+<!ATTLIST field-permission
+	type (none | read | write) #REQUIRED
+>
+<!--
+The field-label element defines a localized name for a field.
+
+Used in: field-definition
+-->
+<!ELEMENT field-label (#PCDATA)>
+<!ATTLIST field-label
+	lang CDATA #IMPLIED
+        screenreader-text CDATA #IMPLIED
+	mime-type (text-plain | text-html) #IMPLIED
+>
+<!--
+The field-description element defines a localized description of a
+field.  If undefined, the localized version of the field-label is used
+whereever field-label would have been.
+
+Used in: field-definition
+-->
+<!ELEMENT field-description (#PCDATA)>
+<!ATTLIST field-description
+	lang CDATA #IMPLIED
+>
+
+<!ELEMENT picklist-id (#PCDATA)>
+<!ATTLIST picklist-id
+    parent-field-id CDATA #IMPLIED
+>
+
+<!--
+
+The enum-value tag defines one of the possible values that a field of
+type="enum" may have.  The order of the enum-value elements in the XML
+determines the order in which the drop-down list is presented, and the
+collation order for sorting by the field.
+
+The "value" attribute defines the non-localized, internal string,
+under which the data is stored.  (Use the enum-label sub-element to
+define localized string labels).
+
+The "style" attribute optionally defines a CSS style that should be
+applied to the data when displayed in the user interface.
+
+Used in: field-definition
+-->
+<!ELEMENT enum-value (enum-label+)>
+<!ATTLIST enum-value
+	value CDATA #REQUIRED
+	style CDATA #IMPLIED
+>
+<!--
+The enum-label element defines a localized name for an enumerated
+value.  The "lang" attribute, if present, specifies the locale for
+which the label should be displayed.  There MUST be at least one
+enum-label element defined per enum-value, and it MUST not have a lang
+attribute - this defines the label for the default locale.
+
+Used in: enum-value
+-->
+<!ELEMENT enum-label (#PCDATA)>
+<!ATTLIST enum-label
+	lang CDATA #IMPLIED
+>
+<!--
+The default-value defines the default or initial value of a field.
+
+For fields or columns of type="text", the value is copied directly to
+the contents of a field in a new goal, accounting for the locale as
+specified by the optional "lang" attribute.
+
+For fields or columns of type="enum", "date", "percent", "number", or "bool",
+the value is specified in a non-localized format, and the lang
+attribute is not allowed.  For "enum" fields, the contents must be
+"value" attribute of one of the enum-value elements.  For "date"
+attributes, the format is MM/DD/YYYY.  For "percent" the value is an
+unformatted number (no "%" sign).  For "bool" it must be either "true"
+or "false".
+
+In all cases, if the value is not required, an empty default-value tag
+specifies the the initial value of the field is empty.
+
+Used in: field-definition
+-->
+<!ELEMENT default-value (#PCDATA)>
+<!ATTLIST default-value
+	lang CDATA #IMPLIED
+>
+<!--
+The field-format defines the format of a field.
+
+Currently, it is only implemented for the number type to support the format string
+used in Java API DecimalFormat (http://java.sun.com/j2se/1.4.2/docs/api/java/text/DecimalFormat.html)
+common formats
+  #.00 - number with 2 decimals
+  #    - interger
+ '#'#  - prefix, formats 123 to "#123"
+ #%    - convert to integer and append % to the end.
+Used in: field-definition
+-->
+<!ELEMENT field-format (#PCDATA)>
+
+<!--
+The description element is used to hold a description for a element
+that may be displayed a template editor or administration tool.
+
+Used in: permission, field-permission
+-->
+<!ELEMENT description (#PCDATA)>
+<!--
+The role-name element specifies a role.  The following role-name
+values are allowed:
+
+  *    all users
+  O    form originator
+  Oxx  derivitives of form originator
+  G    hiring manager
+  T    coordinator
+  R    recruiter
+  S    sourcer
+  V    approver
+  W    second recruiter
+  Q    vp of staffing
+  GM+  upline hiring manager
+
+Notes on "Relative Roles":
+   Currently, we only support derivitives on "O".
+
+  "O" may be followed by any combination of "M", "X", "D", and "H" with
+  optional modifiers "+", "*", "?" to specify complex employee
+  relative roles.
+
+    M   originator's manager
+    X   originator's matrix manager
+    D   originator's direct report
+    H   originator's HR representative
+
+    (In the notation below, "x" is one of "M", "X", "D", or "H" as defined
+    above)
+    x?   x is optional (zero or one of x)
+    x*   zero or more of x
+    x+   one or more of x
+
+  As an example, here are a few common roles:
+
+    OM   originator's manager
+    OX   originator's matrix manager (currently only one level)
+    OD   originator's direct report
+    OH   originator's HR rep
+    OM+  originator's manager, manager's manager, etc...
+    OD+  originator's direct and indirect reports
+    OMM  originator's manager's manager (only)
+    OMD  originator's manager's direct reports (coworkers)
+
+
+  Note: the time it takes to resolve a role is relative to it's
+  length.  The modifiers can drastically increase the time to resolve
+  an access right.  And although using more than one modifier in a
+  role name is supported, it can seriously hinder performance (e.g. do
+  NOT use something like "OM*D*").
+
+  To sum up, use complex role names sparingly.  And as always, when in
+  doubt ASK!
+
+
+Used in: field-permission
+-->
+<!ELEMENT role-name (#PCDATA)>
+
+<!--
+Tells the permission model what status the job-req should be in for the permission
+to apply
+
+Used in: field-permission
+-->
+<!ELEMENT status (#PCDATA)>
+
+<!--
+The field element specifies a field reference.  The "refid" attribute
+specified the "id" attribute previously defined in a field-definition
+element.  The special case of refid="*" represents all fields, but may
+not be appropriate in all cases where field is allowed.
+
+Used in: field-permission
+-->
+<!ELEMENT field EMPTY>
+<!ATTLIST field
+	refid IDREF #IMPLIED
+	application-field-id CDATA #IMPLIED
+	required (true | false) #IMPLIED
+>
+
+<!--
+there are only two buttons that are permissionable
+closeReq, reopenReq
+-->
+<!ELEMENT button-permission (description?, role-name+, button-id+)>
+<!ELEMENT button-id (#PCDATA)>
+
+
+<!--
+the job-req-section-name element defines the string to be used in the job req section header in pre-approved req forms
+-->
+<!ELEMENT job-req-section-name (#PCDATA)>
+<!ATTLIST job-req-section-name
+	lang CDATA #IMPLIED
+>
+
+<!--
+the signature-section-name element defines the string to be used in the job req section header in pre-approved req forms
+-->
+<!ELEMENT signature-section-name (#PCDATA)>
+<!ATTLIST signature-section-name
+	lang CDATA #IMPLIED
+>
+
+<!--
+listing-fields is a list of field id's that are publicly available, these fields are the only ones alowed to be placed on
+a job posting
+-->
+<!ELEMENT listing-fields (field+)>
+
+<!--
+mobile-fields is a list of field id's displayed on mobile
+-->
+<!ELEMENT mobile-fields (field*)>
+
+<!--
+offer-letter-fields is a list of field id's that will be used in the for creating offer letter.
+-->
+<!ELEMENT offer-letter-fields (field*)>
+
+<!ELEMENT overall-assessment-scale (scale-source?,scale-id)>
+<!ATTLIST overall-assessment-scale
+  reverse-scale (true | false) #IMPLIED
+>
+
+<!ELEMENT assessment-scale (scale-source?,scale-id)>
+<!ATTLIST assessment-scale
+  reverse-scale (true | false) #IMPLIED
+>
+
+<!-- scale-source specifies the source of the scale; defined in ScaleBean.java. -->
+<!ELEMENT scale-source (#PCDATA)>
+<!-- scale-id is the unique ID for a particular scale. -->
+<!ELEMENT scale-id (#PCDATA)>
+
+<!--
+The application-status-config element defines detail configuration for application status.
+
+Following is example 
+
+  <application-status-config> 
+        <application-status-set name = "us_engineering"/> 
+        <field-permission type = "write"> 
+            <description><![CDATA[R can write to the following fields in the application during the jobOffer1 application status.]]></description> 
+            <role-name><![CDATA[R]]></role-name> 
+            <status><![CDATA[jobOffer1]]></status> 
+            <field application-field-id = "jobOfferAmount"/> 
+            <field application-field-id = "jobAcceptedDate"/> 
+        </field-permission> 
+        <feature-permission type="interviewAssessment"> 
+            <description><![CDATA[R can launch interview assessment during interview1 status.]]></description> 
+            <role-name><![CDATA[R]]></role-name> 
+            <status><![CDATA[interview1]]></status> 
+        </feature-permission> 
+    </application-status-config> 
+
+
+Used in: job-req-template
+-->
+<!ELEMENT application-status-config (application-status-set, field-permission*, feature-permission*)>
+
+<!--
+
+The feature-permission element defines the access to specific feature of a job req for specified role 
+when application has specified status. 
+                                                    
+The type of feature is one of:
+
+  "interviewAssessment" - Interview Assessment Feature  
+  "backgroundCheck" - Background Check Feature
+  "offerLetter" - Job offer letter Feature
+  "onboarding" - Onboarding Feature
+  "lateStageApp" - Late Stage Application
+Used in: application-status-config
+-->
+
+<!ELEMENT feature-permission (description?, role-name+, status)>
+<!ATTLIST feature-permission
+	type (interviewAssessment | backgroundCheck | offerLetter | onboarding | lateStageApp | offerApproval | candQuestions | assessmentIntegration | offerLetterPortlet | historicalAssessmentResults | historicalBackgroundCheckResults | historicalQuestionAnswers) #REQUIRED
+>
+<!--
+The application-status-set element has one attribute name which defines application status set name.
+
+Used in: application-status-config
+-->
+<!ELEMENT application-status-set EMPTY>
+<!ATTLIST application-status-set
+	name CDATA #REQUIRED 
+>
+
+<!ELEMENT job-event-compact-view-fields (field+)>
+
+<!--
+
+-->
+<!ELEMENT application-template-name EMPTY>
+<!ATTLIST application-template-name
+	name CDATA #REQUIRED
+>
+<!--
+
+-->
+<!ELEMENT candidate-email-permission (description?, role-name+)>
+<!ATTLIST candidate-email-permission
+    type (candidateEmail) #REQUIRED
+ >
+
+<!ELEMENT candidate-sms-permission (description?, role-name+)>
+<!ATTLIST candidate-sms-permission
+    type (candidateSms) #REQUIRED
+ >

@@ -1,0 +1,467 @@
+<!--
+
+$Id$
+
+SuccessFactors confidential and proprietary.
+
+Copyright 2005 SuccessFactors, Inc. 999 Baker Way Suite 500
+San Mateo, CA 94404, U.S.A.  All rights reserved.
+
+This product or document is protected by copyright and distributed
+under licenses restricting its use, copying, distribution, and
+decompilation.  No part of this product or documentation may be
+reproduced in any form by any means without prior written
+authorization of SuccessFactors and its licensors, if any.
+
+DOCUMENTATION IS PROVIDED "AS IS" AND ALL EXPRESS OR IMPLIED
+CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING ANY
+IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE OR NON-INFRINGEMENT, ARE DISCLAIMED, EXCEPT
+TO THE EXTENT THAT SUCH DISCLAIMERS ARE HELD TO BE LEGALLY
+INVALID.
+
+_________________________________________________________________________
+
+Copyright 2005 SuccessFactors, Inc. 999 Baker Way Suite 500
+San Mateo, CA 94404, Etats-Unis.  Tous droits re'serve's.
+
+Ce produit ou document est prote'ge' par un copyright et distribue'
+avec des licences qui en restreignent l'utilisation, la copie, la
+distribution, et la de'compilation.  Aucune partie de ce produit ou de
+sa documentation associe'e ne peut e^tre reproduite sous aucune forme,
+par quelque moyen que ce soit, sans l'autorisation pre'alable et
+e'crite de SuccessFactors et de ses bailleurs de licence, s'il y en a.
+
+LA DOCUMENTATION EST FOURNIE "EN L'ETAT" ET TOUTES AUTRES CONDITIONS,
+DECLARATIONS ET GARANTIES EXPRESSES OU TACITES SONT FORMELLEMENT EXCLUES,
+DANS LA MESURE AUTORISEE PAR LA LOI APPLICABLE, Y COMPRIS NOTAMMENT
+TOUTE GARANTIE IMPLICITE RELATIVE A LA QUALITE MARCHANDE, A L'APTITUDE
+A UNE UTILISATION PARTICULIERE OU A L'ABSENCE DE CONTREFACON.
+-->
+<!--
+
+This is the XML DTD for the SuccessFactors candidate detail
+deployment descriptor.  All such deployment descriptors must include a
+DOCTYPE of the following format:
+
+  <!DOCTYPE candidate-date-model PUBLIC
+	"-//SuccessFactors, Inc.//DTD Candidate Data Model//EN"
+        "http://cvs/viewcvs/V4/src/com/sf/dtd/candidate-date-model.dtd">
+
+The following DTD declaration is also valid, but is not preferred:
+
+  <!DOCTYPE candidate-date-model SYSTEM "candidate-date-model.dtd">
+
+-->
+<!--
+The candidate-date-model element is the root element of the candidate detail
+template descriptor.  It contains:
+
+  - an candidate id
+  - an job req id 
+  - an candidate name
+  - a last-modified date
+  - an optional question response 
+  - a list of field definitions
+  - a optional filter list to filter out field definitions based on country and applicant type
+  - a optional attribute override to override out field definitions attribute based on country
+  - a list of job req field permissions
+  - a candidate detail layout
+  
+
+Spell checking is optional. Default is no spell checking.  Use
+spell-check="true" to turn on.
+
+-->
+<!ELEMENT candidate-data-model (template-name+, template-desc?, template-lastmodified?, field-definition+,field-permission*, field-attr-override*, button-permission*,candidate-summary-display-options-config?)>
+<!ATTLIST candidate-data-model
+	spell-check (true | false) "false"	
+>
+
+<!--
+The database id of the candidate data model.
+
+XXX/JGI - ask Ben for the semantics of this field
+
+Used in: candidate-data-model
+-->
+<!--
+The name of the candidate data model.  This is used by other
+applications in the suite to reference the job req template by
+name.
+
+Used in: candidate-data-model
+-->
+<!ELEMENT template-name (#PCDATA)>
+<!ATTLIST template-name
+	lang CDATA #IMPLIED
+    mime-type (text-plain | text-html) #IMPLIED
+>
+<!--
+A template-desc element is used to provide text describing.  
+This is an area to provide information that may be
+presented in tools for administration of job reqs.
+
+Use this element instead of comments as appropriate.
+
+Used in: candidate-data-model
+-->
+<!ELEMENT template-desc (#PCDATA)>
+
+<!--
+The last modification date of the candidate template
+
+Used in: candidate-data-model
+-->
+<!ELEMENT template-lastmodified (#PCDATA)>
+<!--
+candidate-summary-display-options-config element that describe candSummaryDisplayOptions, this can be used for anything that has many attributes
+associated.Please make sure type-id is unique on each category
+-->
+<!ELEMENT  candidate-summary-display-options-config (category*)>
+
+<!ELEMENT category (label+, column*)>
+<!ATTLIST category
+  id   ID    #REQUIRED
+  name CDATA #REQUIRED  
+>
+
+<!ELEMENT column (label*)>
+<!ATTLIST column
+  name      CDATA #IMPLIED  
+  field-ref CDATA #IMPLIED  
+  gridOrder CDATA #REQUIRED
+  select-by-default (true | false) "false"  
+>
+<!ELEMENT label (#PCDATA)>
+<!ATTLIST label
+   xml:lang NMTOKEN #IMPLIED
+   mime-type (text-plain | text-html) #IMPLIED
+>
+
+
+<!--
+The field-definition element provides a data definition for a field of
+a candidate detail.  Fields have a type, label, description, row-label,
+default value, and type-specific data definitions.
+
+The "id" attribute defines the internal name for the field.  
+
+The "type" attribute defines the type of the field.  This is a
+combination of the stored-data type and UI hints.  The possible values
+for type attribute are:
+
+  text      - a single line of text (non-typed)
+  textarea  - multiple lines of text (non-typed)
+  date      - a date (typed)
+  percent   - a percent value (typed)
+  bool      - true or false (shown as a checkbox)
+  enum      - an enumerated type (shown as a pull-down list)
+  number    - a number value (typed)
+  instruction - This type is for adding a instruction into CDM 
+  multiattachment - Indicates a field that can have multiple documents uploaded and attached to it.
+  multiattachmentSelection - Similar to multiattachment type, except uploaded documents are stored in a user repository and can be selected from.
+  (non-typed means the user's text is stored as entered)
+
+  (typed means the data is stored in an internal format and will be
+  entered by the user and presented to the user in a localized format)
+
+The "required" attribute specifies whether or not a field is required.
+If not required, the field may be left empty.
+
+The "public" attribute specifies whether or not a field is
+readable AND writable for external applicant.
+
+The "custom" attribute specifies that the field is a custom field
+
+The "readOnly" attribute specifies that the field is a readOnly field
+
+Please reference CandidateDMFieldEnum.java for standard fields within the code.
+
+Please reference the Confluence page for corresponding documention:
+http://confluence/display/PRODINFO/Standard+Field+Guide+for+Application+Template
+
+If you are adding a new standard field, you will need to add it to the Enum above and update
+the documentation in confluence.
+
+  (text* - fields may be defined to be of text, textarea, or enum.
+  Use enum with care.)
+
+  (enum* - fields may be defined to be of type enum, text, or
+  textarea.  Use text and textarea with care.)
+
+  (questions? - the field is used to configure the layout and permission for questions)
+
+-->
+<!ELEMENT field-definition (field-label+, field-description*, enum-value*, default-value?, field-format?, picklist-id*)>
+<!ATTLIST field-definition
+	id ID #REQUIRED
+	type (text | textarea | date | percent | bool | enum | number | picklist | questions | competencies | operator | derived | instruction | richText | currency | hyperlink | multiattachment | multiattachmentselection) #REQUIRED
+	required (true | false) "false"	
+	custom (true | false) "false"
+	public (true | false) "false"
+    readOnly (true | false) "false"
+    anonymize (true | false) "false"
+    forward-intact (true | false) "true"
+>
+
+<!--
+
+The field-permission element defines the access permissions to
+specific fields of a candidate detail.  The type of access is one of:
+
+  "none"  - no access to field by the specified roles is allowed.
+  "read"  - the field can be read by internal and external users in the specified roles, only applicable to open reqs
+  "write" - the user may both read and write the fields, this is after the req is open
+  "external-view" - grant operators (of the Job Req that is displayed in Applicant Profile) permission to view fields of the selected Job Req via the Jobs Applied portlet
+
+Field permissions are scanned in XML source order.  The last
+applicable permission is the one used.  For example, it is not
+uncommon to restrict access to all fields and then selectively allow
+permissions.  E.g.:
+
+  <field-permission type="none">
+    <description>deny access to all fields</description>
+    <role-name>*</role-name>
+    <field refid="*"/>
+  </field-permission>
+
+  <field-permission type="pre-aprove-read-internal">
+    <description>allow originator, originator HR rep, all managers above originator to read the req before it is aproved</description>
+    <role-name>OH</role-name>
+    <role-name>OM*</role-name>
+    <field refid="*"/>
+  </field>
+
+  <field-permission type="pre-aprove-write">
+    <description>allow the originator to edit all fields before the req is aproved</description>
+    <role-name>O</role-name>
+    <field refid="*"/>
+  </field-permission>
+
+  <field-permission type="aproved-write">
+    <description>grant write access to status field only, modifiers include originator, originator HR and originator manager after req has been opened</description>
+    <role-name>O</role-name>
+    <role-name>OH</role-name>
+    <role-name>OM</role-name>
+    <field refid="status"/>
+  </field-permission>
+  
+  <field-permission type="aproved-read-internal">
+        <description>grant read access to internal users for questions field after req is opened</description>
+        <role-name>*</role-name>
+        <field refid="questions"/>
+  </field-permission>
+  <field-permission type="read-external">
+      <description>grant read access to internal and external users for title and desc fields after req is opened</description>
+      <role-name>*</role-name>
+      <field refid="title"/>
+      <field refid="desc"/>
+  </field-permission>
+  
+  <field-permission type="external-view">
+    <description><![CDATA[Grant operators (of the Job Req that is displayed in Applicant Profile) permission to view the following fields of the selected Job Req via the Jobs Applied portlet]]></description>
+    <role-name><![CDATA[R]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <field refid="comments"/>
+  </field-permission>
+  
+
+Used in: candidate-data-model
+-->
+<!ELEMENT field-permission (description?, role-name+, country*, source*, field+)>
+<!ATTLIST field-permission
+	type (none | read | write | external-view) #REQUIRED
+>
+<!ELEMENT source (#PCDATA)>
+<!--
+  field-attr-overrides contains one or more override to the field-definition attribute
+  based on one or more country.
+-->
+<!ELEMENT field-attr-override (override+,field+)>
+
+<!--
+  <field-attr-override>
+    <field refid="ethnicity"/>
+    <override>
+      <description><![CDATA[override required attribute for internal applicant and public attribute for external applicant on ethnicity for SE and UZ ]]></description>
+      <country><![CDATA[SE]]></country>
+      <country><![CDATA[UZ]]></country>
+      <field-attr attrubite="required" value="true" applicant="internal"/>
+      <field-attr attrubite="public" value="false" applicant="external"/>
+    </override>
+
+    <override>
+      <description><![CDATA[override required and public attributes on ethnicity for FR and DE for external applicant ]]></description>
+      <country><![CDATA[FR]]></country>
+      <country><![CDATA[DE]]></country>
+      <field-attr attrubite="required" value="false" applicant="external"/>
+      <field-attr attrubite="public" value="false" applicant="external"/>
+    </override>
+
+    <override>
+      <description><![CDATA[override required and public attribute on ethnicity for US required and public for both internal/external applicant ]]></description>
+      <country><![CDATA[US]]></country>
+      <field-attr attrubite="required" value="false"/>
+      <field-attr attrubite="public" value="true"/>
+    </override>
+
+  </field-attr-override>
+-->
+<!ELEMENT override (description?,country+,field-attr+)>
+
+<!--
+The country element specifies a two letter country code.
+-->
+<!ELEMENT country (#PCDATA)>
+
+<!--
+The overrided field attribute.
+-->
+<!ELEMENT field-attr EMPTY>
+<!ATTLIST field-attr
+  attribute (required | public) #REQUIRED
+  value (true|false) #REQUIRED
+  applicant (internal | external | both) "both"
+>
+
+<!--
+The field-label element defines a localized name for a field.
+
+Used in: field-definition
+-->
+<!ELEMENT field-label (#PCDATA)>
+<!ATTLIST field-label
+	lang CDATA #IMPLIED
+    mime-type (text-plain | text-html) #IMPLIED
+>
+<!--
+The field-description element defines a localized description of a
+field.  If undefined, the localized version of the field-label is used
+whereever field-label would have been.
+
+Used in: field-definition
+-->
+<!ELEMENT field-description (#PCDATA)>
+<!ATTLIST field-description
+	lang CDATA #IMPLIED
+    mime-type (text-plain | text-html) #IMPLIED
+>
+
+<!ELEMENT picklist-id (#PCDATA)>
+<!ATTLIST picklist-id
+    country CDATA #IMPLIED
+    parent-field-id CDATA #IMPLIED
+>
+
+<!--
+
+The enum-value tag defines one of the possible values that a field of
+type="enum" may have.  The order of the enum-value elements in the XML
+determines the order in which the drop-down list is presented, and the
+collation order for sorting by the field.
+
+The "value" attribute defines the non-localized, internal string,
+under which the data is stored.  (Use the enum-label sub-element to
+define localized string labels).
+
+The "style" attribute optionally defines a CSS style that should be
+applied to the data when displayed in the user interface.
+
+Used in: field-definition
+-->
+<!ELEMENT enum-value (enum-label+)>
+<!ATTLIST enum-value
+	value CDATA #REQUIRED
+	style CDATA #IMPLIED
+>
+<!--
+The enum-label element defines a localized name for an enumerated
+value.  The "lang" attribute, if present, specifies the locale for
+which the label should be displayed.  There MUST be at least one
+enum-label element defined per enum-value, and it MUST not have a lang
+attribute - this defines the label for the default locale.
+
+Used in: enum-value
+-->
+<!ELEMENT enum-label (#PCDATA)>
+<!ATTLIST enum-label
+	lang CDATA #IMPLIED
+>
+<!--
+The default-value defines the default or initial value of a field.
+
+For fields or columns of type="text", the value is copied directly to
+the contents of a field in a new goal, accounting for the locale as
+specified by the optional "lang" attribute.
+
+For fields or columns of type="enum", "date", "percent", "number", or "bool",
+the value is specified in a non-localized format, and the lang
+attribute is not allowed.  For "enum" fields, the contents must be
+"value" attribute of one of the enum-value elements.  For "date"
+attributes, the format is MM/DD/YYYY.  For "percent" the value is an
+unformatted number (no "%" sign).  For "bool" it must be either "true"
+or "false".
+
+In all cases, if the value is not required, an empty default-value tag
+specifies the the initial value of the field is empty.
+
+Used in: field-definition
+-->
+<!ELEMENT default-value (#PCDATA)>
+<!ATTLIST default-value
+	lang CDATA #IMPLIED
+>
+<!--
+The field-format defines the format of a field.
+
+Currently, it is only implemented for the number type to support the format string
+used in Java API DecimalFormat (http://java.sun.com/j2se/1.4.2/docs/api/java/text/DecimalFormat.html)
+common formats
+  #.00 - number with 2 decimals
+  #    - interger
+ '#'#  - prefix, formats 123 to "#123"
+ #%    - convert to integer and append % to the end.
+Used in: field-definition
+-->
+<!ELEMENT field-format (#PCDATA)>
+
+<!--
+The description element is used to hold a description for a element
+that may be displayed a template editor or administration tool.
+
+Used in: permission, field-permission
+-->
+<!ELEMENT description (#PCDATA)>
+<!--
+The role-name element specifies a role.  The following role-name
+values are allowed:
+
+  To sum up, use complex role names sparingly.  And as always, when in
+  doubt ASK!
+
+
+Used in: field-permission
+-->
+<!ELEMENT role-name (#PCDATA)>
+
+<!--
+The field element specifies a field reference.  The "refid" attribute
+specified the "id" attribute previously defined in a field-definition
+element.  The special case of refid="*" represents all fields, but may
+not be appropriate in all cases where field is allowed.
+
+Used in: field-permission
+-->
+<!ELEMENT field EMPTY>
+<!ATTLIST field
+	refid IDREF #IMPLIED
+>
+
+<!--
+there're only a limited set of buttons supported
+Forward, Reopen, Cancel
+-->
+<!ELEMENT button-permission (description?, role-name+, button-id+)>
+<!ELEMENT button-id (#PCDATA)>
+
