@@ -42,7 +42,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[姓氏：]]></field-label>
   <field-description><![CDATA[Last Name ]]></field-description>
   </field-definition>
-  <field-definition id="address" type="text" required="true" custom="false" anonymize="false">
+  <field-definition id="addressLine1" type="text" required="true" custom="true" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[Address: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Adresse:]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Address:]]></field-label>
@@ -560,7 +560,7 @@
 <sm-mapping field-id="zip" map-to="zipCode" />
 <sm-mapping field-id="languages" map-to="languages" />
 <sm-mapping field-id="insideWorkExperience" map-to="insideWorkExperience" />
-<sm-mapping field-id="address" map-to="addressLine1" />
+<sm-mapping field-id="addressLine1" map-to="addressLine1" />
 <sm-mapping field-id="currentTitle" map-to="title" />
 <sm-mapping field-id="education" map-to="education" />
 <sm-mapping field-id="firstName" map-to="firstName" />
