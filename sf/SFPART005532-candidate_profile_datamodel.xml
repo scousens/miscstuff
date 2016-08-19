@@ -55,7 +55,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[地址：]]></field-label>
   <field-description><![CDATA[Street Address]]></field-description>
   </field-definition>
-  <field-definition id="city" type="text" required="true" custom="false" anonymize="false">
+  <field-definition id="city" type="text" required="false" custom="false" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[City: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Ort]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[City]]></field-label>
@@ -109,7 +109,7 @@
   <field-description><![CDATA[Country ]]></field-description>
     <picklist-id>country</picklist-id>
   </field-definition>
-  <field-definition id="currentTitle" type="text" required="true" custom="false" anonymize="false">
+  <field-definition id="currentTitle" type="text" required="false" custom="false" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[Current Title: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Aktuelle Stellenbezeichnung:]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Current Title:]]></field-label>
@@ -122,7 +122,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[当前职衔：]]></field-label>
   <field-description><![CDATA[Current Job Title]]></field-description>
   </field-definition>
-  <field-definition id="currentCompany" type="text" required="true" custom="false" anonymize="false">
+  <field-definition id="currentCompany" type="text" required="false" custom="false" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[Current Company: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Aktuelles Unternehmen:]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Current Company:]]></field-label>
@@ -186,6 +186,10 @@
   <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Ид. сотрудника:]]></field-label>
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[员工 ID：]]></field-label>
   <field-description><![CDATA[Employee ID]]></field-description>
+  </field-definition>
+  <field-definition id="resume" type="richText" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Resume]]></field-label>
+  <field-description><![CDATA[Resume]]></field-description>
   </field-definition>
 <search-display-options-config>
   <category id="BasicData" name="BasicData">
@@ -555,22 +559,13 @@
     <picklist id="yesnomaybe"/>
   </data-field>
 </background-element>
-<sm-mapping field-id="middleName" map-to="mi" />
-<sm-mapping field-id="lastName" map-to="lastName" />
-<sm-mapping field-id="zip" map-to="zipCode" />
-<sm-mapping field-id="languages" map-to="languages" />
-<sm-mapping field-id="insideWorkExperience" map-to="insideWorkExperience" />
-<sm-mapping field-id="addressLine1" map-to="addressLine1" />
-<sm-mapping field-id="currentTitle" map-to="title" />
-<sm-mapping field-id="education" map-to="education" />
-<sm-mapping field-id="firstName" map-to="firstName" />
-<sm-mapping field-id="mobility" map-to="mobility" />
-<sm-mapping field-id="city" map-to="city" />
 <field-permission type="write">
   <role-name><![CDATA[Candidate]]></role-name>
   <country><![CDATA[*]]></country>
   <source><![CDATA[*]]></source>
   <field refid="*"/>
+  <field refid="addressLine1"/>
+  <field refid="resume"/>
   <bg-element refid="education" data-field-id="*"/>
   <bg-element refid="insideWorkExperience" data-field-id="*"/>
   <bg-element refid="languages" data-field-id="*"/>
@@ -578,10 +573,11 @@
   <bg-element refid="outsideWorkExperience" data-field-id="*"/>
 </field-permission>
 <field-permission type="read">
-  <role-name><![CDATA[Candidate]]></role-name>
+  <role-name><![CDATA[R]]></role-name>
   <country><![CDATA[*]]></country>
   <source><![CDATA[*]]></source>
   <field refid="*"/>
+  <field refid="addressLine1"/>
   <bg-element refid="education" data-field-id="*"/>
   <bg-element refid="insideWorkExperience" data-field-id="*"/>
   <bg-element refid="languages" data-field-id="*"/>
