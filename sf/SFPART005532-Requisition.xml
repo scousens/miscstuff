@@ -815,6 +815,12 @@
   <field-label lang="zh_CN"><![CDATA[?????]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
+
+  <field-definition id="instrScoutLink" type="instruction" required="false" header="false" custom="true">
+  <field-label mime-type="text-html" screenreader-text=""><![CDATA[Go to <a href="https://staging.talentpx.com/sf/login" target="_blank"><font face="Arial, Helvetica, sans-serif" color="blue">Scout</font></a> to post on Scout's Marketplace]]></field-label>
+  <field-description><![CDATA[Requisition]]></field-description>
+  </field-definition>
+
   <field-permission type="read">
     <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
     <role-name><![CDATA[J]]></role-name>
@@ -877,6 +883,7 @@
     <field refid="vpOfStaffingTeam"/>
     <field refid="secondRecruiterTeam"/>
     <field refid="vTeam"/>
+    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
@@ -940,6 +947,7 @@
     <field refid="vpOfStaffingTeam"/>
     <field refid="secondRecruiterTeam"/>
     <field refid="vTeam"/>
+    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
@@ -1003,6 +1011,7 @@
     <field refid="vpOfStaffingTeam"/>
     <field refid="secondRecruiterTeam"/>
     <field refid="vTeam"/>
+    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in pre-approved reqs]]></description>
@@ -1174,6 +1183,7 @@
     <field refid="bgiAccountId"/>
     <field refid="onboardingPackageId"/>
     <field refid="customassess"/>
+    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in approved reqs]]></description>
@@ -1240,6 +1250,7 @@
     <field refid="bgiAccountId"/>
     <field refid="onboardingPackageId"/>
     <field refid="customassess"/>
+    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in closed reqs]]></description>
@@ -1266,6 +1277,7 @@
     <field refid="listingLayout"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
+    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="write">
     <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in approved reqs]]></description>
@@ -1379,6 +1391,7 @@
     <field refid="bgiAccountId"/>
     <field refid="onboardingPackageId"/>
     <field refid="customassess"/>
+    <field refid="instrScoutLink"/>
   </field-permission>
   <field-permission type="write">
     <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in closed reqs]]></description>
