@@ -540,6 +540,40 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是，请说明亲属关系。]]></field-label>
   <field-description><![CDATA[If yes, what is the relationship]]></field-description>
   </field-definition>
+
+  <field-definition id="custRecruitmentSource" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruitment Source]]></field-label>
+  <field-description><![CDATA[Recruitment Source]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterNotes" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruiter Notes]]></field-label>
+  <field-description><![CDATA[Recruiter Notes]]></field-description>
+  </field-definition>
+  <field-definition id="custAgencyName" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Agency Name]]></field-label>
+  <field-description><![CDATA[Search Firm Agency Name]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterFeePercent" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Percent Fee]]></field-label>
+  <field-description><![CDATA[% Fee]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterFlatFee" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruiter Flat Fee]]></field-label>
+  <field-description><![CDATA[Recruiter Flat Fee]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterName" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Name]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Name]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterEmail" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Email]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Email]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterPhone" type="text" required="false" custom="true" public="true" readOnly="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Phone]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Phone]]></field-description>
+  </field-definition>
+
 <field-permission type="write">
   <description><![CDATA[Grant recruiter, sourcer and admin write access to the following fields]]></description>
   <role-name><![CDATA[S]]></role-name>
@@ -554,6 +588,14 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field refid="bkgrndChkAttachment"/>
   <field refid="assessmentStatus"/>
   <field refid="assessmentAttachment"/>
+  <field refid="custRecruitmentSource"/>
+  <field refid="custRecruiterNotes"/>
+  <field refid="custAgencyName"/>
+  <field refid="custRecruiterFeePercent"/>
+  <field refid="custRecruiterFlatFee"/>
+  <field refid="custRecruiterName"/>
+  <field refid="custRecruiterEmail"/>
+  <field refid="custRecruiterPhone"/>
 </field-permission>
 <field-permission type="read">
   <description><![CDATA[[Grant recruiter, sourcer and admin read access to the following fields]]></description>
