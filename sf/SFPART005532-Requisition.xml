@@ -1117,6 +1117,37 @@
     <field refid="division"/>
     <field refid="budgeted"/>
     <field refid="comments"/>
+
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="sourcerName"/>
+    <field refid="industry"/>
+    <field refid="city"/>
+    <field refid="stateProvince"/>
+    <field refid="postalcode"/>
+    <field refid="filter1"/>
+    <field refid="filter2"/>
+    <field refid="filter4"/>
+    <field refid="filter8"/>
+    <field refid="country"/>
+    <field refid="erpAmount"/>
+    <field refid="relocationPack"/>
+    <field refid="questions"/>
+    <field refid="competencies"/>
+    <field refid="costOfHire"/>
+    <field refid="offerExtensionDate"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="targetBonusAmount"/>
+    <field refid="options"/>
+    <field refid="stock"/>
+    <field refid="relocationPack"/>
+    <field refid="packageId"/>
+    <field refid="costCenterId"/>
+    <field refid="bgiAccountId"/>
+    <field refid="onboardingPackageId"/>
+    <field refid="customassess"/>
+
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in closed reqs]]></description>
