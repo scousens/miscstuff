@@ -295,7 +295,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[求职信：]]></field-label>
   <field-description><![CDATA[coverletter]]></field-description>
   </field-definition>
-  <field-definition id="resume" type="richText" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="resume" type="richText" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Resume: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Lebenslauf: ]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Resume:]]></field-label>
@@ -474,7 +474,7 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[背景调查附件： ]]></field-label>
   <field-description><![CDATA[Background Check Attachments]]></field-description>
   </field-definition>
-  <field-definition id="convicted" type="picklist" required="true" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="convicted" type="picklist" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Have you ever been convicted of a crime (for other than a traffic violation)?]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Wurden Sie jemals wegen einer Straftat verurteilt (mit Ausnahme von Verkehrsdelikten)?]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Have you ever been convicted of a crime (for other than a traffic violation)?]]></field-label>
@@ -501,7 +501,7 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是，请简要描述犯罪行为的性质、控诉日期、案件发生地所在国家和州以及案件情况]]></field-label>
   <field-description><![CDATA[If yes, please briefly describe the nature of the offense, the date of the charge, the county and state, and the status of the case]]></field-description>
   </field-definition>
-  <field-definition id="relativesEmployed" type="picklist" required="true" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="relativesEmployed" type="picklist" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[If yes, what department]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Haben Sie Verwandte, die bei der ACE Corporation arbeiten?]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Do you have relatives employed by ACE Corp?]]></field-label>
@@ -540,7 +540,6 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是，请说明亲属关系。]]></field-label>
   <field-description><![CDATA[If yes, what is the relationship]]></field-description>
   </field-definition>
-
   <field-definition id="custRecruitmentSource" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Recruitment Source: ]]></field-label>
   <field-description><![CDATA[Recruitment Source]]></field-description>
@@ -573,7 +572,6 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Phone: ]]></field-label>
   <field-description><![CDATA[Search Firm Recruiter Phone]]></field-description>
   </field-definition>
-  
 <field-permission type="write">
   <description><![CDATA[Grant recruiter, sourcer and admin write access to the following fields]]></description>
   <role-name><![CDATA[S]]></role-name>
