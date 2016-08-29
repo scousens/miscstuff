@@ -601,7 +601,13 @@ US applicants: In order for to comply with Federal and State legislation, we ask
 </field-permission>
 <field-permission type="read">
   <description><![CDATA[[Grant recruiter read access to the following fields]]></description>
+  <role-name><![CDATA[O]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
   <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[T]]></role-name>
+  <role-name><![CDATA[W]]></role-name>
+  <role-name><![CDATA[Q]]></role-name>
+  <role-name><![CDATA[V]]></role-name>
   <field refid="custRecruitmentSource"/>
   <field refid="custRecruiterNotes"/>
   <field refid="custAgencyName"/>
