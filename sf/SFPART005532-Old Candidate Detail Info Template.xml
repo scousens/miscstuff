@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE candidate-data-model PUBLIC "-//SuccessFactors, Inc.//DTD Candidate Data Model//EN" "candidate-data-model.dtd">
 <candidate-data-model spell-check="true">
- <template-name><![CDATA[Candidate Detail Info Template]]></template-name>
-  <template-desc><![CDATA[This defined candidate detail page.]]></template-desc>
+ <template-name><![CDATA[Old Candidate Detail Info Template]]></template-name>
+  <template-desc><![CDATA[Original Scout - This defined candidate detail page.]]></template-desc>
   <template-lastmodified>8/16/06 12:00 AM</template-lastmodified>
   <field-definition id="statusId" type="picklist" required="true" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Status: ]]></field-label>
@@ -540,35 +540,35 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是，请说明亲属关系。]]></field-label>
   <field-description><![CDATA[If yes, what is the relationship]]></field-description>
   </field-definition>
-  <field-definition id="scoutRecruitmentSource" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custRecruitmentSource" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Recruitment Source: ]]></field-label>
   <field-description><![CDATA[Recruitment Source]]></field-description>
   </field-definition>
-  <field-definition id="scoutRecruiterNotes" type="richText" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custRecruiterNotes" type="richText" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Recruiter Notes: ]]></field-label>
   <field-description><![CDATA[Recruiter Notes]]></field-description>
   </field-definition>
-  <field-definition id="scoutAgencyName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custAgencyName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Search Firm Agency Name: ]]></field-label>
   <field-description><![CDATA[Search Firm Agency Name]]></field-description>
   </field-definition>
-  <field-definition id="scoutRecruiterFeePercent" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custRecruiterFeePercent" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[% Fee: ]]></field-label>
   <field-description><![CDATA[% fee that the candidate was submitted (and accepted) at]]></field-description>
   </field-definition>
-  <field-definition id="scoutRecruiterFlatFee" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custRecruiterFlatFee" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Recruiter Flat Fee: ]]></field-label>
   <field-description><![CDATA[$ amount flat fee that the candidate was submitted (and accepted) at]]></field-description>
   </field-definition>
-  <field-definition id="scoutRecruiterName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custRecruiterName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Name: ]]></field-label>
   <field-description><![CDATA[Search Firm Recruiter Name]]></field-description>
   </field-definition>
-  <field-definition id="scoutRecruiterEmail" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custRecruiterEmail" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Email: ]]></field-label>
   <field-description><![CDATA[Search Firm Recruiter Email]]></field-description>
   </field-definition>
-  <field-definition id="scoutRecruiterPhone" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="custRecruiterPhone" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Phone: ]]></field-label>
   <field-description><![CDATA[Search Firm Recruiter Phone]]></field-description>
   </field-definition>
@@ -590,14 +590,14 @@ US applicants: In order for to comply with Federal and State legislation, we ask
 <field-permission type="write">
   <description><![CDATA[Grant sourcer write access to the following fields]]></description>
   <role-name><![CDATA[S]]></role-name>
-  <field refid="scoutRecruitmentSource"/>
-  <field refid="scoutRecruiterNotes"/>
-  <field refid="scoutAgencyName"/>
-  <field refid="scoutRecruiterFeePercent"/>
-  <field refid="scoutRecruiterFlatFee"/>
-  <field refid="scoutRecruiterName"/>
-  <field refid="scoutRecruiterEmail"/>
-  <field refid="scoutRecruiterPhone"/>
+  <field refid="custRecruitmentSource"/>
+  <field refid="custRecruiterNotes"/>
+  <field refid="custAgencyName"/>
+  <field refid="custRecruiterFeePercent"/>
+  <field refid="custRecruiterFlatFee"/>
+  <field refid="custRecruiterName"/>
+  <field refid="custRecruiterEmail"/>
+  <field refid="custRecruiterPhone"/>
 </field-permission>
 <field-permission type="read">
   <description><![CDATA[[Grant recruiter read access to the following fields]]></description>
@@ -608,14 +608,14 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <role-name><![CDATA[W]]></role-name>
   <role-name><![CDATA[Q]]></role-name>
   <role-name><![CDATA[V]]></role-name>
-  <field refid="scoutRecruitmentSource"/>
-  <field refid="scoutRecruiterNotes"/>
-  <field refid="scoutAgencyName"/>
-  <field refid="scoutRecruiterFeePercent"/>
-  <field refid="scoutRecruiterFlatFee"/>
-  <field refid="scoutRecruiterName"/>
-  <field refid="scoutRecruiterEmail"/>
-  <field refid="scoutRecruiterPhone"/>
+  <field refid="custRecruitmentSource"/>
+  <field refid="custRecruiterNotes"/>
+  <field refid="custAgencyName"/>
+  <field refid="custRecruiterFeePercent"/>
+  <field refid="custRecruiterFlatFee"/>
+  <field refid="custRecruiterName"/>
+  <field refid="custRecruiterEmail"/>
+  <field refid="custRecruiterPhone"/>
 </field-permission>
 <field-permission type="read">
   <description><![CDATA[[Grant recruiter, sourcer and admin read access to the following fields]]></description>
