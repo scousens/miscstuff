@@ -737,7 +737,7 @@
   <field-label lang="zh_CN"><![CDATA[?????????]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
-  <field-definition id="recruiterTeam" type="operatorTeam" required="false" custom="false">
+  <field-definition id="recruiterTeam" type="operatorTeam" required="false" custom="false" group-name="Recruiters">
   <field-label><![CDATA[Recruiter Operator Team]]></field-label>
   <field-label lang="de_DE"><![CDATA[Bearbeiterteam des Recruiters]]></field-label>
   <field-label lang="en_US"><![CDATA[Recruiter Operator Team]]></field-label>
