@@ -42,7 +42,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[姓氏：]]></field-label>
   <field-description><![CDATA[Last Name ]]></field-description>
   </field-definition>
-  <field-definition id="address" type="text" required="true" custom="false" anonymize="false">
+  <field-definition id="address" type="text" required="false" custom="false" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[Address: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Adresse:]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Address:]]></field-label>
@@ -82,7 +82,7 @@
   <field-description><![CDATA[State / Province]]></field-description>
     <picklist-id>state</picklist-id>
   </field-definition>
-  <field-definition id="zip" type="text" required="true" custom="false" anonymize="false">
+  <field-definition id="zip" type="text" required="false" custom="false" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[Zip / Postal Code: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Postleitzahl:]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Zip/Postal Code:]]></field-label>
