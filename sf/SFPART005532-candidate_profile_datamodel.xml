@@ -42,7 +42,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[姓氏：]]></field-label>
   <field-description><![CDATA[Last Name ]]></field-description>
   </field-definition>
-  <field-definition id="addressLine1" type="text" required="true" custom="true" anonymize="false">
+  <field-definition id="address" type="text" required="true" custom="false" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[Address: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Adresse:]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Address:]]></field-label>
@@ -564,7 +564,7 @@
   <country><![CDATA[*]]></country>
   <source><![CDATA[*]]></source>
   <field refid="*"/>
-  <field refid="addressLine1"/>
+  <field refid="address"/>
   <field refid="resume"/>
   <bg-element refid="education" data-field-id="*"/>
   <bg-element refid="insideWorkExperience" data-field-id="*"/>
@@ -577,7 +577,7 @@
   <country><![CDATA[*]]></country>
   <source><![CDATA[*]]></source>
   <field refid="*"/>
-  <field refid="addressLine1"/>
+  <field refid="address"/>
   <bg-element refid="education" data-field-id="*"/>
   <bg-element refid="insideWorkExperience" data-field-id="*"/>
   <bg-element refid="languages" data-field-id="*"/>

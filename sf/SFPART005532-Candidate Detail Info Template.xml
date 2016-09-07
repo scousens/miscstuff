@@ -162,7 +162,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[传真号]]></field-label>
   <field-description><![CDATA[Fax Number]]></field-description>
   </field-definition>
-  <field-definition id="addressLine1" type="text" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="address" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Street Address: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Straße und Hausnummer: ]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Street Address: ]]></field-label>
@@ -629,7 +629,7 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field refid="candidateName"/>
   <field refid="cellPhone"/>
   <field refid="homePhone"/>
-  <field refid="addressLine1"/>
+  <field refid="address"/>
   <field refid="city"/>
   <field refid="state"/>
   <field refid="zip"/>
@@ -657,7 +657,7 @@ US applicants: In order for to comply with Federal and State legislation, we ask
   <field refid="contactEmail"/>
   <field refid="cellPhone"/>
   <field refid="homePhone"/>
-  <field refid="addressLine1"/>
+  <field refid="address"/>
   <field refid="city"/>
   <field refid="state"/>
   <field refid="zip"/>
