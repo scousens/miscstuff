@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE candidate-data-model PUBLIC "-//SuccessFactors, Inc.//DTD Candidate Data Model//EN" "candidate-data-model.dtd">
+<candidate-data-model spell-check="true">
+ <template-name><![CDATA[Candidate Detail Info Template -- VP]]></template-name>
+  <template-desc><![CDATA[This defined candidate detail page (from Veritas Prime tenant.)]]></template-desc>
+  <template-lastmodified>8/16/06 12:00 AM</template-lastmodified>
+  <field-definition id="statusId" type="text" required="true" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Status: ]]></field-label>
+  <field-description><![CDATA[Status ]]></field-description>
+  </field-definition>
+  <field-definition id="comments" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Comments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE_SF"><![CDATA[Kommentare: ]]></field-label>
+  <field-description><![CDATA[Comments ]]></field-description>
+  </field-definition>
+  <field-definition id="custom_instr01" type="instruction" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-html"><![CDATA[<table frame="border" width="100%">
+   <tr><td style="background-color:#FFFFFF; color: #f4164e" valign="bottom"><b>Please ensure that you are providing all information when you apply as you won't be able to update this application later</b><br></td></tr></table>]]></field-label>
+  </field-definition>
+  <field-definition id="custom_instr1" type="instruction" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-html"><![CDATA[<table frame="border" width="100%">
+   <tr><td style="background-color:#999999; color: #FFFFFF" valign="bottom"><b>Personal Information</b><br></td></tr></table>]]></field-label>
+  </field-definition>
+  <field-definition id="firstName" type="text" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[First Name: ]]></field-label>
+  <field-description><![CDATA[First Name ]]></field-description>
+  </field-definition>
+  <field-definition id="middleName" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Middle Name: ]]></field-label>
+  <field-description><![CDATA[Middle Name ]]></field-description>
+  </field-definition>
+  <field-definition id="lastName" type="text" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Last Name: ]]></field-label>
+  <field-description><![CDATA[Last Name ]]></field-description>
+  </field-definition>
+  <field-definition id="contactEmail" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Email Address: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE_SF"><![CDATA[Email: ]]></field-label>
+  <field-description><![CDATA[email]]></field-description>
+  </field-definition>
+  <field-definition id="cellPhone" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Daytime Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE_SF"><![CDATA[Telefon tagsüber: ]]></field-label>
+  <field-description><![CDATA[day phone]]></field-description>
+  </field-definition>
+  <field-definition id="homePhone" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Evening Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE_SF"><![CDATA[Telefon abends: ]]></field-label>
+  <field-description><![CDATA[eve phone]]></field-description>
+  </field-definition>
+  <field-definition id="addressLine1" type="text" required="true" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Address Line 1]]></field-label>
+  <field-description><![CDATA[Address Line 1]]></field-description>
+  </field-definition>
+  <field-definition id="addressLine2" type="text" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Address Line 2]]></field-label>
+  <field-description><![CDATA[Address Line 2]]></field-description>
+  </field-definition>
+  <field-definition id="city" type="text" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[City]]></field-label>
+  <field-description><![CDATA[City]]></field-description>
+  </field-definition>
+  <field-definition id="state" type="picklist" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[State]]></field-label>
+  <field-description><![CDATA[State]]></field-description>
+    <picklist-id>state</picklist-id>
+  </field-definition>
+  <field-definition id="zip" type="text" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Postal Code]]></field-label>
+  <field-description><![CDATA[Postal Code]]></field-description>
+  </field-definition>
+  <field-definition id="country" type="picklist" required="true" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Country]]></field-label>
+  <field-description><![CDATA[Country]]></field-description>
+    <picklist-id>country</picklist-id>
+  </field-definition>
+  <field-definition id="custom_instr2" type="instruction" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-html"><![CDATA[<table frame="border" width="100%">
+   <tr><td style="background-color:#999999; color: #FFFFFF" valign="bottom"><b>Employment Information</b><br></td></tr></table>]]></field-label>
+  </field-definition>
+  <field-definition id="resume" type="richText" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Resume: ]]></field-label>
+  <field-description><![CDATA[resume]]></field-description>
+  </field-definition>
+  <field-definition id="coverLetter" type="richText" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Cover Letter: ]]></field-label>
+  <field-description><![CDATA[coverletter]]></field-description>
+  </field-definition>
+  <field-definition id="eeoInstruction2" type="instruction" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-html"><![CDATA[<table frame="border" width="100%">
+    <tr><td style="background-color:#999999; color: #FFFFFF" valign="bottom"><b> Diversity Information</b><br></td></tr></table>]]></field-label>
+  <field-label mime-type="text-html" lang="en_US"><![CDATA[<table frame="border" width="100%">
+    <tr><td style="background-color:#999999; color: #FFFFFF" valign="bottom"><b> Diversity Information</b><br></td></tr></table>]]></field-label>
+  </field-definition>
+  <field-definition id="eeoIsTheLawLink" type="instruction" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-html"><![CDATA[ <a href="http://www1.eeoc.gov/employers/upload/eeoc_self_print_poster.pdf" target="_blank"><font face="Arial, Helvetica, sans-serif" color="blue">EEO is the Law Poster</font></a>]]></field-label>
+  </field-definition>
+  <field-definition id="eeoInstruction" type="instruction" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-html"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">
+US applicants: To help us comply with government regulations and recordkeeping guidelines, we would appreciate you completing the Self-Disclosure/EEO Identification information.  This information is confidential, it will be kept separately from your application and will not affect our consideration of your application. Disclosure of the requested information is voluntary.
+  </font></p>]]></field-label>
+  </field-definition>
+  <field-definition id="ethnicity" type="text" required="true" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Ethnicity]]></field-label>
+  <field-description><![CDATA[Ethnicity]]></field-description>
+  </field-definition>
+  <field-definition id="gender" type="picklist" required="true" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Gender]]></field-label>
+  <field-description><![CDATA[Gender]]></field-description>
+    <picklist-id>gender</picklist-id>
+  </field-definition>
+  <field-definition id="veteranStatus" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Veteran Status: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE_SF"><![CDATA[Veteran Status ]]></field-label>
+  <field-description><![CDATA[]]></field-description>
+  </field-definition>
+  <field-definition id="headerEEODisability" type="instruction" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-html"><![CDATA[<p><br><strong><font size="3" face="Arial, Helvetica, sans-serif">U.S. – Voluntary Self-Identification of Disability (Form CC-305 / OMB Control Number 1250-0005 / Expires: 1/31/2017)</font></strong></p>]]></field-label>
+  <field-description><![CDATA[U.S. – Voluntary Self-Identification of Disability (Form CC-305 / OMB Control Number 1250-0005/ Expires: 1/31/2017)]]></field-description>
+  </field-definition>
+  <field-definition id="disabilityStatus" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Disabled Veteran: ]]></field-label>
+  <field-description><![CDATA[]]></field-description>
+  </field-definition>
+  <field-definition id="questionResponse" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Question Responses: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE_SF"><![CDATA[Ausschreibungsfragen: ]]></field-label>
+  <field-description><![CDATA[questionresponse]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruitmentSource" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruitment Source: ]]></field-label>
+  <field-description><![CDATA[Recruitment Source]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterNotes" type="richText" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruiter Notes: ]]></field-label>
+  <field-description><![CDATA[Recruiter Notes]]></field-description>
+  </field-definition>
+  <field-definition id="custAgencyName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Agency Name: ]]></field-label>
+  <field-description><![CDATA[Search Firm Agency Name]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterFeePercent" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[% Fee: ]]></field-label>
+  <field-description><![CDATA[% fee that the candidate was submitted (and accepted) at]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterFlatFee" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruiter Flat Fee: ]]></field-label>
+  <field-description><![CDATA[$ amount flat fee that the candidate was submitted (and accepted) at]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Name: ]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Name]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterEmail" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Email: ]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Email]]></field-description>
+  </field-definition>
+  <field-definition id="custRecruiterPhone" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Phone: ]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Phone]]></field-description>
+  </field-definition>
+<field-permission type="write">
+  <description><![CDATA[Grant recruiter, sourcer and admin write access to the following fields]]></description>
+  <role-name><![CDATA[S]]></role-name>
+  <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[T]]></role-name>
+  <role-name><![CDATA[O]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <field refid="statusId"/>
+  <field refid="comments"/>
+</field-permission>
+<field-permission type="read">
+  <description><![CDATA[[Grant recruiter, sourcer and admin read access to the following fields]]></description>
+  <role-name><![CDATA[R]]></role-name>
+  <field refid="firstName"/>
+  <field refid="middleName"/>
+  <field refid="lastName"/>
+  <field refid="contactEmail"/>
+  <field refid="cellPhone"/>
+  <field refid="homePhone"/>
+  <field refid="addressLine1"/>
+  <field refid="addressLine2"/>
+  <field refid="city"/>
+  <field refid="state"/>
+  <field refid="zip"/>
+  <field refid="country"/>
+  <field refid="custom_instr2"/>
+  <field refid="resume"/>
+  <field refid="coverLetter"/>
+  <field refid="eeoInstruction2"/>
+  <field refid="eeoIsTheLawLink"/>
+  <field refid="eeoInstruction"/>
+  <field refid="gender"/>
+  <field refid="ethnicity"/>
+  <field refid="veteranStatus"/>
+  <field refid="headerEEODisability"/>
+  <field refid="disabilityStatus"/>
+  <field refid="custRecruitmentSource"/>
+  <field refid="custRecruiterNotes"/>
+  <field refid="custAgencyName"/>
+  <field refid="custRecruiterFeePercent"/>
+  <field refid="custRecruiterFlatFee"/>
+  <field refid="custRecruiterName"/>
+  <field refid="custRecruiterEmail"/>
+  <field refid="custRecruiterPhone"/>
+</field-permission>
+<field-permission type="read">
+  <description><![CDATA[Grant hiring manager and 2nd level manager read access to the following fields]]></description>
+  <role-name><![CDATA[G]]></role-name>
+  <role-name><![CDATA[GM]]></role-name>
+  <role-name><![CDATA[T]]></role-name>
+  <field refid="statusId"/>
+  <field refid="questionResponse"/>
+  <field refid="custom_instr1"/>
+  <field refid="firstName"/>
+  <field refid="middleName"/>
+  <field refid="lastName"/>
+  <field refid="contactEmail"/>
+  <field refid="cellPhone"/>
+  <field refid="homePhone"/>
+  <field refid="addressLine1"/>
+  <field refid="addressLine2"/>
+  <field refid="city"/>
+  <field refid="state"/>
+  <field refid="zip"/>
+  <field refid="country"/>
+  <field refid="custom_instr2"/>
+  <field refid="resume"/>
+  <field refid="coverLetter"/>
+</field-permission>
+<field-permission type="write">
+  <description><![CDATA[Grant originator, hiring manager, and hiring manager's manager write access to the following fields]]></description>
+  <role-name><![CDATA[O]]></role-name>
+  <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <role-name><![CDATA[GM]]></role-name>
+  <field refid="comments"/>
+</field-permission>
+<field-permission type="write">
+  <description><![CDATA[Grant originator, hiring manager, and hiring manager's manager write access to the following fields]]></description>
+  <role-name><![CDATA[S]]></role-name>
+  <field refid="custRecruitmentSource"/>
+  <field refid="custRecruiterNotes"/>
+  <field refid="custAgencyName"/>
+  <field refid="custRecruiterFeePercent"/>
+  <field refid="custRecruiterFlatFee"/>
+  <field refid="custRecruiterName"/>
+  <field refid="custRecruiterEmail"/>
+  <field refid="custRecruiterPhone"/>
+</field-permission>
+<field-permission type="external-view">
+  <description><![CDATA[Grant operators (of the Job Req that is displayed in Applicant Profile) permission to view the following fields of the selected Job Req via the Jobs Applied portlet]]></description>
+  <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <field refid="comments"/>
+</field-permission>
+<field-attr-override>
+  <override>
+    <description><![CDATA[For US External applicants only.]]></description>
+    <country><![CDATA[US]]></country>
+    <field-attr attribute="public" value="true" applicant="external"/>
+  </override>
+  <field refid="eeoInstruction"/>
+  <field refid="headerEEODisability"/>
+  <field refid="veteranStatus"/>
+  <field refid="gender"/>
+  <field refid="disabilityStatus"/>
+  <field refid="ethnicity"/>
+  <field refid="eeoInstruction2"/>
+</field-attr-override>
+  <button-permission>
+    <role-name><![CDATA[R]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <button-id><![CDATA[Save]]></button-id>
+    <button-id><![CDATA[Cancel]]></button-id>
+    <button-id><![CDATA[Forward]]></button-id>
+    <button-id><![CDATA[Close]]></button-id>
+    <button-id><![CDATA[Reopen]]></button-id>
+  </button-permission>
+<candidate-summary-display-options-config>
+  <category id="ContactDetails" name="ContactDetails">
+    <label xml:lang="en_US"><![CDATA[Candidate Contact and Application Data]]></label>
+    <column field-ref="cellPhone" select-by-default="true" gridOrder="1">
+    </column>
+    <column field-ref="contactEmail" select-by-default="true" gridOrder="2">
+    </column>
+    <column field-ref="country" select-by-default="false" gridOrder="3">
+    </column>
+  </category>
+</candidate-summary-display-options-config>
+</candidate-data-model>

@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE job-req-template PUBLIC "-//SuccessFactors, Inc.//DTD Job Requisition Template//EN" "job-req-template.dtd">
+<job-req-template type="jobReq" spell-check="true" min-posting-days="0" min-internal-lead-days="0">
+ <template-name><![CDATA[Simple Job Requisition]]></template-name>
+ <template-name lang="en_US"><![CDATA[Simple Job Requisition]]></template-name>
+  <template-desc><![CDATA[]]></template-desc>
+  <template-lastmodified>2/14/13 12:00 AM</template-lastmodified>
+  <default-listing-layout-id><![CDATA[2]]></default-listing-layout-id>
+  <field-definition id="instrInformation" type="instruction" required="false" header="false" custom="true">
+  <field-label mime-type="text-html" screenreader-text=""><![CDATA[Requisition]]></field-label>
+  <field-label mime-type="text-html" lang="en_US" screenreader-text=""><![CDATA[<b><font color="blue">Requisition</font></b>]]></field-label>
+  <field-description><![CDATA[Requisition]]></field-description>
+  <field-description lang="en_US"><![CDATA[Requisition]]></field-description>
+  </field-definition>
+  <field-definition id="id" type="text" required="false" custom="false">
+  <field-label><![CDATA[Position Id]]></field-label>
+  <field-label lang="en_US"><![CDATA[Position Id]]></field-label>
+  <field-description><![CDATA[Position Id]]></field-description>
+  <field-description lang="en_US"><![CDATA[Position Id]]></field-description>
+  </field-definition>
+  <field-definition id="status" type="picklist" required="true" custom="false">
+  <field-label><![CDATA[Status]]></field-label>
+  <field-label lang="en_US"><![CDATA[Status]]></field-label>
+  <field-description><![CDATA[For reporting purposes only.]]></field-description>
+  <field-description lang="en_US"><![CDATA[For reporting purposes only.]]></field-description>
+    <picklist-id>status</picklist-id>
+  </field-definition>
+  <field-definition id="numberOpenings" type="number" required="false" custom="false">
+  <field-label><![CDATA[Number of Openings]]></field-label>
+  <field-label lang="en_US"><![CDATA[Number of Openings]]></field-label>
+  <field-description><![CDATA[Number of Openings]]></field-description>
+  <field-description lang="en_US"><![CDATA[Number of Openings]]></field-description>
+  </field-definition>
+  <field-definition id="jobCode" type="text" required="true" custom="false">
+  <field-label><![CDATA[Existing Job Code]]></field-label>
+  <field-label lang="en_US"><![CDATA[Existing Job Code]]></field-label>
+  <field-description><![CDATA[Existing Job Code]]></field-description>
+  <field-description lang="en_US"><![CDATA[Existing Job Code]]></field-description>
+  </field-definition>
+  <field-definition id="jobRole" type="jobRole" required="false" custom="false">
+  <field-label><![CDATA[Role for the current Job]]></field-label>
+  <field-description><![CDATA[Role for the current Job]]></field-description>
+  </field-definition>
+  <field-definition id="division" type="enum" required="true" custom="false">
+  <field-label><![CDATA[Division]]></field-label>
+  <field-label lang="en_US"><![CDATA[Division]]></field-label>
+  </field-definition>
+  <field-definition id="department" type="enum" required="true" custom="false">
+  <field-label><![CDATA[Region/Department]]></field-label>
+  <field-label lang="en_US"><![CDATA[Region/Department]]></field-label>
+  </field-definition>
+  <field-definition id="location" type="enum" required="true" custom="false">
+  <field-label><![CDATA[Work Location]]></field-label>
+  <field-description><![CDATA[Work Location]]></field-description>
+  </field-definition>
+  <field-definition id="country" type="derived" required="true" custom="false">
+  <field-label><![CDATA[country]]></field-label>
+  <field-description><![CDATA[country]]></field-description>
+  </field-definition>
+  <field-definition id="stateProvince" type="derived" required="true" custom="false">
+  <field-label><![CDATA[State]]></field-label>
+  <field-description><![CDATA[State]]></field-description>
+  </field-definition>
+  <field-definition id="city" type="text" required="true" custom="false">
+  <field-label><![CDATA[City]]></field-label>
+  <field-description><![CDATA[City]]></field-description>
+  </field-definition>
+  <field-definition id="postalcode" type="text" required="true" custom="false">
+  <field-label><![CDATA[Zip Code]]></field-label>
+  <field-description><![CDATA[Zip Code]]></field-description>
+  </field-definition>
+  <field-definition id="costCenterId" type="picklist" required="false" custom="false">
+  <field-label mime-type="text-plain"><![CDATA[Cost Center]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Cost Center]]></field-label>
+    <picklist-id>CostCenter</picklist-id>
+  </field-definition>
+  <field-definition id="jobGrade" type="picklist" required="false" custom="false">
+  <field-label><![CDATA[Job Grade]]></field-label>
+    <picklist-id>jobGrade</picklist-id>
+  </field-definition>
+  <field-definition id="requiredTravel" type="picklist" required="true" custom="false">
+  <field-label><![CDATA[Travel Required]]></field-label>
+  <field-label lang="en_US"><![CDATA[Travel Required]]></field-label>
+    <picklist-id>travelPercent</picklist-id>
+  </field-definition>
+  <field-definition id="eeoJobCat" type="picklist" required="true" custom="false">
+  <field-label><![CDATA[EEO Job Category]]></field-label>
+    <picklist-id>eeoJobCat</picklist-id>
+  </field-definition>
+  <field-definition id="erpAmount" type="currency" required="true" custom="false">
+  <field-label><![CDATA[Employee Referral Amount]]></field-label>
+  <field-label lang="en_US"><![CDATA[Employee Referral Amount]]></field-label>
+  </field-definition>
+  <field-definition id="currency" type="enum" required="true" custom="false">
+  <field-label><![CDATA[Currency]]></field-label>
+  <field-description><![CDATA[Currency]]></field-description>
+    <enum-value value="USD">
+   <enum-label lang="en_US"><![CDATA[USD]]></enum-label>
+    </enum-value>
+    <enum-value value="CAD">
+   <enum-label lang="en_US"><![CDATA[CAD]]></enum-label>
+    </enum-value>
+  </field-definition>
+  <field-definition id="salaryBase" type="currency" required="false" custom="false">
+  <field-label><![CDATA[Salary]]></field-label>
+  </field-definition>
+  <field-definition id="questions" type="questions" required="false" custom="false">
+  <field-label><![CDATA[Questions]]></field-label>
+  <field-label lang="en_US"><![CDATA[Questions]]></field-label>
+  <field-description><![CDATA[These are screening questions required for job candidates]]></field-description>
+  <field-description lang="en_US"><![CDATA[These are screening questions required for job candidates]]></field-description>
+  </field-definition>
+  <field-definition id="interviewGuide" type="multiattachment" required="false" custom="false">
+  <field-label><![CDATA[Interview Attachments]]></field-label>
+  <field-label lang="en_US"><![CDATA[Interview Attachments]]></field-label>
+  </field-definition>
+  <field-definition id="title" type="text" required="true" custom="false">
+  <field-label><![CDATA[Job Title]]></field-label>
+  <field-label lang="en_US"><![CDATA[Job Title]]></field-label>
+  <field-description><![CDATA[Job Title]]></field-description>
+  <field-description lang="en_US"><![CDATA[Job Title]]></field-description>
+  </field-definition>
+  <field-definition id="extTitle" type="text" required="true" custom="false">
+  <field-label><![CDATA[Public title]]></field-label>
+  <field-label lang="en_US"><![CDATA[Public title]]></field-label>
+  <field-description><![CDATA[Public title]]></field-description>
+  <field-description lang="en_US"><![CDATA[Public title]]></field-description>
+  </field-definition>
+  <field-definition id="intJobDescHeader" type="richText" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[Internal Header]]></field-label>
+  <field-description lang="en_US"><![CDATA[Internal Header]]></field-description>
+  </field-definition>
+  <field-definition id="extJobDescHeader" type="richText" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[External Header]]></field-label>
+  <field-description lang="en_US"><![CDATA[External Header]]></field-description>
+  </field-definition>
+  <field-definition id="listingLayout" type="richText" required="false" custom="false">
+  <field-label><![CDATA[Internal Description]]></field-label>
+  <field-label lang="en_US"><![CDATA[Internal Description]]></field-label>
+  <field-description><![CDATA[Internal Description]]></field-description>
+  <field-description lang="en_US"><![CDATA[Internal Description]]></field-description>
+  </field-definition>
+  <field-definition id="extListingLayout" type="richText" required="false" custom="false">
+  <field-label><![CDATA[External Description]]></field-label>
+  <field-label lang="en_US"><![CDATA[External Description]]></field-label>
+  <field-description lang="en_US"><![CDATA[External Description]]></field-description>
+  </field-definition>
+  <field-definition id="intJobDescFooter" type="richText" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[Internal Footer]]></field-label>
+  <field-description lang="en_US"><![CDATA[Internal Footer]]></field-description>
+  </field-definition>
+  <field-definition id="extJobDescFooter" type="richText" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[External Footer]]></field-label>
+  <field-description lang="en_US"><![CDATA[External Footer]]></field-description>
+  </field-definition>
+  <field-definition id="hiringManagerName" type="operator" required="true" custom="false" group-name="Hiring Managers">
+  <field-label><![CDATA[Hiring Manager]]></field-label>
+  <field-label lang="en_US"><![CDATA[Hiring Manager]]></field-label>
+  <field-description><![CDATA[Hiring Manager]]></field-description>
+  <field-description lang="en_US"><![CDATA[Hiring Manager]]></field-description>
+  </field-definition>
+  <field-definition id="recruiterName" type="operator" required="true" custom="false" group-name="Recruiters">
+  <field-label><![CDATA[Recruiter]]></field-label>
+  <field-label lang="en_US"><![CDATA[Recruiter]]></field-label>
+  <field-description><![CDATA[This is the recruiter]]></field-description>
+  <field-description lang="en_US"><![CDATA[This is the recruiter]]></field-description>
+  </field-definition>
+  <field-definition id="recruiterTeam" type="operatorTeam" required="false" custom="false">
+  <field-label><![CDATA[Recruiter Team]]></field-label>
+  <field-description><![CDATA[Recruiter Team]]></field-description>
+  </field-definition>
+  <field-definition id="coordinatorName" type="operator" required="false" custom="false" group-name="HR Business Partner">
+  <field-label><![CDATA[HR Business Partner]]></field-label>
+  <field-description><![CDATA[HR Business Partner]]></field-description>
+  </field-definition>
+  <field-definition id="vpOfStaffingName" type="operator" required="false" custom="false" group-name="Recruiting Admin">
+  <field-label><![CDATA[Recruiting Admin]]></field-label>
+  <field-description><![CDATA[Recruiting Admin]]></field-description>
+  </field-definition>
+  <field-definition id="intranetPosting" type="bool" required="false" custom="false">
+  <field-label><![CDATA[Internal Posting]]></field-label>
+  <field-label lang="en_US"><![CDATA[Internal Posting]]></field-label>
+  <field-description><![CDATA[Internal Posting]]></field-description>
+  <field-description lang="en_US"><![CDATA[Internal Posting]]></field-description>
+  </field-definition>
+  <field-definition id="instrScoutLink" type="instruction" required="false" header="false" custom="true">
+  <field-label mime-type="text-html" screenreader-text=""><![CDATA[Go to <a href="https://sftest.talentpx.com/sf/login" target="_blank"><font face="Arial, Helvetica, sans-serif" color="blue">Scout</font></a> to post on Scout's Marketplace]]></field-label>
+  <field-description><![CDATA[Requisition]]></field-description>
+  <field-description lang="en_US"><![CDATA[Requisition]]></field-description>
+  </field-definition>
+  <field-definition id="corporatePosting" type="bool" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[External Posting]]></field-label>
+  <field-description lang="en_US"><![CDATA[External Posting]]></field-description>
+  </field-definition>
+  <field-definition id="agencyPosting" type="bool" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[Agency Posting]]></field-label>
+  <field-description lang="en_US"><![CDATA[Agency Posting]]></field-description>
+  </field-definition>
+  <field-definition id="intranetPrivatePosting" type="bool" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[Internal Private Posting]]></field-label>
+  <field-description lang="en_US"><![CDATA[Internal Private Posting]]></field-description>
+  </field-definition>
+  <field-definition id="externalPrivatePosting" type="bool" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[External Private Posting]]></field-label>
+  <field-description lang="en_US"><![CDATA[External Private Posting]]></field-description>
+  </field-definition>
+  <field-definition id="start" type="date" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[Start]]></field-label>
+  <field-description lang="en_US"><![CDATA[Start Date]]></field-description>
+  </field-definition>
+  <field-definition id="end" type="date" required="false" custom="false">
+  <field-label lang="en_US"><![CDATA[End]]></field-label>
+  <field-description lang="en_US"><![CDATA[End Date]]></field-description>
+  </field-definition>
+  <field-permission type="read">
+    <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
+    <role-name><![CDATA[J]]></role-name>
+    <status><![CDATA[pre-approved]]></status>
+    <field refid="instrInformation"/>
+    <field refid="id"/>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="intranetPosting"/>
+    <field refid="instrScoutLink"/>
+    <field refid="corporatePosting"/>
+    <field refid="agencyPosting"/>
+    <field refid="intranetPrivatePosting"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="start"/>
+    <field refid="end"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
+    <role-name><![CDATA[J]]></role-name>
+    <status><![CDATA[approved]]></status>
+    <field refid="instrInformation"/>
+    <field refid="id"/>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="intranetPosting"/>
+    <field refid="instrScoutLink"/>
+    <field refid="corporatePosting"/>
+    <field refid="agencyPosting"/>
+    <field refid="intranetPrivatePosting"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="start"/>
+    <field refid="end"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[(Auto Generated) Super User Default Read Access]]></description>
+    <role-name><![CDATA[J]]></role-name>
+    <status><![CDATA[closed]]></status>
+    <field refid="instrInformation"/>
+    <field refid="id"/>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="intranetPosting"/>
+    <field refid="instrScoutLink"/>
+    <field refid="corporatePosting"/>
+    <field refid="agencyPosting"/>
+    <field refid="intranetPrivatePosting"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="start"/>
+    <field refid="end"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[The following roles can read these fields in pre-approved reqs]]></description>
+    <role-name><![CDATA[S]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <role-name><![CDATA[V]]></role-name>
+    <role-name><![CDATA[W]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[OM]]></role-name>
+    <role-name><![CDATA[GM]]></role-name>
+    <role-name><![CDATA[OM+]]></role-name>
+    <role-name><![CDATA[GM+]]></role-name>
+    <status><![CDATA[pre-approved]]></status>
+    <field refid="id"/>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[The following roles can write these fields in pre-approved reqs]]></description>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[Q]]></role-name>
+    <role-name><![CDATA[R]]></role-name>
+    <status><![CDATA[pre-approved]]></status>
+    <field refid="id"/>
+  </field-permission>
+  <field-permission type="write">
+    <description><![CDATA[The following roles can write these fields in pre-approved reqs]]></description>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[Q]]></role-name>
+    <role-name><![CDATA[R]]></role-name>
+    <status><![CDATA[pre-approved]]></status>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[The following roles can read these fields in approved reqs]]></description>
+    <role-name><![CDATA[S]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <role-name><![CDATA[V]]></role-name>
+    <role-name><![CDATA[W]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[OM]]></role-name>
+    <role-name><![CDATA[GM]]></role-name>
+    <role-name><![CDATA[OM+]]></role-name>
+    <role-name><![CDATA[GM+]]></role-name>
+    <status><![CDATA[approved]]></status>
+    <field refid="id"/>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="intranetPosting"/>
+    <field refid="corporatePosting"/>
+    <field refid="agencyPosting"/>
+    <field refid="intranetPrivatePosting"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="start"/>
+    <field refid="end"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[The following roles can write these fields in pre-approved reqs]]></description>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[Q]]></role-name>
+    <role-name><![CDATA[R]]></role-name>
+    <status><![CDATA[approved]]></status>
+    <field refid="id"/>
+  </field-permission>
+  <field-permission type="write">
+    <description><![CDATA[The following roles can write these fields in pre-approved reqs]]></description>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[Q]]></role-name>
+    <role-name><![CDATA[R]]></role-name>
+    <status><![CDATA[approved]]></status>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="intranetPosting"/>
+    <field refid="corporatePosting"/>
+    <field refid="agencyPosting"/>
+    <field refid="intranetPrivatePosting"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="start"/>
+    <field refid="end"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+  <field-permission type="read">
+    <description><![CDATA[The following roles can read these fields in closed reqs]]></description>
+    <role-name><![CDATA[S]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <role-name><![CDATA[V]]></role-name>
+    <role-name><![CDATA[W]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[OM]]></role-name>
+    <role-name><![CDATA[GM]]></role-name>
+    <role-name><![CDATA[OM+]]></role-name>
+    <role-name><![CDATA[GM+]]></role-name>
+    <role-name><![CDATA[O]]></role-name>
+    <role-name><![CDATA[Q]]></role-name>
+    <role-name><![CDATA[R]]></role-name>
+    <status><![CDATA[closed]]></status>
+    <field refid="id"/>
+    <field refid="status"/>
+    <field refid="numberOpenings"/>
+    <field refid="jobCode"/>
+    <field refid="jobRole"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="country"/>
+    <field refid="stateProvince"/>
+    <field refid="city"/>
+    <field refid="postalcode"/>
+    <field refid="costCenterId"/>
+    <field refid="jobGrade"/>
+    <field refid="requiredTravel"/>
+    <field refid="eeoJobCat"/>
+    <field refid="erpAmount"/>
+    <field refid="currency"/>
+    <field refid="salaryBase"/>
+    <field refid="questions"/>
+    <field refid="interviewGuide"/>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="extListingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="hiringManagerName"/>
+    <field refid="recruiterName"/>
+    <field refid="recruiterTeam"/>
+    <field refid="coordinatorName"/>
+    <field refid="vpOfStaffingName"/>
+    <field refid="intranetPosting"/>
+    <field refid="corporatePosting"/>
+    <field refid="agencyPosting"/>
+    <field refid="intranetPrivatePosting"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="start"/>
+    <field refid="end"/>
+    <field refid="externalPrivatePosting"/>
+    <field refid="instrScoutLink"/>
+  </field-permission>
+  <button-permission>
+    <description><![CDATA[Who is allowed to close and re-open the requisition ]]></description>
+    <role-name><![CDATA[Q]]></role-name>
+    <role-name><![CDATA[R]]></role-name>
+    <button-id><![CDATA[closeReq]]></button-id>
+    <button-id><![CDATA[reopenReq]]></button-id>
+  </button-permission>
+ <job-req-section-name><![CDATA[Job Requisition]]></job-req-section-name>
+  <listing-fields>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="status"/>
+    <field refid="requiredTravel"/>
+    <field refid="recruiterName"/>
+    <field refid="coordinatorName"/>
+    <field refid="numberOpenings"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="extListingLayout"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="intranetPosting"/>
+</listing-fields>
+<mobile-fields>
+    <field refid="title"/>
+    <field refid="extTitle"/>
+    <field refid="division"/>
+    <field refid="department"/>
+    <field refid="location"/>
+    <field refid="status"/>
+    <field refid="requiredTravel"/>
+    <field refid="recruiterName"/>
+    <field refid="coordinatorName"/>
+    <field refid="numberOpenings"/>
+    <field refid="intJobDescHeader"/>
+    <field refid="listingLayout"/>
+    <field refid="intJobDescFooter"/>
+    <field refid="extJobDescHeader"/>
+    <field refid="extListingLayout"/>
+    <field refid="extJobDescFooter"/>
+    <field refid="intranetPosting"/>
+</mobile-fields>
+  <application-status-config>
+    <application-status-set name="Standard"/>
+    <feature-permission type="offerApproval">
+      <description><![CDATA[Users can access the Offer Approval button]]></description>
+      <role-name><![CDATA[R]]></role-name>
+      <role-name><![CDATA[T]]></role-name>
+      <role-name><![CDATA[S]]></role-name>
+      <role-name><![CDATA[Q]]></role-name>
+      <role-name><![CDATA[G]]></role-name>
+      <status><![CDATA[Offer Approval]]></status>
+    </feature-permission>
+    <feature-permission type="offerLetter">
+      <description><![CDATA[The following roles can launch offer letters during specified status]]></description>
+      <role-name><![CDATA[O]]></role-name>
+      <role-name><![CDATA[R]]></role-name>
+      <role-name><![CDATA[G]]></role-name>
+      <status><![CDATA[Offer Extended]]></status>
+    </feature-permission>
+  </application-status-config>
+  <application-template-name name="Candidate Detail Info Template"/>
+</job-req-template>
