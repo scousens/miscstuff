@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE job-req-template PUBLIC "-//SuccessFactors, Inc.//DTD Job Requisition Template//EN" "job-req-template.dtd">
 <job-req-template type="jobReq" spell-check="true" min-posting-days="14" min-internal-lead-days="0">
- <template-name><![CDATA[Requisition Template]]></template-name>
- <template-name lang="en_US"><![CDATA[Requisition_Template]]></template-name>
-  <template-desc><![CDATA[]]></template-desc>
-  <template-lastmodified>3/5/06 12:00 AM</template-lastmodified>
+ <template-name><![CDATA[Requisition_Template]]></template-name>
+  <template-desc><![CDATA[Template]]></template-desc>
+  <template-lastmodified>9/14/16 12:00 AM</template-lastmodified>
   <default-listing-layout-id><![CDATA[2]]></default-listing-layout-id>
   <field-definition id="cust-intro-req" type="instruction" required="false" header="false" custom="true">
   <field-label mime-type="text-html" screenreader-text=""><![CDATA[<table frame="border" width="100%">
@@ -415,8 +414,6 @@
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="location"/>
     <field refid="division"/>
     <field refid="comments"/>
@@ -447,8 +444,6 @@
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="location"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
@@ -498,8 +493,6 @@
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="location"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
@@ -539,8 +532,6 @@
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="listingLayout"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
@@ -554,7 +545,6 @@
     <role-name><![CDATA[G]]></role-name>
     <role-name><![CDATA[GM]]></role-name>
     <role-name><![CDATA[J]]></role-name>
-    <role-name><![CDATA[G]]></role-name>
     <status><![CDATA[approved]]></status>
     <field refid="status"/>
     <field refid="hiringManagerName"/>
@@ -569,8 +559,6 @@
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="listingLayout"/>
     <field refid="extListingLayout"/>
     <field refid="numberOpenings"/>
@@ -621,8 +609,6 @@
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="location"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
@@ -658,8 +644,6 @@
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
     <field refid="currency"/>
