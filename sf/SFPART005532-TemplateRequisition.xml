@@ -2,21 +2,9 @@
 <!DOCTYPE job-req-template PUBLIC "-//SuccessFactors, Inc.//DTD Job Requisition Template//EN" "job-req-template.dtd">
 <job-req-template type="jobReq" spell-check="true" min-posting-days="14" min-internal-lead-days="0">
  <template-name><![CDATA[Requisition Template]]></template-name>
- <template-name lang="en_US"><![CDATA[Requisition Template]]></template-name>
+ <template-name lang="en_US"><![CDATA[Requisition_Template]]></template-name>
   <template-desc><![CDATA[]]></template-desc>
   <template-lastmodified>3/5/06 12:00 AM</template-lastmodified>
-  <supported-languages>
-    <lang><![CDATA[en_US]]></lang>
-    <lang><![CDATA[fr_CA]]></lang>
-    <lang><![CDATA[en_GB]]></lang>
-    <lang><![CDATA[de_DE]]></lang>
-    <lang><![CDATA[ja_JP]]></lang>
-    <lang><![CDATA[ko_KR]]></lang>
-    <lang><![CDATA[nl_NL]]></lang>
-    <lang><![CDATA[pt_BR]]></lang>
-    <lang><![CDATA[es_ES]]></lang>
-    <lang><![CDATA[zh_CN]]></lang>
-  </supported-languages>
   <default-listing-layout-id><![CDATA[2]]></default-listing-layout-id>
   <field-definition id="cust-intro-req" type="instruction" required="false" header="false" custom="true">
   <field-label mime-type="text-html" screenreader-text=""><![CDATA[<table frame="border" width="100%">
@@ -25,74 +13,32 @@
 <li>All fields marked with <span class="required" title="Required">*</span> are mandatory.<br> 
 <li>Please contact your HR team for help and guidance.]]></field-label>
   </field-definition>
-  <field-definition id="jobPostLanguage" type="text" required="false" custom="false">
-  <field-label><![CDATA[Post Job in Language(s)]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Sprachen Veröffentlichung]]></field-label>
-  </field-definition>
-  <field-definition id="defaultLanguage" type="text" required="true" custom="false">
-  <field-label><![CDATA[Default Language]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Standardsprache]]></field-label>
-  <field-description><![CDATA[Default Language]]></field-description>
-    <default-value>en_US</default-value>
-  </field-definition>
   <field-definition id="title" type="text" required="true" custom="false">
   <field-label><![CDATA[Job Title]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Job Titel]]></field-label>
   <field-description><![CDATA[Position Title]]></field-description>
   </field-definition>
   <field-definition id="extTitle" type="text" required="true" custom="false">
   <field-label><![CDATA[External Job Title]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Externer Job Titel]]></field-label>
   <field-description><![CDATA[External Position Title]]></field-description>
   </field-definition>
   <field-definition id="jobCode" type="text" required="true" custom="false">
   <field-label><![CDATA[jobCode]]></field-label>
   <field-description><![CDATA[Job Code]]></field-description>
   </field-definition>
-  <field-definition id="customString9" type="jobCode" required="true" custom="false">
-  <field-label><![CDATA[Pay Grade]]></field-label>
-  <field-description><![CDATA[Job Grade]]></field-description>
-  </field-definition>
-  <field-definition id="customString2" type="jobCode" required="true" custom="false">
-  <field-label><![CDATA[Job Level]]></field-label>
-  <field-description><![CDATA[Job Level]]></field-description>
-  </field-definition>
   <field-definition id="customString5" type="jobCode" required="true" custom="false">
   <field-label><![CDATA[Reg/Temp]]></field-label>
   <field-description><![CDATA[Regular or Temp]]></field-description>
   </field-definition>
-  <field-definition id="customString6" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[Employee Class]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Klassifizierung]]></field-label>
-  </field-definition>
-  <field-definition id="customString7" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[Is Full Time employee]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Vollzeit/Teilzeit]]></field-label>
-  </field-definition>
-  <field-definition id="customString11" type="jobCode" required="false" custom="false">
-  <field-label><![CDATA[EEO Job Category]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[EEO Job Kategorie]]></field-label>
-  <field-description><![CDATA[eeo job category]]></field-description>
-  </field-definition>
   <field-definition id="customString13" type="jobCode" required="false" custom="false">
   <field-label><![CDATA[Salary Range - Low]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Grundgehalt]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
   <field-definition id="customString12" type="jobCode" required="false" custom="false">
   <field-label><![CDATA[Salary Range - High]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Grundgehalt]]></field-label>
   <field-description><![CDATA[]]></field-description>
-  </field-definition>
-  <field-definition id="budgeted" type="picklist" required="false" custom="true">
-  <field-label><![CDATA[Position Budgeted]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Position budgetiert]]></field-label>
-  <field-description><![CDATA[bugetl]]></field-description>
-    <picklist-id>yesNo</picklist-id>
   </field-definition>
   <field-definition id="currency" type="enum" required="false" custom="false">
   <field-label><![CDATA[Currency]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Währung]]></field-label>
   <field-description><![CDATA[Select a currency for monetary fields on this Job Requisition]]></field-description>
     <default-value>USD</default-value>
   </field-definition>
@@ -102,34 +48,28 @@
   </field-definition>
   <field-definition id="relocationPack" type="picklist" required="false" custom="false">
   <field-label><![CDATA[Approved for Relocation?]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Genehmigt für Umzug?]]></field-label>
   <field-description><![CDATA[relo]]></field-description>
     <picklist-id>yesNo</picklist-id>
   </field-definition>
   <field-definition id="listingLayout" type="richText" required="false" custom="false">
   <field-label><![CDATA[Internal Job Description]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Interne Jobbeschreibung]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
   <field-definition id="extListingLayout" type="richText" required="false" custom="false">
   <field-label><![CDATA[External Job Description]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Externe Jobbeschreibung]]></field-label>
   <field-description><![CDATA[External Job Description]]></field-description>
   </field-definition>
   <field-definition id="status" type="picklist" required="false" custom="false">
   <field-label><![CDATA[Progress]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Fortschritt]]></field-label>
   <field-description><![CDATA[After the job req is released, this field tracks the progress]]></field-description>
     <picklist-id>jobReqStatus</picklist-id>
   </field-definition>
   <field-definition id="numberOpenings" type="number" required="false" custom="false">
   <field-label><![CDATA[Number of Openings]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Anzahl offene Stellen]]></field-label>
   <field-description><![CDATA[Number of Openings]]></field-description>
   </field-definition>
   <field-definition id="hiringManagerName" type="operator" required="true" custom="false">
   <field-label><![CDATA[Hiring Manager]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Einstellender Manager]]></field-label>
   <field-description><![CDATA[This is the hiring manager]]></field-description>
   </field-definition>
   <field-definition id="recruiterName" type="operator" required="true" custom="false">
@@ -146,117 +86,55 @@
   </field-definition>
   <field-definition id="end" type="date" required="false" custom="false">
   <field-label><![CDATA[Posting End]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Posting Ende]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
   <field-definition id="intranetPosting" type="bool" required="false" custom="false">
   <field-label><![CDATA[Internal Posting]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Internes Posting]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
   <field-definition id="corporatePosting" type="bool" required="false" custom="false">
   <field-label><![CDATA[External Posting]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Externes Posting]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
   <field-definition id="agencyPosting" type="bool" required="false" custom="false">
   <field-label><![CDATA[Agency Posting]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Agenturposting]]></field-label>
   <field-description><![CDATA[]]></field-description>
   </field-definition>
   <field-definition id="division" type="enum" required="true" custom="false">
   <field-label><![CDATA[Division]]></field-label>
   <field-description><![CDATA[Company]]></field-description>
   </field-definition>
-  <field-definition id="department" type="enum" required="true" custom="false">
-  <field-label><![CDATA[Department]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Abteilung]]></field-label>
-  <field-description><![CDATA[The department the job is open in.]]></field-description>
-  </field-definition>
   <field-definition id="location" type="enum" required="true" custom="false">
   <field-label><![CDATA[Location]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Standort]]></field-label>
   <field-description><![CDATA[The location the job is open in.]]></field-description>
   </field-definition>
   <field-definition id="country" type="derived" required="true" custom="false">
   <field-label><![CDATA[Country]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Land]]></field-label>
   <field-description><![CDATA[Country]]></field-description>
   </field-definition>
   <field-definition id="city" type="text" required="false" custom="false">
   <field-label><![CDATA[City]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Stadt]]></field-label>
   </field-definition>
   <field-definition id="stateProvince" type="derived" required="false" custom="false">
   <field-label><![CDATA[State]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Bundesland]]></field-label>
   </field-definition>
   <field-definition id="postalcode" type="text" required="false" custom="false">
   <field-label><![CDATA[Zip / Postal Code]]></field-label>
-  <field-label lang="EN_US"><![CDATA[Zip / Postal Code]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[PLZ]]></field-label>
-  </field-definition>
-  <field-definition id="filter1" type="picklist" required="true" custom="false">
-  <field-label lang="de_DE_SF"><![CDATA[Standort der Stelle]]></field-label>
-  <field-label lang="en_US"><![CDATA[Job Location]]></field-label>
-  <field-description><![CDATA[Job location]]></field-description>
-    <picklist-id></picklist-id>
-  </field-definition>
-  <field-definition id="filter2" type="picklist" required="true" custom="false">
-  <field-label lang="de_DE_SF"><![CDATA[Funktion des Jobs]]></field-label>
-  <field-label lang="en_US"><![CDATA[Job Function]]></field-label>
-  <field-description><![CDATA[Job function]]></field-description>
-    <picklist-id></picklist-id>
-  </field-definition>
-  <field-definition id="filter4" type="picklist" required="true" custom="false">
-  <field-label lang="de_DE_SF"><![CDATA[Primärsprache]]></field-label>
-  <field-label lang="en_US"><![CDATA[Job Language]]></field-label>
-  <field-description><![CDATA[Language]]></field-description>
-    <picklist-id></picklist-id>
-  </field-definition>
-  <field-definition id="filter8" type="picklist" required="true" custom="false">
-  <field-label><![CDATA[Job Type]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Job Typ]]></field-label>
-  <field-description><![CDATA[Job Type for career site posting]]></field-description>
-    <picklist-id></picklist-id>
-  </field-definition>
-  <field-definition id="industry" type="enum" required="false" custom="false">
-  <field-label><![CDATA[Industry]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Industrie]]></field-label>
   </field-definition>
   <field-definition id="questions" type="questions" required="false" custom="false">
   <field-label><![CDATA[Questions]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Fragen]]></field-label>
   <field-description><![CDATA[These are screening questions required for job candidates]]></field-description>
-  </field-definition>
-  <field-definition id="competencies" type="competencies" required="false" custom="false">
-  <field-label><![CDATA[Competencies]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Kompetenzen]]></field-label>
-  <field-description><![CDATA[These are competencies required for job candidates]]></field-description>
   </field-definition>
   <field-definition id="costOfHire" type="currency" required="false" custom="false">
   <field-label><![CDATA[Cost of Hire Test]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Einstellungskosten]]></field-label>
   <field-description><![CDATA[Cost of Hire Test]]></field-description>
   </field-definition>
   <field-definition id="comments" type="textarea" required="false" custom="true">
   <field-label><![CDATA[Comments]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Kommentare]]></field-label>
   <field-description><![CDATA[Comments]]></field-description>
-  </field-definition>
-  <field-definition id="jobStartDate" type="date" required="false" custom="false">
-  <field-label><![CDATA[Start Date]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Startdatum]]></field-label>
-  <field-description><![CDATA[Job start date (used for offer letter)]]></field-description>
-  </field-definition>
-  <field-definition id="offerExtensionDate" type="date" required="false" custom="false">
-  <field-label><![CDATA[Offer Date]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Angebotsdatum]]></field-label>
-  <field-description><![CDATA[Date the job offer is extended to the candidate]]></field-description>
   </field-definition>
   <field-definition id="salaryBase" type="currency" required="false" custom="false">
   <field-label><![CDATA[Target Base Salary]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Grundgehalt]]></field-label>
   <field-description><![CDATA[Offered base salary]]></field-description>
   </field-definition>
   <field-definition id="targetBonusAmount" type="currency" required="false" custom="false">
@@ -273,40 +151,14 @@
   </field-definition>
   <field-definition id="bgiAccountId" type="picklist" required="false" custom="false">
   <field-label><![CDATA[Background Check Account Id]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Account Hintergrundcheck]]></field-label>
   <field-description><![CDATA[Cost Center Id]]></field-description>
     <picklist-id>bgiAccountId</picklist-id>
-  </field-definition>
-  <field-definition id="packageId" type="picklist" required="false" custom="false">
-  <field-label><![CDATA[Background Check/Onboarding Package Id]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Paket Hintergrundcheck]]></field-label>
-  <field-description><![CDATA[Background Check/Onboarding Package Id]]></field-description>
-    <picklist-id>packageID</picklist-id>
   </field-definition>
   <field-definition id="costCenterId" type="picklist" required="false" custom="false">
   <field-label><![CDATA[Cost Center Id]]></field-label>
   <field-label lang="de_DE_SF"><![CDATA[Kostenstelle]]></field-label>
   <field-description><![CDATA[Cost Center Id]]></field-description>
     <picklist-id>Costcenterid</picklist-id>
-  </field-definition>
-  <field-definition id="onboardingPackageId" type="picklist" required="false" custom="false">
-  <field-label><![CDATA[onboardingPackageId]]></field-label>
-  <field-description><![CDATA[onboarding package Id]]></field-description>
-    <picklist-id>ONBOARDINGPKGID</picklist-id>
-  </field-definition>
-  <field-definition id="customassess" type="text" required="false" custom="false">
-  <field-label><![CDATA[Assessment Package]]></field-label>
-  <field-description><![CDATA[]]></field-description>
-  </field-definition>
-  <field-definition id="intranetPrivatePosting" type="bool" required="false" custom="false">
-  <field-label><![CDATA[Private Internal Posting URL]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Privates internes Posting]]></field-label>
-  <field-description><![CDATA[Private Internal Posting URL]]></field-description>
-  </field-definition>
-  <field-definition id="externalPrivatePosting" type="bool" required="false" custom="false">
-  <field-label><![CDATA[Private External Posting URL]]></field-label>
-  <field-label lang="de_DE_SF"><![CDATA[Privates externes Posting]]></field-label>
-  <field-description><![CDATA[Private External Posting URL]]></field-description>
   </field-definition>
   <field-definition id="hiringManagerTeam" type="operatorTeam" required="true" custom="false">
   <field-label><![CDATA[Hiring Manager Operator Team]]></field-label>
@@ -341,20 +193,12 @@
     <role-name><![CDATA[J]]></role-name>
     <status><![CDATA[pre-approved]]></status>
     <field refid="cust-intro-req"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="extTitle"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
-    <field refid="customString6"/>
-    <field refid="customString7"/>
-    <field refid="customString11"/>
     <field refid="customString13"/>
     <field refid="customString12"/>
-    <field refid="budgeted"/>
     <field refid="currency"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
@@ -371,34 +215,20 @@
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
     <field refid="division"/>
-    <field refid="department"/>
     <field refid="location"/>
     <field refid="country"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="postalcode"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
-    <field refid="industry"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="salaryBase"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="bgiAccountId"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="hiringManagerTeam"/>
     <field refid="recruiterTeam"/>
     <field refid="sourcerTeam"/>
@@ -412,20 +242,12 @@
     <role-name><![CDATA[J]]></role-name>
     <status><![CDATA[approved]]></status>
     <field refid="cust-intro-req"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="extTitle"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
-    <field refid="customString6"/>
-    <field refid="customString7"/>
-    <field refid="customString11"/>
     <field refid="customString13"/>
     <field refid="customString12"/>
-    <field refid="budgeted"/>
     <field refid="currency"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
@@ -442,34 +264,20 @@
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
     <field refid="division"/>
-    <field refid="department"/>
     <field refid="location"/>
     <field refid="country"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="postalcode"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
-    <field refid="industry"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="salaryBase"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="bgiAccountId"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="hiringManagerTeam"/>
     <field refid="recruiterTeam"/>
     <field refid="sourcerTeam"/>
@@ -483,20 +291,12 @@
     <role-name><![CDATA[J]]></role-name>
     <status><![CDATA[closed]]></status>
     <field refid="cust-intro-req"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="extTitle"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
-    <field refid="customString6"/>
-    <field refid="customString7"/>
-    <field refid="customString11"/>
     <field refid="customString13"/>
     <field refid="customString12"/>
-    <field refid="budgeted"/>
     <field refid="currency"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
@@ -513,34 +313,20 @@
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
     <field refid="division"/>
-    <field refid="department"/>
     <field refid="location"/>
     <field refid="country"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="postalcode"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
-    <field refid="industry"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="salaryBase"/>
     <field refid="targetBonusAmount"/>
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="bgiAccountId"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
-    <field refid="intranetPrivatePosting"/>
-    <field refid="externalPrivatePosting"/>
     <field refid="hiringManagerTeam"/>
     <field refid="recruiterTeam"/>
     <field refid="sourcerTeam"/>
@@ -570,12 +356,8 @@
     <role-name><![CDATA[T]]></role-name>
     <role-name><![CDATA[J]]></role-name>
     <status><![CDATA[pre-approved]]></status>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
@@ -590,30 +372,17 @@
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
     <field refid="location"/>
-    <field refid="department"/>
     <field refid="division"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
-    <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="postalcode"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
     <field refid="country"/>
-    <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
     <field refid="listingLayout"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="salaryBase"/>
     <field refid="customString13"/>
@@ -622,11 +391,8 @@
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="relocationPack"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
     <field refid="bgiAccountId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
   </field-permission>
   <field-permission type="write">
     <description><![CDATA[For originator, manager and approving manager can write these fields in pre-approved reqs]]></description>
@@ -637,21 +403,13 @@
     <role-name><![CDATA[J]]></role-name>
     <role-name><![CDATA[V]]></role-name>
     <status><![CDATA[pre-approved]]></status>
-    <field refid="jobPostLanguage"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="numberOpenings"/>
     <field refid="hiringManagerName"/>
     <field refid="recruiterName"/>
-    <field refid="jobStartDate"/>
     <field refid="start"/>
     <field refid="end"/>
     <field refid="intranetPosting"/>
@@ -660,9 +418,7 @@
     <field refid="intranetPrivatePosting"/>
     <field refid="externalPrivatePosting"/>
     <field refid="location"/>
-    <field refid="department"/>
     <field refid="division"/>
-    <field refid="budgeted"/>
     <field refid="comments"/>
   </field-permission>
   <field-permission type="read">
@@ -674,17 +430,10 @@
     <role-name><![CDATA[GM]]></role-name>
     <role-name><![CDATA[T]]></role-name>
     <status><![CDATA[closed]]></status>
-    <field refid="jobPostLanguage"/>
     <field refid="cust-intro-req"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="status"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
@@ -701,30 +450,17 @@
     <field refid="intranetPrivatePosting"/>
     <field refid="externalPrivatePosting"/>
     <field refid="location"/>
-    <field refid="department"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
-    <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="postalcode"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
     <field refid="country"/>
     <field refid="division"/>
-    <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
     <field refid="listingLayout"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="salaryBase"/>
     <field refid="customString13"/>
@@ -733,11 +469,8 @@
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="relocationPack"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
     <field refid="bgiAccountId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in approved reqs]]></description>
@@ -748,17 +481,10 @@
     <role-name><![CDATA[GM]]></role-name>
     <role-name><![CDATA[T]]></role-name>
     <status><![CDATA[approved]]></status>
-    <field refid="jobPostLanguage"/>
     <field refid="cust-intro-req"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="status"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
@@ -775,30 +501,17 @@
     <field refid="intranetPrivatePosting"/>
     <field refid="externalPrivatePosting"/>
     <field refid="location"/>
-    <field refid="department"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
-    <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="postalcode"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
     <field refid="country"/>
     <field refid="division"/>
-    <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
     <field refid="listingLayout"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="salaryBase"/>
     <field refid="customString13"/>
@@ -807,11 +520,8 @@
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="relocationPack"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
     <field refid="bgiAccountId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in closed reqs]]></description>
@@ -826,10 +536,6 @@
     <field refid="sourcerName"/>
     <field refid="start"/>
     <field refid="end"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
@@ -854,18 +560,12 @@
     <field refid="hiringManagerName"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="recruiterName"/>
     <field refid="sourcerName"/>
     <field refid="start"/>
     <field refid="end"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
     <field refid="intranetPosting"/>
     <field refid="corporatePosting"/>
     <field refid="agencyPosting"/>
@@ -875,11 +575,8 @@
     <field refid="extListingLayout"/>
     <field refid="numberOpenings"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="erpAmount"/>
     <field refid="salaryBase"/>
@@ -889,21 +586,14 @@
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="relocationPack"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
     <field refid="bgiAccountId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
     <field refid="postalcode"/>
-    <field refid="department"/>
     <field refid="division"/>
     <field refid="location"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="country"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
   </field-permission>
   <field-permission type="read">
     <description><![CDATA[For recruiter, sourcer and sourcer can read these fields in closed reqs]]></description>
@@ -916,12 +606,8 @@
     <status><![CDATA[closed]]></status>
     <field refid="status"/>
     <field refid="cust-intro-req"/>
-    <field refid="jobPostLanguage"/>
-    <field refid="defaultLanguage"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="listingLayout"/>
@@ -938,33 +624,19 @@
     <field refid="intranetPrivatePosting"/>
     <field refid="externalPrivatePosting"/>
     <field refid="location"/>
-    <field refid="department"/>
-    <field refid="customString6"/>
-    <field refid="customString11"/>
-    <field refid="customString7"/>
-    <field refid="industry"/>
     <field refid="city"/>
     <field refid="stateProvince"/>
     <field refid="postalcode"/>
-    <field refid="filter1"/>
-    <field refid="filter2"/>
-    <field refid="filter4"/>
-    <field refid="filter8"/>
     <field refid="country"/>
     <field refid="division"/>
-    <field refid="budgeted"/>
     <field refid="erpAmount"/>
     <field refid="relocationPack"/>
     <field refid="listingLayout"/>
     <field refid="questions"/>
-    <field refid="competencies"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="packageId"/>
     <field refid="costCenterId"/>
     <field refid="bgiAccountId"/>
-    <field refid="onboardingPackageId"/>
-    <field refid="customassess"/>
   </field-permission>
   <field-permission type="write">
     <description><![CDATA[For recruiter, sourcer and sourcer can write these fields in closed reqs]]></description>
@@ -979,8 +651,6 @@
     <field refid="cust-intro-req"/>
     <field refid="title"/>
     <field refid="jobCode"/>
-    <field refid="customString9"/>
-    <field refid="customString2"/>
     <field refid="customString5"/>
     <field refid="extTitle"/>
     <field refid="start"/>
@@ -992,8 +662,6 @@
     <field refid="externalPrivatePosting"/>
     <field refid="costOfHire"/>
     <field refid="comments"/>
-    <field refid="jobStartDate"/>
-    <field refid="offerExtensionDate"/>
     <field refid="currency"/>
     <field refid="salaryBase"/>
     <field refid="erpAmount"/>
@@ -1022,7 +690,6 @@
     <field refid="jobCode"/>
     <field refid="extTitle"/>
     <field refid="numberOpenings"/>
-    <field refid="department"/>
     <field refid="division"/>
     <field refid="location"/>
 </listing-fields>
@@ -1031,7 +698,6 @@
     <field refid="jobCode"/>
     <field refid="extTitle"/>
     <field refid="numberOpenings"/>
-    <field refid="department"/>
     <field refid="division"/>
     <field refid="location"/>
 </mobile-fields>
@@ -1044,7 +710,6 @@
     <field refid="options"/>
     <field refid="stock"/>
     <field refid="relocationPack"/>
-    <field refid="jobStartDate"/>
     <field refid="offerExtensionDate"/>
 </offer-letter-fields>
   <assessment-scale reverse-scale="false">
