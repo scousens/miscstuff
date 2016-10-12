@@ -255,7 +255,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[前员工：]]></field-label>
   <field-description><![CDATA[forEmp]]></field-description>
   </field-definition>
-  <field-definition id="candidateSource" type="picklist" required="true" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-definition id="candidateSource" type="picklist" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
   <field-label mime-type="text-plain"><![CDATA[Source: ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Quelle: ]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Source: ]]></field-label>
