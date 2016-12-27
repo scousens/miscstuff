@@ -95,7 +95,7 @@
   <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[邮政编码：]]></field-label>
   <field-description><![CDATA[US Zip or Postal Code]]></field-description>
   </field-definition>
-  <field-definition id="country" type="picklist" required="true" custom="false" anonymize="false">
+  <field-definition id="country" type="picklist" required="false" custom="false" anonymize="false">
   <field-label mime-type="text-plain"><![CDATA[Country ]]></field-label>
   <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Land:]]></field-label>
   <field-label mime-type="text-plain" lang="en_US"><![CDATA[Country:]]></field-label>

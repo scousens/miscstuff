@@ -103,7 +103,7 @@
   <field-label><![CDATA[Division]]></field-label>
   <field-description><![CDATA[Company]]></field-description>
   </field-definition>
-  <field-definition id="location" type="enum" required="true" custom="false">
+  <field-definition id="location" type="enum" required="false" custom="false">
   <field-label><![CDATA[Location]]></field-label>
   <field-description><![CDATA[The location the job is open in.]]></field-description>
   </field-definition>
@@ -111,10 +111,10 @@
   <field-label><![CDATA[Country]]></field-label>
   <field-description><![CDATA[Country]]></field-description>
   </field-definition>
-  <field-definition id="city" type="text" required="false" custom="false">
+  <field-definition id="city" type="text" required="true" custom="false">
   <field-label><![CDATA[City]]></field-label>
   </field-definition>
-  <field-definition id="stateProvince" type="derived" required="false" custom="false">
+  <field-definition id="stateProvince" type="derived" required="true" custom="false">
   <field-label><![CDATA[State]]></field-label>
   </field-definition>
   <field-definition id="postalcode" type="text" required="false" custom="false">
@@ -137,7 +137,7 @@
   <field-label lang="de_DE_SF"><![CDATA[Angebotsdatum]]></field-label>
   <field-description><![CDATA[Date the job offer is extended to the candidate]]></field-description>
   </field-definition>
-  <field-definition id="salaryBase" type="currency" required="false" custom="false">
+  <field-definition id="salaryBase" type="currency" required="true" custom="false">
   <field-label><![CDATA[Target Base Salary]]></field-label>
   <field-description><![CDATA[Offered base salary]]></field-description>
   </field-definition>

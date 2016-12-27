@@ -189,7 +189,7 @@
   <field-description><![CDATA[relo]]></field-description>
     <picklist-id>yesNo</picklist-id>
   </field-definition>
-  <field-definition id="listingLayout" type="richText" required="false" custom="false">
+  <field-definition id="listingLayout" type="richText" required="true" custom="false">
   <field-label><![CDATA[Internal Job Description]]></field-label>
   <field-label lang="de_DE"><![CDATA[Interne Stellenbeschreibung]]></field-label>
   <field-label lang="en_US"><![CDATA[Internal Job Description]]></field-label>
@@ -372,7 +372,7 @@
   <field-label lang="zh_CN"><![CDATA[??]]></field-label>
   <field-description><![CDATA[The department the job is open in.]]></field-description>
   </field-definition>
-  <field-definition id="location" type="enum" required="true" custom="false">
+  <field-definition id="location" type="enum" required="false" custom="false">
   <field-label><![CDATA[Location]]></field-label>
   <field-label lang="de_DE"><![CDATA[Standort]]></field-label>
   <field-label lang="en_US"><![CDATA[Location]]></field-label>
@@ -398,7 +398,7 @@
   <field-label lang="zh_CN"><![CDATA[??]]></field-label>
   <field-description><![CDATA[Country]]></field-description>
   </field-definition>
-  <field-definition id="city" type="text" required="false" custom="false">
+  <field-definition id="city" type="text" required="true" custom="false">
   <field-label><![CDATA[City]]></field-label>
   <field-label lang="de_DE"><![CDATA[Ort]]></field-label>
   <field-label lang="en_US"><![CDATA[City]]></field-label>
@@ -410,7 +410,7 @@
   <field-label lang="ru_RU"><![CDATA[?????]]></field-label>
   <field-label lang="zh_CN"><![CDATA[?]]></field-label>
   </field-definition>
-  <field-definition id="stateProvince" type="derived" required="false" custom="false">
+  <field-definition id="stateProvince" type="derived" required="true" custom="false">
   <field-label><![CDATA[State]]></field-label>
   <field-label lang="de_DE"><![CDATA[Bundesland]]></field-label>
   <field-label lang="en_US"><![CDATA[State]]></field-label>
@@ -525,7 +525,7 @@
   <field-label lang="zh_CN"><![CDATA[??]]></field-label>
   <field-description><![CDATA[These are competencies required for job candidates]]></field-description>
   </field-definition>
-  <field-definition id="costOfHire" type="currency" required="false" custom="false">
+  <field-definition id="costOfHire" type="currency" required="true" custom="false">
   <field-label><![CDATA[Cost of Hire Test]]></field-label>
   <field-label lang="de_DE"><![CDATA[Einstellungskosten]]></field-label>
   <field-label lang="en_US"><![CDATA[Cost of Hire]]></field-label>
@@ -577,7 +577,7 @@
   <field-label lang="zh_CN"><![CDATA[?????????]]></field-label>
   <field-description><![CDATA[Date the job offer is extended to the candidate]]></field-description>
   </field-definition>
-  <field-definition id="salaryBase" type="currency" required="false" custom="false">
+  <field-definition id="salaryBase" type="currency" required="true" custom="false">
   <field-label><![CDATA[Target Base Salary]]></field-label>
   <field-label lang="de_DE"><![CDATA[Zielgrundgehalt]]></field-label>
   <field-label lang="en_US"><![CDATA[Target Base Salary]]></field-label>
