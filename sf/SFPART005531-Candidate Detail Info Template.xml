@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE candidate-data-model PUBLIC "-//SuccessFactors, Inc.//DTD Candidate Data Model//EN" "candidate-data-model.dtd">
+<candidate-data-model spell-check="true">
+ <template-name><![CDATA[Candidate Detail Info Template]]></template-name>
+  <template-desc><![CDATA[This defined candidate detail page.]]></template-desc>
+  <template-lastmodified>8/16/06 12:00 AM</template-lastmodified>
+  <field-definition id="statusId" type="picklist" required="true" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Status: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Status:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Status:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Estado:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Statut :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[ステータス:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[상태:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Status:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Статус:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[状态：]]></field-label>
+  <field-description><![CDATA[Status ]]></field-description>
+    <picklist-id>CandidateStatus</picklist-id>
+  </field-definition>
+  <field-definition id="rejectReason" type="picklist" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Rejected Reason: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Ablehnungsgrund: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Rejected Reason: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Motivo del rechazo: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Motif de refus : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[却下理由:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[불합격 사유:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Motivo da rejeição: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Причина отклонения: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[拒绝原因：]]></field-label>
+  <field-description><![CDATA[Reason for rejection]]></field-description>
+    <picklist-id>reject_reason</picklist-id>
+  </field-definition>
+  <field-definition id="comments" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Comments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Kommentare:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Comments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Comentarios:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Commentaires :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[コメント:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[코멘트:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Comentários:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Комментарии:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[备注：]]></field-label>
+  <field-description><![CDATA[Comments ]]></field-description>
+  </field-definition>
+  <field-definition id="firstName" type="text" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[First Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Vorname:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[First Name:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Nombre:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Prénom :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[名:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[이름:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Nome:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Имя:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[名字：]]></field-label>
+  <field-description><![CDATA[First Name ]]></field-description>
+  </field-definition>
+  <field-definition id="middleName" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Middle Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Zweiter Vorname:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Middle Name:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Segundo nombre:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Deuxième prénom :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[ミドルネーム:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[중간 이름:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Nome do meio:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Отчество:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[中间名：]]></field-label>
+  <field-description><![CDATA[Middle Name ]]></field-description>
+  </field-definition>
+  <field-definition id="lastName" type="text" required="true" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Last Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Nachname: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Last Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Apellido: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Nom : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[姓:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[성:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Sobrenome: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Фамилия:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[姓氏：]]></field-label>
+  <field-description><![CDATA[Last Name ]]></field-description>
+  </field-definition>
+  <field-definition id="startDate" type="date" required="true" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Start Date: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[]]></field-label>
+  <field-description><![CDATA[Start Date ]]></field-description>
+  </field-definition>
+  <field-definition id="candidateName" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Name:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Name:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Nombre:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Nom :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[名前:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[이름:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Nome:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Имя:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[姓名：]]></field-label>
+  <field-description><![CDATA[Candidate Name ]]></field-description>
+  </field-definition>
+  <field-definition id="contactEmail" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Email Address: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[E-Mail-Adresse: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Email Address: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Dirección de correo electrónico: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[E-mail : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[電子メールアドレス:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[전자메일 주소: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Endereço de e-mail: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Адрес электронной почты: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[电子邮件地址：]]></field-label>
+  <field-description><![CDATA[email]]></field-description>
+  </field-definition>
+  <field-definition id="cellPhone" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Daytime Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Telefon tagsüber: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Daytime Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Teléfono durante el día: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Numéro de téléphone dans la journée : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[日中の電話番号:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[주간 연락번호:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Telefone diurno: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Телефон в дневное время: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[日间电话：]]></field-label>
+  <field-description><![CDATA[day phone]]></field-description>
+  </field-definition>
+  <field-definition id="homePhone" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Evening Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Telefon abends: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Evening Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Teléfono durante la tarde: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Numéro de téléphone le soir : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[夜間の電話番号:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[야간 연락번호: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Telefone noturno: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Телефон в вечернее время: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[夜间电话：]]></field-label>
+  <field-description><![CDATA[eve phone]]></field-description>
+  </field-definition>
+  <field-definition id="faxNumber" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Fax Number]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Faxnummer]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Fax Number]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Número de fax]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Numéro de fax]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[FAX 番号]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[팩스 번호]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Número de fax]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Номер факса]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[传真号]]></field-label>
+  <field-description><![CDATA[Fax Number]]></field-description>
+  </field-definition>
+  <field-definition id="address" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Street Address: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Straße und Hausnummer: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Street Address: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Dirección: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Numéro et rue : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[所在地住所:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[상세 주소: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Endereço: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Улица и номер дома: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[街道地址：]]></field-label>
+  <field-description><![CDATA[address]]></field-description>
+  </field-definition>
+  <field-definition id="city" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[City: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Ort:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[City: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Ciudad: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Ville :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[市区町村:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[시:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Cidade: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Город:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[市： ]]></field-label>
+  <field-description><![CDATA[city]]></field-description>
+  </field-definition>
+  <field-definition id="state" type="picklist" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[State: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Bundesland:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[State:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Estado:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[État :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[都道府県:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[도:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Estado:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Регион:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[省：]]></field-label>
+  <field-description><![CDATA[state]]></field-description>
+    <picklist-id>state</picklist-id>
+  </field-definition>
+  <field-definition id="zip" type="text" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Zip / Postal Code: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Postleitzahl: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Zip / Postal Code: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Código postal: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Code postal : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[郵便番号:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[우편번호: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[CEP/Código postal: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Почтовый индекс: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[邮政编码：]]></field-label>
+  <field-description><![CDATA[zip]]></field-description>
+  </field-definition>
+  <field-definition id="noticePeriod" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[What will be the notice period for your current employer?]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Welche Kündigungsfrist gilt für Ihr derzeitiges Beschäftigungsverhältnis?]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[What will be the notice period for your current employer?]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[¿Cuál sería el período de aviso para su empleador actual?]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Quel est le délai de préavis pour votre employeur actuel ?]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[現雇用主への通知期間はどの程度ですか。]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[현재 고용주에게 미리 알려야 하는 통지 기간이 어떻게 됩니까?]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Qual será o prazo do aviso prévio para seu empregador atual?]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Какой срок для расторжения установлен у текущего работодателя?]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[当前工作单位的离职通知期限是多久？]]></field-label>
+  <field-description><![CDATA[What will be the notice period for your current employer?]]></field-description>
+  </field-definition>
+  <field-definition id="country" type="picklist" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Country: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Land: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Country: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[País: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Pays : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[国:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[국가:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[País: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Страна:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[国家：]]></field-label>
+  <field-description><![CDATA[country]]></field-description>
+    <picklist-id>country</picklist-id>
+  </field-definition>
+  <field-definition id="formerEmployee" type="bool" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Former Employee: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Früherer Mitarbeiter:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Former Employee: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Antiguo empleado: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Ancien employé : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[元従業員:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[이전 사원: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Ex-colaborador: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Бывший сотрудник: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[前员工：]]></field-label>
+  <field-description><![CDATA[forEmp]]></field-description>
+  </field-definition>
+  <field-definition id="candidateSource" type="picklist" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Source: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Quelle: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Source: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Fuente: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Source: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[ソース: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[출처:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Fonte: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Источник: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[来源：]]></field-label>
+  <field-description><![CDATA[source]]></field-description>
+    <picklist-id>canSou</picklist-id>
+  </field-definition>
+  <field-definition id="referralName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[If Employee Referral, Name of Referring Employee: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Falls Mitarbeiterempfehlung, Name des empfehlenden Mitarbeiters: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[If Employee Referral, Name of Referring Employee: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Si es una recomendación de empleado, nombre del empleado recomendado: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[En cas de recommandation, nom de l'auteur de la recommandation : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[従業員紹介の場合、紹介従業員の名前:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[추천 사원의 이름(사원 추천인 경우): ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Em caso de indicação de colaborador, nome do colaborador que o indicou: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Для рекомендации сотрудника имя порекомендовавшего сотрудника: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是员工推荐，请填写推荐人姓名：]]></field-label>
+  <field-description><![CDATA[refName]]></field-description>
+  </field-definition>
+  <field-definition id="coverLetter" type="richText" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Cover Letter: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Anschreiben: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Cover Letter: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Carta de presentación: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Lettre de motivation : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[カバーレター:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[자기 소개서: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Carta de apresentação: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Заявление кандидата: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[求职信：]]></field-label>
+  <field-description><![CDATA[coverletter]]></field-description>
+  </field-definition>
+  <field-definition id="resume" type="richText" required="false" custom="false" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Resume: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Lebenslauf: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Resume:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Currículum vitae: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[CV : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[履歴書:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[이력서:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Currículo: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Автобиография:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[简历：]]></field-label>
+  <field-description><![CDATA[resume]]></field-description>
+  </field-definition>
+  <field-definition id="supportingDoc" type="multiattachmentselection" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Work Examples / Other Attachments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Arbeitsproben/sonstige Anlagen: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Work Examples / Other Attachments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Ejemplos de trabajos/Otros adjuntos: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Exemples de travaux réalisés/Autres pièces jointes : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[勤務例/その他添付文書]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[업무 사례/기타 첨부파일: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Exemplos de trabalho/Outros anexos: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Примеры работ/другие приложения: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[作品示例/其他附件：]]></field-label>
+  <field-description lang="de_DE"><![CDATA[Bitte hinterlegen Sie hier Ihre Zeugnisse]]></field-description>
+  <field-description lang="en_GB"><![CDATA[Please attach any additional supporting documents.]]></field-description>
+  <field-description lang="en_US"><![CDATA[Please attach any additional supporting documents.]]></field-description>
+  </field-definition>
+  <field-definition id="questionResponse" type="text" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Question Responses: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Antworten auf Frage: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Question Responses: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Respuestas a las preguntas: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Réponses aux questions : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[質問の回答:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[질문 대답: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Respostas a perguntas: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Ответы на вопросы: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[问题回复：]]></field-label>
+  <field-description><![CDATA[questionresponse]]></field-description>
+  </field-definition>
+  <field-definition id="eeoInstruction" type="instruction" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">
+US applicants: In order for to comply with Federal and State legislation, we ask you to voluntarily complete this EEO data.  The information you are asked to give will not be used for any decision regarding terms and conditions of employment.  All information in this section will be used exclusively for compliance with Federal Requirements and will go directly to our Equal Employment Opportunity Coordinator.
+  </font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">US-amerikanische Bewerber: Zur Einhaltung der nationalen und bundesstaatlichen Vorschriften bitten wir Sie, Informationen zur Gleichstellung auf freiwilliger Basis bereitzustellen.  Die von Ihnen angegebenen Informationen werden nicht für Entscheidungen bezüglich der Bedingungen und Konditionen der Beschäftigung verwendet.  Alle Informationen in diesem Abschnitt werden ausschließlich zur Einhaltung der nationalen Vorschriften verwendet und werden direkt an unseren Gleichstellungskoordinator weitergeleitet.</font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">US applicants: In order for to comply with Federal and State legislation, we ask you to voluntarily complete this EEO data.  The information you are asked to give will not be used for any decision regarding terms and conditions of employment.  All information in this section will be used exclusively for compliance with Federal Requirements and will go directly to our Equal Employment Opportunity Coordinator.]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">Aspirantes de EE. UU.: Para cumplir con la legislación federal y estatal, le solicitamos que complete voluntariamente estos datos de EEO.  La información que se le solicita no se utilizará para decisiones acerca de los términos y condiciones de empleo.  Toda la información de esta sección se utilizará exclusivamente para cumplir los requisitos federales y se enviará directamente a nuestro Coordinador de igualdad de oportunidades de empleo.</font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">Candidats États-Unis : Afin de nous conformer à la législation fédérale et des États, nous vous demandons de compléter volontairement ces données relatives à l'égalité d'accès à l'emploi (EAE).  Les informations demandées ne seront pas utilisées pour prendre une décision concernant les conditions d'emploi.  Toutes les informations figurant dans cette section serviront exclusivement à des fins de conformité aux exigences fédérales et seront directement transmises à notre coordinateur Égalité d'accès à l'emploi.</font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">米国の志願者: 連邦および州の法律を順守するため、この EEO データを任意でご入力ください。提供をお願する情報は、雇用条件に関する決定には使用されません。このセクションの情報は、すべて連邦の要件を遵守する目的のみで使用され、雇用機会均等コーディネータに直接提供されます。</font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">미국 지원자: 연방법과 주법을 준수하기 위해 이 EEO 데이터를 직접 작성하시기 바랍니다.  요청되는 정보는 고용 조건을 결정하는 데 활용되지 않습니다.  이 섹션에 있는 정보는 연방 규정을 준수하는 데에만 사용되고 당사의 평등 고용 기회 코디네이터에게 바로 전달됩니다.</font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">Candidatos dos EUA: De acordo com a legislação federal e estadual, voluntariamente, preencha estes dados de igualdade de oportunidades.  As informações apresentadas não serão utilizadas para nenhuma decisão a respeito de termos e condições de emprego. Todas as informações nesta seção serão utilizadas exclusivamente para conformidade com as exigências federais e irão diretamente para nosso coordenador de igualdade de oportunidades.</font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">Кандидаты из США: для соблюдения законодательства государства и штата в добровольном порядке укажите следующие данные РВЗ.  Предоставленная информация не будет использоваться для принятия решений по срокам и условиям занятости. Вся информация в этом разделе будет использоваться исключительно для соблюдения федеральных требований и будет передана напрямую нашему координатору по равным возможностям занятости.</font></p>]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[<br><p><font face="Arial, Helvetica, sans-serif">美国申请人：为遵循联邦和各州法律，请您遵照自愿原则填写 EEO 数据。所提供的信息将不会影响与雇用条款和条件相关的任何决策。本部分的所有信息将仅供符合联邦要求之用，并将直接转交我们的平等就业机会协调员。</font></p>]]></field-label>
+  </field-definition>
+  <field-definition id="ethnicity" type="picklist" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Ethnicity: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Ethnizität: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Ethnicity: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Origen étnico: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Ethnicité : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[民族: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[민족: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Etnia: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Этническая принадлежность: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[种族： ]]></field-label>
+  <field-description><![CDATA[]]></field-description>
+    <picklist-id>ETHNIC-GROUP_USA</picklist-id>
+  </field-definition>
+  <field-definition id="gender" type="picklist" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Gender: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Geschlecht: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Gender: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Género: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Sexe : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[性別:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[성별:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Sexo: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Пол: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[性别：]]></field-label>
+  <field-description><![CDATA[]]></field-description>
+    <picklist-id>gender</picklist-id>
+  </field-definition>
+  <field-definition id="veteranStatus" type="picklist" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Are you a Veteran? : ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Sind Sie ein Veteran?]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Are you a Veteran?:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[¿Es veterano de guerra?:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Êtes-vous un vétéran ?]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[退役軍人ですか:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[재향군인:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[É um veterano?]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Ветеран:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[您是否是退伍军人？]]></field-label>
+  <field-description><![CDATA[]]></field-description>
+    <picklist-id>yesNo</picklist-id>
+  </field-definition>
+  <field-definition id="veteranStatusViet" type="picklist" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Are you a Veteran of the Vietnam Era? : ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Sind Sie ein Vietnamveteran?]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Are you a Veteran of the Vietnam Era? :]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[¿Es veterano de Vietnam? :]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Êtes-vous un vétéran du Viêtnam ? :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[ベトナム戦争の退役軍人ですか :]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[베트남 참전 여부 :]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[É um veterano da Guerra do Vietnã?]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Ветеран Вьетнамской войны :]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[您是否是越战时期的退伍军人？ :]]></field-label>
+  <field-description><![CDATA[]]></field-description>
+    <picklist-id>yesNo</picklist-id>
+  </field-definition>
+  <field-definition id="disabilityStatus" type="picklist" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Disabled Veteran: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Kriegsversehrter Veteran: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Disabled Veteran: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Veterano discapacitado: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Vétéran handicapé : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[障がいを持つ退役軍人:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[상이군인: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Veterano deficiente: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Инвалид войны: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[残疾退伍军人： ]]></field-label>
+  <field-description><![CDATA[]]></field-description>
+    <picklist-id>yesNo</picklist-id>
+  </field-definition>
+  <field-definition id="assessmentStatus" type="picklist" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Assessment Passed: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Beurteilung bestanden: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Assessment Passed: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Valoración aprobada: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Évaluation réussie : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[評価合格: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[평가 통과: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Passou na avaliação: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Оценка пройдена: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[通过评估： ]]></field-label>
+  <field-description><![CDATA[Assessment Status]]></field-description>
+    <picklist-id>yesNo</picklist-id>
+  </field-definition>
+  <field-definition id="assessmentAttachment" type="multiattachment" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Assessment Attachments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Beurteilungsanhänge: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Assessment Attachments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Adjuntos de la valoración:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Pièces jointes évaluation : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[評価添付文書:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[평가 첨부 파일]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Anexos da avaliação: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Приложения к оценке: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[评估附件：]]></field-label>
+  <field-description><![CDATA[Assessment Attachments]]></field-description>
+  </field-definition>
+  <field-definition id="bkgrndChkStatus" type="picklist" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Background Check Passed: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Hintergrundüberprüfung bestanden:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Background Check Passed:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Verificación de antecedentes aprobada:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Contrôle des références réussi :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[経歴確認合格:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[배경 조사 통과:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Passou na avaliação de histórico:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Проверка информации о профессиональной деятельности пройдена:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[通过背景调查：]]></field-label>
+  <field-description><![CDATA[Background Check Status]]></field-description>
+    <picklist-id>yesNo</picklist-id>
+  </field-definition>
+  <field-definition id="bkgrndChkAttachment" type="multiattachment" required="false" custom="false" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Background Check Attachments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Anhänge für Hintergrundüberprüfung: ]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Background Check Attachments: ]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Adjuntos de verificación de antecedentes: ]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Pièces jointes contrôle des références : ]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[経歴確認添付文書: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[배경 조사 첨부 파일: ]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Anexos da avaliação de histórico: ]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Приложения к проверке информации о профессиональной деятельности: ]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[背景调查附件： ]]></field-label>
+  <field-description><![CDATA[Background Check Attachments]]></field-description>
+  </field-definition>
+  <field-definition id="convicted" type="picklist" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Have you ever been convicted of a crime (for other than a traffic violation)?]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Wurden Sie jemals wegen einer Straftat verurteilt (mit Ausnahme von Verkehrsdelikten)?]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Have you ever been convicted of a crime (for other than a traffic violation)?]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[¿Ha sido alguna vez declarado culpable de un delito (a excepción de una infracción de tránsito)?]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Avez-vous déjà été reconnu coupable d'une infraction (autre qu'une infraction au code de la route) ?]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[過去に犯罪を犯したことがありますか (交通違反を除く)。]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[기소된 적이 있습니까(교통법 위반 제외)?]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[]Já foi condenado por algum crime (além de violação às leis de trânsito)?]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[您是否曾被判定有罪（出于交通违章以外的原因）？]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Привлекались ли Вы к уголовной ответственности (кроме нарушений ПДД)?]]></field-label>
+  <field-description><![CDATA[Have you ever been convicted of a crime (for other than a traffic violation)?]]></field-description>
+    <picklist-id>yesNo</picklist-id>
+  </field-definition>
+  <field-definition id="convictedYes" type="text" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[If yes, please briefly describe the nature of the offense, the date of the charge, the county and state, and the status of the case]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Falls ja: Beschreiben Sie kurz die Art der Straftat, und geben Sie das Datum der Strafanzeige, den Landkreis und den Bundesstaat sowie den Status des Falls an.]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[If yes, please briefly describe the nature of the offense, the date of the charge, the county and state, and the status of the case]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Si la respuesta es sí, describa brevemente la naturaleza del delito, la fecha de la acusación, el condado y estado, y el estado del caso]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Si oui, décrivez brièvement la nature de l'infraction, la date de l'accusation, le comté et l'État et la situation de l'affaire.]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[ある場合、犯罪の種類、告訴の日付、国と州/都道府県、訴訟の状況を簡潔に記載してください]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[있는 경우, 기소 내용, 기소 일자, 시/도, 현재 상태를 간단히 기록하십시오.]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Em caso afirmativo, descreva brevemente a natureza do crime, a data da acusação, o condado/estado e o status do caso]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Если да, кратко опишите правонарушение, дату иска, регион и штат, а также статус судебного дела.]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是，请简要描述犯罪行为的性质、控诉日期、案件发生地所在国家和州以及案件情况]]></field-label>
+  <field-description><![CDATA[If yes, please briefly describe the nature of the offense, the date of the charge, the county and state, and the status of the case]]></field-description>
+  </field-definition>
+  <field-definition id="relativesEmployed" type="picklist" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[If yes, what department]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Haben Sie Verwandte, die bei der ACE Corporation arbeiten?]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Do you have relatives employed by ACE Corp?]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[¿Tiene familiares que trabajan en ACE Corp?]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Avez-vous des parents employés par ACE Corp ?]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[ACE Corp で働いている親戚がいますか。]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[ACE Corp에 근무하는 친척이 있습니까?]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Tem parentes empregados pela ACE Corp?]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Есть ли у Вас родственники среди сотрудников ACE Corp?]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[您是否有亲属就职于 ACE 公司？]]></field-label>
+  <field-description><![CDATA[Do you have relatives employed by ACE Corp?]]></field-description>
+    <picklist-id>yesNo</picklist-id>
+  </field-definition>
+  <field-definition id="relativesDept" type="text" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Falls ja: In welcher Abteilung?]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[If yes, what department?]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Si la respuesta es sí, ¿en qué departamento?]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Si oui, dans quel service ?]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[いる場合、どの部門にいますか。]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[있는 경우, 어느 부서에서 근무합니까?]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Em caso afirmativo, em qual departamento?]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Если да, в каком отделе?]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是，请说明其所在部门。]]></field-label>
+  <field-description><![CDATA[If yes, what department]]></field-description>
+  </field-definition>
+  <field-definition id="relativesRelationship" type="text" required="false" custom="true" public="true" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[If yes, what is the relationship]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Falls ja: Welche Verwandschaftsbeziehung?]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[If yes, what is the relationship?]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Si la respuesta es sí, ¿cuál es la relación?]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Si oui, quelle est votre lien de parenté ?]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[いる場合、続柄は何ですか。]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[있는 경우, 구체적으로 어떤 관계입니까?]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Em caso afirmativo, qual é sua relação?]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Если да, укажите родственную связь.]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[如果是，请说明亲属关系。]]></field-label>
+  <field-description><![CDATA[If yes, what is the relationship]]></field-description>
+  </field-definition>
+  <field-definition id="scoutRecruitmentSource" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruitment Source: ]]></field-label>
+  <field-description><![CDATA[Recruitment Source]]></field-description>
+  </field-definition>
+  <field-definition id="scoutRecruiterNotes" type="richText" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruiter Notes: ]]></field-label>
+  <field-description><![CDATA[Recruiter Notes]]></field-description>
+  </field-definition>
+  <field-definition id="scoutAgencyName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Agency Name: ]]></field-label>
+  <field-description><![CDATA[Search Firm Agency Name]]></field-description>
+  </field-definition>
+  <field-definition id="scoutRecruiterFeePercent" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[% Fee: ]]></field-label>
+  <field-description><![CDATA[% fee that the candidate was submitted (and accepted) at]]></field-description>
+  </field-definition>
+  <field-definition id="scoutRecruiterFlatFee" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Recruiter Flat Fee: ]]></field-label>
+  <field-description><![CDATA[$ amount flat fee that the candidate was submitted (and accepted) at]]></field-description>
+  </field-definition>
+  <field-definition id="scoutRecruiterName" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Name: ]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Name]]></field-description>
+  </field-definition>
+  <field-definition id="scoutRecruiterEmail" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Email: ]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Email]]></field-description>
+  </field-definition>
+  <field-definition id="scoutRecruiterPhone" type="text" required="false" custom="true" public="false" readOnly="false" anonymize="false" forward-intact="true">
+  <field-label mime-type="text-plain"><![CDATA[Search Firm Recruiter Phone: ]]></field-label>
+  <field-description><![CDATA[Search Firm Recruiter Phone]]></field-description>
+  </field-definition>
+<field-permission type="write">
+  <description><![CDATA[Grant recruiter, sourcer and admin write access to the following fields]]></description>
+  <role-name><![CDATA[S]]></role-name>
+  <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[T]]></role-name>
+  <role-name><![CDATA[O]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <field refid="statusId"/>
+  <field refid="rejectReason"/>
+  <field refid="comments"/>
+  <field refid="bkgrndChkStatus"/>
+  <field refid="bkgrndChkAttachment"/>
+  <field refid="assessmentStatus"/>
+  <field refid="assessmentAttachment"/>
+</field-permission>
+<field-permission type="write">
+  <description><![CDATA[Grant sourcer write access to the following fields]]></description>
+  <role-name><![CDATA[S]]></role-name>
+  <field refid="scoutRecruitmentSource"/>
+  <field refid="scoutRecruiterNotes"/>
+  <field refid="scoutAgencyName"/>
+  <field refid="scoutRecruiterFeePercent"/>
+  <field refid="scoutRecruiterFlatFee"/>
+  <field refid="scoutRecruiterName"/>
+  <field refid="scoutRecruiterEmail"/>
+  <field refid="scoutRecruiterPhone"/>
+</field-permission>
+<field-permission type="read">
+  <description><![CDATA[[Grant recruiter read access to the following fields]]></description>
+  <role-name><![CDATA[O]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[T]]></role-name>
+  <role-name><![CDATA[W]]></role-name>
+  <role-name><![CDATA[Q]]></role-name>
+  <role-name><![CDATA[V]]></role-name>
+  <field refid="scoutRecruitmentSource"/>
+  <field refid="scoutRecruiterNotes"/>
+  <field refid="scoutAgencyName"/>
+  <field refid="scoutRecruiterFeePercent"/>
+  <field refid="scoutRecruiterFlatFee"/>
+  <field refid="scoutRecruiterName"/>
+  <field refid="scoutRecruiterEmail"/>
+  <field refid="scoutRecruiterPhone"/>
+</field-permission>
+<field-permission type="read">
+  <description><![CDATA[[Grant recruiter, sourcer and admin read access to the following fields]]></description>
+  <role-name><![CDATA[S]]></role-name>
+  <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[T]]></role-name>
+  <field refid="contactEmail"/>
+  <field refid="firstName"/>
+  <field refid="middleName"/>
+  <field refid="lastName"/>
+  <field refid="candidateName"/>
+  <field refid="cellPhone"/>
+  <field refid="homePhone"/>
+  <field refid="address"/>
+  <field refid="city"/>
+  <field refid="state"/>
+  <field refid="zip"/>
+  <field refid="country"/>
+  <field refid="formerEmployee"/>
+  <field refid="candidateSource"/>
+  <field refid="referralName"/>
+  <field refid="coverLetter"/>
+  <field refid="resume"/>
+  <field refid="supportingDoc"/>
+  <field refid="questionResponse"/>
+</field-permission>
+<field-permission type="read">
+  <description><![CDATA[Grant originator, hiring manager and 2nd level manager read access to the following fields]]></description>
+  <role-name><![CDATA[O]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <role-name><![CDATA[GM]]></role-name>
+  <field refid="statusId"/>
+  <field refid="rejectReason"/>
+  <field refid="comments"/>
+  <field refid="firstName"/>
+  <field refid="middleName"/>
+  <field refid="lastName"/>
+  <field refid="candidateName"/>
+  <field refid="contactEmail"/>
+  <field refid="cellPhone"/>
+  <field refid="homePhone"/>
+  <field refid="address"/>
+  <field refid="city"/>
+  <field refid="state"/>
+  <field refid="zip"/>
+  <field refid="country"/>
+  <field refid="formerEmployee"/>
+  <field refid="candidateSource"/>
+  <field refid="referralName"/>
+  <field refid="coverLetter"/>
+  <field refid="resume"/>
+  <field refid="supportingDoc"/>
+  <field refid="questionResponse"/>
+  <field refid="bkgrndChkStatus"/>
+  <field refid="bkgrndChkAttachment"/>
+  <field refid="assessmentStatus"/>
+  <field refid="assessmentAttachment"/>
+</field-permission>
+<field-permission type="write">
+  <description><![CDATA[Grant originator, hiring manager, and hiring manager's manager write access to the following fields]]></description>
+  <role-name><![CDATA[O]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <role-name><![CDATA[GM]]></role-name>
+  <field refid="comments"/>
+</field-permission>
+<field-permission type="external-view">
+  <description><![CDATA[Grant operators (of the Job Req that is displayed in Applicant Profile) permission to view the following fields of the selected Job Req via the Jobs Applied portlet]]></description>
+  <role-name><![CDATA[R]]></role-name>
+  <role-name><![CDATA[G]]></role-name>
+  <field refid="comments"/>
+</field-permission>
+<field-attr-override>
+  <override>
+    <description><![CDATA[For US External applicants only.]]></description>
+    <country><![CDATA[US]]></country>
+    <field-attr attribute="public" value="true" applicant="external"/>
+  </override>
+  <field refid="eeoInstruction"/>
+  <field refid="veteranStatus"/>
+  <field refid="disabilityStatus"/>
+  <field refid="gender"/>
+  <field refid="ethnicity"/>
+  <field refid="veteranStatusViet"/>
+</field-attr-override>
+<field-attr-override>
+  <override>
+    <description><![CDATA[For External applicants only.]]></description>
+    <country><![CDATA[US]]></country>
+    <country><![CDATA[AU]]></country>
+    <country><![CDATA[CN]]></country>
+    <country><![CDATA[CA]]></country>
+    <country><![CDATA[PH]]></country>
+    <country><![CDATA[DE]]></country>
+    <field-attr attribute="public" value="true" applicant="external"/>
+  </override>
+  <field refid="referralName"/>
+  <field refid="formerEmployee"/>
+  <field refid="candidateSource"/>
+</field-attr-override>
+  <button-permission>
+    <role-name><![CDATA[R]]></role-name>
+    <role-name><![CDATA[T]]></role-name>
+    <role-name><![CDATA[G]]></role-name>
+    <button-id><![CDATA[Save]]></button-id>
+    <button-id><![CDATA[Cancel]]></button-id>
+    <button-id><![CDATA[Forward]]></button-id>
+    <button-id><![CDATA[Close]]></button-id>
+    <button-id><![CDATA[Reopen]]></button-id>
+  </button-permission>
+<candidate-summary-display-options-config>
+  <category id="ContactDetails" name="ContactDetails">
+    <label xml:lang="en_US"><![CDATA[Candidate Contact and Application Data]]></label>
+    <column field-ref="cellPhone" select-by-default="true" gridOrder="1">
+    </column>
+    <column field-ref="contactEmail" select-by-default="true" gridOrder="2">
+    </column>
+    <column field-ref="country" select-by-default="false" gridOrder="3">
+    </column>
+  </category>
+  <category id="SourceData" name="SourceData">
+    <label xml:lang="en_US"><![CDATA[Candidate Source Data]]></label>
+    <column field-ref="candidateSource" select-by-default="false" gridOrder="4">
+    </column>
+  </category>
+  <category id="ScreeningData" name="ScreeningData">
+    <label xml:lang="en_US"><![CDATA[Candidate Screening Data]]></label>
+    <column field-ref="bkgrndChkStatus" select-by-default="false" gridOrder="7">
+    </column>
+    <column field-ref="comments" select-by-default="false" gridOrder="8">
+    </column>
+  </category>
+</candidate-summary-display-options-config>
+</candidate-data-model>

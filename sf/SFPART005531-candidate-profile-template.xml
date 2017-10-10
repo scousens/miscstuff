@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE candidate-profile-data-model PUBLIC "-//SuccessFactors, Inc.//DTD Candidate Profile Data Model//EN" "candidate-profile-data-model.dtd">
+<candidate-profile-data-model>
+ <template-name><![CDATA[Candidate Profile Template]]></template-name>
+  <template-desc><![CDATA[This defined candidate profile fields.]]></template-desc>
+  <field-definition id="firstName" type="text" required="true" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[First Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Vorname:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[First Name:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Nombre:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Prénom :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[名:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[이름:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Nome:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Имя:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[名字：]]></field-label>
+  <field-description><![CDATA[First Name ]]></field-description>
+  </field-definition>
+  <field-definition id="middleName" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Middle Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Zweiter Vorname:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Middle Name:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Segundo nombre:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Deuxième prénom :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[ミドルネーム:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[중간 이름:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Nome do meio:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Отчество:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[中间名：]]></field-label>
+  <field-description><![CDATA[Middle Name ]]></field-description>
+  </field-definition>
+  <field-definition id="lastName" type="text" required="true" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Last Name: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Nachname:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Last Name:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Apellido:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Nom :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[姓:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[성:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Sobrenome:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Фамилия:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[姓氏：]]></field-label>
+  <field-description><![CDATA[Last Name ]]></field-description>
+  </field-definition>
+  <field-definition id="address" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Address: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Adresse:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Address:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Dirección:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Adresse :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[住所:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[주소:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Endereço:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Адрес:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[地址：]]></field-label>
+  <field-description><![CDATA[Street Address]]></field-description>
+  </field-definition>
+  <field-definition id="city" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[City: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Ort]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[City]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Ciudad]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Ville]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[市区町村]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[시]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Cidade]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Город]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[市]]></field-label>
+  <field-description><![CDATA[City]]></field-description>
+  </field-definition>
+  <field-definition id="state" type="picklist" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[State / Province: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Bundesland/Kanton:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[State/Province:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Estado/provincia:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[État/Province :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[都道府県:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[시/도:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Estado/província:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Регион/область:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[州/省：]]></field-label>
+  <field-description><![CDATA[State / Province]]></field-description>
+    <picklist-id>state</picklist-id>
+  </field-definition>
+  <field-definition id="zip" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Zip / Postal Code: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Postleitzahl:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Zip/Postal Code:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Código postal:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Code postal :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[郵便番号:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[우편번호:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[CEP/Código postal:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Почтовый индекс:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[邮政编码：]]></field-label>
+  <field-description><![CDATA[US Zip or Postal Code]]></field-description>
+  </field-definition>
+  <field-definition id="country" type="picklist" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Country ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Land:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Country:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[País:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Pays :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[国:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[국가:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[País:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Страна:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[国家：]]></field-label>
+  <field-description><![CDATA[Country ]]></field-description>
+    <picklist-id>country</picklist-id>
+  </field-definition>
+  <field-definition id="currentTitle" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Current Title: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Aktuelle Stellenbezeichnung:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Current Title:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Cargo actual:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Titre actuel :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[現職位:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[현재 직급:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Cargo atual:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Текущая должность:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[当前职衔：]]></field-label>
+  <field-description><![CDATA[Current Job Title]]></field-description>
+  </field-definition>
+  <field-definition id="currentCompany" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Current Company: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Aktuelles Unternehmen:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Current Company:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Compañía actual:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Société actuelle :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[現会社:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[현재 회사:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Empresa atual:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Текущая компания:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[当前公司：]]></field-label>
+  <field-description><![CDATA[Current Company or Employer]]></field-description>
+  </field-definition>
+  <field-definition id="homePhone" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Evening Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Telefon abends:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Evening Phone:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Teléfono durante la tarde:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Numéro de téléphone le soir :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[夜間の電話番号:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[야간 연락번호:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Telefone noturno:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Телефон в вечернее время:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[夜间电话：]]></field-label>
+  <field-description><![CDATA[Evening phone number]]></field-description>
+  </field-definition>
+  <field-definition id="cellPhone" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Daytime Phone: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Telefon tagsüber:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Daytime Phone:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Teléfono durante el día:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Numéro de téléphone dans la journée :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[日中の電話番号:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[주간 연락번호:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[Telefone diurno:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Телефон в дневное время:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[日间电话：]]></field-label>
+  <field-description><![CDATA[Daytime phone number]]></field-description>
+  </field-definition>
+  <field-definition id="contactEmail" type="text" required="true" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Email: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[E-Mail:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Email:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[Correo electrónico:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[E-mail :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[電子メール:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[전자메일:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[E-mail:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Электронная почта:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[电子邮件：]]></field-label>
+  <field-description><![CDATA[Contact Email]]></field-description>
+  </field-definition>
+  <field-definition id="employeeId" type="text" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Employee ID: ]]></field-label>
+  <field-label mime-type="text-plain" lang="de_DE"><![CDATA[Mitarbeiterkennung:]]></field-label>
+  <field-label mime-type="text-plain" lang="en_US"><![CDATA[Employee ID:]]></field-label>
+  <field-label mime-type="text-plain" lang="es_ES"><![CDATA[ID del empleado:]]></field-label>
+  <field-label mime-type="text-plain" lang="fr_FR"><![CDATA[Identifiant employé :]]></field-label>
+  <field-label mime-type="text-plain" lang="ja_JP"><![CDATA[従業員 ID:]]></field-label>
+  <field-label mime-type="text-plain" lang="ko_KR"><![CDATA[사원 ID:]]></field-label>
+  <field-label mime-type="text-plain" lang="pt_BR"><![CDATA[ID do colaborador:]]></field-label>
+  <field-label mime-type="text-plain" lang="ru_RU"><![CDATA[Ид. сотрудника:]]></field-label>
+  <field-label mime-type="text-plain" lang="zh_CN"><![CDATA[员工 ID：]]></field-label>
+  <field-description><![CDATA[Employee ID]]></field-description>
+  </field-definition>
+  <field-definition id="resume" type="richText" required="false" custom="false" anonymize="false">
+  <field-label mime-type="text-plain"><![CDATA[Resume]]></field-label>
+  <field-description><![CDATA[Resume]]></field-description>
+  </field-definition>
+<search-display-options-config>
+  <category id="BasicData" name="BasicData">
+    <label><![CDATA[Basic Candidate Data]]></label>
+    <label xml:lang="de_DE"><![CDATA[Grundlegende Daten des Kandidaten]]></label>
+    <label xml:lang="en_US"><![CDATA[Basic Candidate Data]]></label>
+    <label xml:lang="es_ES"><![CDATA[Datos básicos del candidato]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Données de base du candidat]]></label>
+    <label xml:lang="ja_JP"><![CDATA[基本候補者データ]]></label>
+    <label xml:lang="ko_KR"><![CDATA[기본 후보자 데이터]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Dados básicos do candidato]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Основные данные кандидата]]></label>
+    <label xml:lang="zh_CN"><![CDATA[候选人基本信息]]></label>
+    <column field-ref="contactEmail" bge-ref="none" select-by-default="false" gridOrder="1">
+    </column>
+    <column field-ref="state" bge-ref="none" select-by-default="false" gridOrder="4">
+    </column>
+    <column field-ref="cellPhone" bge-ref="none" select-by-default="false" gridOrder="2">
+    </column>
+    <column field-ref="city" bge-ref="none" select-by-default="false" gridOrder="3">
+    </column>
+  </category>
+</search-display-options-config>
+<background-element id="globalInfo" type-id="7">
+  <label><![CDATA[Global Info]]></label>
+  <label xml:lang="de_DE"><![CDATA[Globale Informationen]]></label>
+  <label xml:lang="en_US"><![CDATA[Global Info]]></label>
+  <label xml:lang="es_ES"><![CDATA[Información global]]></label>
+  <label xml:lang="fr_FR"><![CDATA[Informations globales]]></label>
+  <label xml:lang="ja_JP"><![CDATA[グローバル情報]]></label>
+  <label xml:lang="ko_KR"><![CDATA[해외 정보]]></label>
+  <label xml:lang="pt_BR"><![CDATA[Informações gerais]]></label>
+  <label xml:lang="ru_RU"><![CDATA[Глобальная информация]]></label>
+  <label xml:lang="zh_CN"><![CDATA[全球性信息]]></label>
+  <data-field id="ethnicity" field-name="vfld1" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Ethnicity]]></label>
+    <label xml:lang="de_DE"><![CDATA[Ethnizität]]></label>
+    <label xml:lang="en_US"><![CDATA[Ethnicity]]></label>
+    <label xml:lang="es_ES"><![CDATA[Origen étnico]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Ethnicité]]></label>
+    <label xml:lang="ja_JP"><![CDATA[民族]]></label>
+    <label xml:lang="ko_KR"><![CDATA[민족]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Etnia]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Этническая принадлежность]]></label>
+    <label xml:lang="zh_CN"><![CDATA[种族]]></label>
+  </data-field>
+</background-element>
+<background-element id="outsideWorkExperience" type-id="4">
+  <label><![CDATA[Previous Employment]]></label>
+  <label xml:lang="de_DE"><![CDATA[Berufliche Erfahrung]]></label>
+  <label xml:lang="en_US"><![CDATA[Previous Employment]]></label>
+  <label xml:lang="es_ES"><![CDATA[Empleo anterior]]></label>
+  <label xml:lang="fr_FR"><![CDATA[Emploi précédent]]></label>
+  <label xml:lang="ja_JP"><![CDATA[前職歴]]></label>
+  <label xml:lang="ko_KR"><![CDATA[전 직장]]></label>
+  <label xml:lang="pt_BR"><![CDATA[Emprego anterior]]></label>
+  <label xml:lang="ru_RU"><![CDATA[Предыдущая занятость]]></label>
+  <label xml:lang="zh_CN"><![CDATA[曾受雇职位]]></label>
+  <data-field id="employer" field-name="vfld6" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Company Name]]></label>
+    <label xml:lang="de_DE"><![CDATA[Name des Unternehmens]]></label>
+    <label xml:lang="en_US"><![CDATA[Company Name]]></label>
+    <label xml:lang="es_ES"><![CDATA[Nombre de la compañía]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Nom de la société]]></label>
+    <label xml:lang="ja_JP"><![CDATA[会社名]]></label>
+    <label xml:lang="ko_KR"><![CDATA[회사명]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Nome da empresa]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Название компании]]></label>
+    <label xml:lang="zh_CN"><![CDATA[公司名称]]></label>
+  </data-field>
+  <data-field id="startTitle" field-name="vfld3" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Title]]></label>
+    <label xml:lang="de_DE"><![CDATA[Stellenbezeichnung]]></label>
+    <label xml:lang="en_US"><![CDATA[Title]]></label>
+    <label xml:lang="es_ES"><![CDATA[Título]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Titre]]></label>
+    <label xml:lang="ja_JP"><![CDATA[職位]]></label>
+    <label xml:lang="ko_KR"><![CDATA[직급]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Cargo]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Должность]]></label>
+    <label xml:lang="zh_CN"><![CDATA[职衔]]></label>
+  </data-field>
+  <data-field id="startDate" field-name="startDate" required="true" max-length="999" anonymize="false">
+    <label><![CDATA[From Date]]></label>
+    <label xml:lang="de_DE"><![CDATA[Anfangsdatum]]></label>
+    <label xml:lang="en_US"><![CDATA[From Date]]></label>
+    <label xml:lang="es_ES"><![CDATA[Desde la fecha]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Date de début]]></label>
+    <label xml:lang="ja_JP"><![CDATA[開始日]]></label>
+    <label xml:lang="ko_KR"><![CDATA[시작일]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Data inicial]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Дата начала]]></label>
+    <label xml:lang="zh_CN"><![CDATA[起始日期]]></label>
+  </data-field>
+  <data-field id="endDate" field-name="endDate" max-length="999" anonymize="false">
+    <label><![CDATA[End Date]]></label>
+    <label xml:lang="de_DE"><![CDATA[Enddatum]]></label>
+    <label xml:lang="en_US"><![CDATA[End Date]]></label>
+    <label xml:lang="es_ES"><![CDATA[Fecha de finalización]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Date de fin]]></label>
+    <label xml:lang="ja_JP"><![CDATA[終了日]]></label>
+    <label xml:lang="ko_KR"><![CDATA[종료일]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Data final]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Дата окончания]]></label>
+    <label xml:lang="zh_CN"><![CDATA[结束日期]]></label>
+  </data-field>
+  <data-field id="presentEmployer" field-name="ifld1" max-length="999" anonymize="false">
+    <label><![CDATA[Present Employer]]></label>
+    <label xml:lang="de_DE"><![CDATA[Derzeitiger Arbeitgeber]]></label>
+    <label xml:lang="en_US"><![CDATA[Present Employer]]></label>
+    <label xml:lang="es_ES"><![CDATA[Empleador actual]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Employeur actuel]]></label>
+    <label xml:lang="ja_JP"><![CDATA[現雇用主]]></label>
+    <label xml:lang="ko_KR"><![CDATA[현재 고용주]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Empregador atual]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Текущий работодатель]]></label>
+    <label xml:lang="zh_CN"><![CDATA[目前的工作单位]]></label>
+    <picklist id="yesnomaybe"/>
+  </data-field>
+  <data-field id="businessType" field-name="vfld2" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Type of Business]]></label>
+    <label xml:lang="de_DE"><![CDATA[Branche]]></label>
+    <label xml:lang="en_US"><![CDATA[Type of Business]]></label>
+    <label xml:lang="es_ES"><![CDATA[Tipo de negocio]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Type d’activité]]></label>
+    <label xml:lang="ja_JP"><![CDATA[事業のタイプ]]></label>
+    <label xml:lang="ko_KR"><![CDATA[업종]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Ramo de atuação]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Вид деятельности]]></label>
+    <label xml:lang="zh_CN"><![CDATA[业务类型]]></label>
+    <picklist id="industry"/>
+  </data-field>
+</background-element>
+<background-element id="insideWorkExperience" type-id="1">
+  <label><![CDATA[Work Experience Within Company]]></label>
+  <label xml:lang="de_DE"><![CDATA[Im Unternehmen gesammelte Berufserfahrungen]]></label>
+  <label xml:lang="en_US"><![CDATA[Work Experience Within Company]]></label>
+  <label xml:lang="es_ES"><![CDATA[Experiencia laboral dentro de la compañía]]></label>
+  <label xml:lang="fr_FR"><![CDATA[Expérience professionnelle dans l’entreprise]]></label>
+  <label xml:lang="ja_JP"><![CDATA[社内職務経験]]></label>
+  <label xml:lang="ko_KR"><![CDATA[회사 내 경력]]></label>
+  <label xml:lang="pt_BR"><![CDATA[Experiência de trabalho dentro da empresa]]></label>
+  <label xml:lang="ru_RU"><![CDATA[Опыт работы в компании]]></label>
+  <label xml:lang="zh_CN"><![CDATA[本公司内的工作经验]]></label>
+  <data-field id="title" field-name="vfld1" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Title]]></label>
+    <label xml:lang="de_DE"><![CDATA[Stellenbezeichnung]]></label>
+    <label xml:lang="en_US"><![CDATA[Title]]></label>
+    <label xml:lang="es_ES"><![CDATA[Título]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Titre]]></label>
+    <label xml:lang="ja_JP"><![CDATA[職位]]></label>
+    <label xml:lang="ko_KR"><![CDATA[직급]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Título]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Должность]]></label>
+    <label xml:lang="zh_CN"><![CDATA[职衔]]></label>
+  </data-field>
+  <data-field id="department" field-name="vfld2" max-length="4000" anonymize="false">
+    <label><![CDATA[Department]]></label>
+    <label xml:lang="de_DE"><![CDATA[Abteilung]]></label>
+    <label xml:lang="en_US"><![CDATA[Department]]></label>
+    <label xml:lang="es_ES"><![CDATA[Departamento]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Service]]></label>
+    <label xml:lang="ja_JP"><![CDATA[部門]]></label>
+    <label xml:lang="ko_KR"><![CDATA[부서]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Departamento]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Отдел]]></label>
+    <label xml:lang="zh_CN"><![CDATA[部门]]></label>
+  </data-field>
+  <data-field id="startDate" field-name="startDate" required="true" max-length="999" anonymize="false">
+    <label><![CDATA[From Date]]></label>
+    <label xml:lang="de_DE"><![CDATA[Anfangsdatum]]></label>
+    <label xml:lang="en_US"><![CDATA[From Date]]></label>
+    <label xml:lang="es_ES"><![CDATA[Desde la fecha]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Date de début]]></label>
+    <label xml:lang="ja_JP"><![CDATA[開始日]]></label>
+    <label xml:lang="ko_KR"><![CDATA[시작일]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Data inicial]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Дата начала]]></label>
+    <label xml:lang="zh_CN"><![CDATA[起始日期]]></label>
+  </data-field>
+</background-element>
+<background-element id="education" type-id="6">
+  <label><![CDATA[Formal Education]]></label>
+  <label xml:lang="de_DE"><![CDATA[Ausbildung]]></label>
+  <label xml:lang="en_US"><![CDATA[Formal Education]]></label>
+  <label xml:lang="es_ES"><![CDATA[Educación formal]]></label>
+  <label xml:lang="fr_FR"><![CDATA[Niveau d’études]]></label>
+  <label xml:lang="ja_JP"><![CDATA[学校教育]]></label>
+  <label xml:lang="ko_KR"><![CDATA[정규 교육]]></label>
+  <label xml:lang="pt_BR"><![CDATA[Formação]]></label>
+  <label xml:lang="ru_RU"><![CDATA[Формальное образование]]></label>
+  <label xml:lang="zh_CN"><![CDATA[正规教育]]></label>
+  <data-field id="school" field-name="vfld1" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[School]]></label>
+    <label xml:lang="de_DE"><![CDATA[Schule]]></label>
+    <label xml:lang="en_US"><![CDATA[School]]></label>
+    <label xml:lang="es_ES"><![CDATA[Escuela]]></label>
+    <label xml:lang="fr_FR"><![CDATA[École]]></label>
+    <label xml:lang="ja_JP"><![CDATA[学校]]></label>
+    <label xml:lang="ko_KR"><![CDATA[학교]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Instituição]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Учебное заведение]]></label>
+    <label xml:lang="zh_CN"><![CDATA[学校]]></label>
+  </data-field>
+  <data-field id="degree" field-name="vfld3" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Degree]]></label>
+    <label xml:lang="de_DE"><![CDATA[Abschluss]]></label>
+    <label xml:lang="en_US"><![CDATA[Degree]]></label>
+    <label xml:lang="es_ES"><![CDATA[Grado académico]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Diplôme]]></label>
+    <label xml:lang="ja_JP"><![CDATA[学位]]></label>
+    <label xml:lang="ko_KR"><![CDATA[학위]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Nível]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Степень]]></label>
+    <label xml:lang="zh_CN"><![CDATA[学历]]></label>
+    <picklist id="degree"/>
+  </data-field>
+  <data-field id="major" field-name="vfld2" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Major]]></label>
+    <label xml:lang="de_DE"><![CDATA[Hauptfach]]></label>
+    <label xml:lang="en_US"><![CDATA[Major]]></label>
+    <label xml:lang="es_ES"><![CDATA[Carrera]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Spécialité]]></label>
+    <label xml:lang="ja_JP"><![CDATA[専攻]]></label>
+    <label xml:lang="ko_KR"><![CDATA[전공]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Área]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Специализация]]></label>
+    <label xml:lang="zh_CN"><![CDATA[专业]]></label>
+    <picklist id="major"/>
+  </data-field>
+  <data-field id="presentEmployer" field-name="vfld5" max-length="999" anonymize="false">
+    <label><![CDATA[Still Attending]]></label>
+    <label xml:lang="de_DE"><![CDATA[Noch nicht abgeschlossen]]></label>
+    <label xml:lang="en_US"><![CDATA[Still Attending]]></label>
+    <label xml:lang="es_ES"><![CDATA[En curso]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Encore étudiant]]></label>
+    <label xml:lang="ja_JP"><![CDATA[通学中]]></label>
+    <label xml:lang="ko_KR"><![CDATA[재학 중]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Cursando]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Студент]]></label>
+    <label xml:lang="zh_CN"><![CDATA[仍在就读]]></label>
+    <picklist id="yesnomaybe"/>
+  </data-field>
+  <data-field id="startDate" field-name="startDate" max-length="999" anonymize="false">
+    <label><![CDATA[From Date]]></label>
+    <label xml:lang="de_DE"><![CDATA[Anfangsdatum]]></label>
+    <label xml:lang="en_US"><![CDATA[From Date]]></label>
+    <label xml:lang="es_ES"><![CDATA[Desde la fecha]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Date de début]]></label>
+    <label xml:lang="ja_JP"><![CDATA[開始日]]></label>
+    <label xml:lang="ko_KR"><![CDATA[시작일]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Data inicial]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Дата начала]]></label>
+    <label xml:lang="zh_CN"><![CDATA[起始日期]]></label>
+  </data-field>
+  <data-field id="endDate" field-name="endDate" max-length="999" anonymize="false">
+    <label><![CDATA[End Date]]></label>
+    <label xml:lang="de_DE"><![CDATA[Enddatum]]></label>
+    <label xml:lang="en_US"><![CDATA[End Date]]></label>
+    <label xml:lang="es_ES"><![CDATA[Fecha de finalización]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Date de fin]]></label>
+    <label xml:lang="ja_JP"><![CDATA[終了日]]></label>
+    <label xml:lang="ko_KR"><![CDATA[종료일]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Data final]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Дата окончания]]></label>
+    <label xml:lang="zh_CN"><![CDATA[结束日期]]></label>
+  </data-field>
+</background-element>
+<background-element id="languages" type-id="11">
+  <label><![CDATA[Language Skills]]></label>
+  <label xml:lang="de_DE"><![CDATA[Sprachkenntnisse]]></label>
+  <label xml:lang="en_US"><![CDATA[Language Skills]]></label>
+  <label xml:lang="es_ES"><![CDATA[Conocimientos de idiomas]]></label>
+  <label xml:lang="fr_FR"><![CDATA[Compétences linguistiques]]></label>
+  <label xml:lang="ja_JP"><![CDATA[言語能力]]></label>
+  <label xml:lang="ko_KR"><![CDATA[언어 능력]]></label>
+  <label xml:lang="pt_BR"><![CDATA[Conhecimento de idiomas]]></label>
+  <label xml:lang="ru_RU"><![CDATA[Знание языков]]></label>
+  <label xml:lang="zh_CN"><![CDATA[语言能力]]></label>
+  <data-field id="language" field-name="vfld1" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Language]]></label>
+    <label xml:lang="de_DE"><![CDATA[Sprache]]></label>
+    <label xml:lang="en_US"><![CDATA[Language]]></label>
+    <label xml:lang="es_ES"><![CDATA[Idioma]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Langue]]></label>
+    <label xml:lang="ja_JP"><![CDATA[言語]]></label>
+    <label xml:lang="ko_KR"><![CDATA[언어]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Idioma]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Язык]]></label>
+    <label xml:lang="zh_CN"><![CDATA[语言]]></label>
+    <picklist id="language"/>
+  </data-field>
+  <data-field id="speakingProf" field-name="vfld2" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Speaking Proficiency]]></label>
+    <label xml:lang="de_DE"><![CDATA[Sprechfertigkeit]]></label>
+    <label xml:lang="en_US"><![CDATA[Speaking Proficiency]]></label>
+    <label xml:lang="es_ES"><![CDATA[Dominio oral]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Niveau de langue parlée]]></label>
+    <label xml:lang="ja_JP"><![CDATA[会話能力段階]]></label>
+    <label xml:lang="ko_KR"><![CDATA[말하기 수준]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Proficiência oral]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Владение устной речью]]></label>
+    <label xml:lang="zh_CN"><![CDATA[口语能力]]></label>
+    <picklist id="fluency"/>
+  </data-field>
+  <data-field id="readingProf" field-name="vfld3" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Reading Proficiency]]></label>
+    <label xml:lang="de_DE"><![CDATA[Lesefertigkeit]]></label>
+    <label xml:lang="en_US"><![CDATA[Reading Proficiency]]></label>
+    <label xml:lang="es_ES"><![CDATA[Dominio de lectura]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Niveau de langue lue]]></label>
+    <label xml:lang="ja_JP"><![CDATA[読解力]]></label>
+    <label xml:lang="ko_KR"><![CDATA[읽기 수준]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Proficiência em leitura]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Владение чтением]]></label>
+    <label xml:lang="zh_CN"><![CDATA[阅读能力]]></label>
+    <picklist id="fluency"/>
+  </data-field>
+  <data-field id="writingProf" field-name="vfld4" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Writing Proficiency]]></label>
+    <label xml:lang="de_DE"><![CDATA[Schreibfertigkeit]]></label>
+    <label xml:lang="en_US"><![CDATA[Writing Proficiency]]></label>
+    <label xml:lang="es_ES"><![CDATA[Dominio escrito]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Niveau de langue écrite]]></label>
+    <label xml:lang="ja_JP"><![CDATA[筆記力]]></label>
+    <label xml:lang="ko_KR"><![CDATA[쓰기 수준]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Proficiência em escrita]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Владение письменной речью]]></label>
+    <label xml:lang="zh_CN"><![CDATA[书写能力]]></label>
+    <picklist id="fluency"/>
+  </data-field>
+</background-element>
+<background-element id="mobility" type-id="15">
+  <label><![CDATA[Geographic Mobility]]></label>
+  <label xml:lang="de_DE"><![CDATA[Mobilität]]></label>
+  <label xml:lang="en_US"><![CDATA[Geographic Mobility]]></label>
+  <label xml:lang="es_ES"><![CDATA[Movilidad geográfica]]></label>
+  <label xml:lang="fr_FR"><![CDATA[Mobilité géographique]]></label>
+  <label xml:lang="ja_JP"><![CDATA[地理的移動性]]></label>
+  <label xml:lang="ko_KR"><![CDATA[지역 이동성]]></label>
+  <label xml:lang="pt_BR"><![CDATA[Mobilidade geográfica]]></label>
+  <label xml:lang="ru_RU"><![CDATA[Географическая мобильность]]></label>
+  <label xml:lang="zh_CN"><![CDATA[工作地点的灵活性]]></label>
+  <data-field id="location" field-name="vfld2" max-length="4000" anonymize="false">
+    <label><![CDATA[Location Desired]]></label>
+    <label xml:lang="de_DE"><![CDATA[Bevorzugter Standort]]></label>
+    <label xml:lang="en_US"><![CDATA[Location Desired]]></label>
+    <label xml:lang="es_ES"><![CDATA[Ubicación deseada]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Destination souhaitée]]></label>
+    <label xml:lang="ja_JP"><![CDATA[希望事業所]]></label>
+    <label xml:lang="ko_KR"><![CDATA[희망 근무지]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Localização desejada]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Желаемое местоположение]]></label>
+    <label xml:lang="zh_CN"><![CDATA[合意的工作地点]]></label>
+  </data-field>
+  <data-field id="willingness" field-name="vfld1" required="true" max-length="4000" anonymize="false">
+    <label><![CDATA[Willing to Relocate]]></label>
+    <label xml:lang="de_DE"><![CDATA[Umzugsbereitschaft]]></label>
+    <label xml:lang="en_US"><![CDATA[Willingness to Relocate]]></label>
+    <label xml:lang="es_ES"><![CDATA[Disponibilidad de traslado]]></label>
+    <label xml:lang="fr_FR"><![CDATA[Disposition à déménager]]></label>
+    <label xml:lang="ja_JP"><![CDATA[転勤可否]]></label>
+    <label xml:lang="ko_KR"><![CDATA[근무지 이동 희망 여부]]></label>
+    <label xml:lang="pt_BR"><![CDATA[Disposição para ser transferido]]></label>
+    <label xml:lang="ru_RU"><![CDATA[Готовность к переезду]]></label>
+    <label xml:lang="zh_CN"><![CDATA[愿意异地任职]]></label>
+    <picklist id="yesnomaybe"/>
+  </data-field>
+</background-element>
+<sm-mapping field-id="middleName" map-to="mi" />
+<sm-mapping field-id="lastName" map-to="lastName" />
+<sm-mapping field-id="zip" map-to="zipCode" />
+<sm-mapping field-id="languages" map-to="languages" />
+<sm-mapping field-id="insideWorkExperience" map-to="insideWorkExperience" />
+<sm-mapping field-id="address" map-to="addressLine1" />
+<sm-mapping field-id="currentTitle" map-to="title" />
+<sm-mapping field-id="education" map-to="education" />
+<sm-mapping field-id="firstName" map-to="firstName" />
+<sm-mapping field-id="mobility" map-to="mobility" />
+<sm-mapping field-id="city" map-to="city" />
+<field-permission type="write">
+  <role-name><![CDATA[Candidate]]></role-name>
+  <country><![CDATA[*]]></country>
+  <source><![CDATA[*]]></source>
+  <field refid="*"/>
+  <bg-element refid="education" data-field-id="*"/>
+  <bg-element refid="insideWorkExperience" data-field-id="*"/>
+  <bg-element refid="languages" data-field-id="*"/>
+  <bg-element refid="mobility" data-field-id="*"/>
+  <bg-element refid="outsideWorkExperience" data-field-id="*"/>
+</field-permission>
+<field-permission type="read">
+  <role-name><![CDATA[R]]></role-name>
+  <country><![CDATA[*]]></country>
+  <source><![CDATA[*]]></source>
+  <field refid="*"/>
+  <bg-element refid="education" data-field-id="*"/>
+  <bg-element refid="insideWorkExperience" data-field-id="*"/>
+  <bg-element refid="languages" data-field-id="*"/>
+  <bg-element refid="mobility" data-field-id="*"/>
+  <bg-element refid="outsideWorkExperience" data-field-id="*"/>
+</field-permission>
+</candidate-profile-data-model>
