@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE job-req-template PUBLIC "-//SuccessFactors, Inc.//DTD Job Requisition Template//EN" "job-req-template.dtd">
 <job-req-template type="jobReq" spell-check="false" min-posting-days="0" min-internal-lead-days="0">
- <template-name><![CDATA[Standard Job Requisition]]></template-name>
+ <template-name><![CDATA[Standard Job Requisition - with Annual Salary]]></template-name>
  <template-name lang="de_DE"><![CDATA[Standardstellenanforderung]]></template-name>
  <template-name lang="en_GB"><![CDATA[Standard Job Requisition]]></template-name>
- <template-name lang="en_US"><![CDATA[Standard Job Requisition]]></template-name>
+ <template-name lang="en_US"><![CDATA[Standard Job Requisition - with Annual Salary]]></template-name>
  <template-name lang="es_ES"><![CDATA[Solicitud de puesto estándar]]></template-name>
  <template-name lang="fr_FR"><![CDATA[Demande de recrutement standard]]></template-name>
  <template-name lang="ja_JP"><![CDATA[標準採用申請]]></template-name>
@@ -12,7 +12,7 @@
  <template-name lang="pt_BR"><![CDATA[Requisição de vaga padrão]]></template-name>
  <template-name lang="ru_RU"><![CDATA[Стандартная заявка на подбор кандидата на вакантную должность ]]></template-name>
  <template-name lang="zh_CN"><![CDATA[标准职位申请]]></template-name>
-  <template-desc><![CDATA[Standard Job Requisition]]></template-desc>
+  <template-desc><![CDATA[Standard Job Requisition - with Annual Salary]]></template-desc>
   <template-lastmodified>12/9/14 12:00 AM</template-lastmodified>
   <supported-languages>
     <lang><![CDATA[en_US]]></lang>
@@ -288,16 +288,16 @@
   </field-definition>
   <field-definition id="filter1" type="picklist" required="true" custom="false">
   <field-label><![CDATA[Job Search Country]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Land für Stellensuche]]></field-label>
+  <field-label lang="de_DE"><![CDATA[Stelle – Land]]></field-label>
   <field-label lang="en_GB"><![CDATA[Job Search Country]]></field-label>
   <field-label lang="en_US"><![CDATA[Job Search Country]]></field-label>
-  <field-label lang="es_ES"><![CDATA[País de búsqueda de empleo]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Pays de recherche d'offres d'emploi]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[求人検索国]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[직무 검색 국가]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[País da pesquisa do cargo]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[Страна поиска должности]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[职位搜索国家]]></field-label>
+  <field-label lang="es_ES"><![CDATA[País del puesto de trabajo]]></field-label>
+  <field-label lang="fr_FR"><![CDATA[Pays du poste]]></field-label>
+  <field-label lang="ja_JP"><![CDATA[任地国]]></field-label>
+  <field-label lang="ko_KR"><![CDATA[근무 국가]]></field-label>
+  <field-label lang="pt_BR"><![CDATA[País do trabalho]]></field-label>
+  <field-label lang="ru_RU"><![CDATA[Страна вакантной должности]]></field-label>
+  <field-label lang="zh_CN"><![CDATA[工作的国家]]></field-label>
   <field-description><![CDATA[Country used for searching on job boards]]></field-description>
   <field-description lang="de_DE"><![CDATA[Land, das bei der Suche in Stellenausschreibungsplattformen verwendet wird]]></field-description>
   <field-description lang="en_GB"><![CDATA[Country used for searching on job boards]]></field-description>
@@ -621,16 +621,16 @@
   </field-definition>
   <field-definition id="filter2" type="picklist" required="true" custom="false">
   <field-label><![CDATA[Job Search Function]]></field-label>
-  <field-label lang="de_DE"><![CDATA[Stellensuchfunktion]]></field-label>
+  <field-label lang="de_DE"><![CDATA[Stelle – Funktion]]></field-label>
   <field-label lang="en_GB"><![CDATA[Job Search Function]]></field-label>
   <field-label lang="en_US"><![CDATA[Job Search Function]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Función de búsqueda de empleo]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Fonction de recherche d'offres d'emploi]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[仕事検索の職種]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[직무 검색 기능]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Função da pesquisa do cargo]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[Функция поиска должности]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[职位搜索功能]]></field-label>
+  <field-label lang="es_ES"><![CDATA[Función del puesto de trabajo]]></field-label>
+  <field-label lang="fr_FR"><![CDATA[Fonction]]></field-label>
+  <field-label lang="ja_JP"><![CDATA[職種]]></field-label>
+  <field-label lang="ko_KR"><![CDATA[직무]]></field-label>
+  <field-label lang="pt_BR"><![CDATA[Função do trabalho]]></field-label>
+  <field-label lang="ru_RU"><![CDATA[Функциональные обязанности]]></field-label>
+  <field-label lang="zh_CN"><![CDATA[工作职能]]></field-label>
   <field-description><![CDATA[Choose the functional area of this job.]]></field-description>
   <field-description lang="de_DE"><![CDATA[Wählen Sie den Funktionsbereich dieser Stelle.]]></field-description>
   <field-description lang="en_GB"><![CDATA[Choose the functional area of this job.]]></field-description>
@@ -1291,6 +1291,54 @@
   <field-description lang="ru_RU"><![CDATA[Максимальный оклад]]></field-description>
   <field-description lang="zh_CN"><![CDATA[最高工资]]></field-description>
   </field-definition>
+  <field-definition id="annualSalaryMin" type="currency" required="false" custom="true">
+  <field-label><![CDATA[Annual Salary Min.]]></field-label>
+  <field-label lang="de_DE"><![CDATA[Gehalt min.]]></field-label>
+  <field-label lang="en_GB"><![CDATA[Annual Salary Min.]]></field-label>
+  <field-label lang="en_US"><![CDATA[Annual Salary Min.]]></field-label>
+  <field-label lang="es_ES"><![CDATA[Salario mín.]]></field-label>
+  <field-label lang="fr_FR"><![CDATA[Salaire min.]]></field-label>
+  <field-label lang="ja_JP"><![CDATA[最低給与]]></field-label>
+  <field-label lang="ko_KR"><![CDATA[최저 급여]]></field-label>
+  <field-label lang="pt_BR"><![CDATA[Salário mín.]]></field-label>
+  <field-label lang="ru_RU"><![CDATA[Мин. оклад]]></field-label>
+  <field-label lang="zh_CN"><![CDATA[最低工资]]></field-label>
+  <field-description><![CDATA[Annual Minimum Salary]]></field-description>
+  <field-description lang="de_DE"><![CDATA[Mindestgehalt]]></field-description>
+  <field-description lang="en_GB"><![CDATA[Minimum Salary]]></field-description>
+  <field-description lang="en_US"><![CDATA[Annual Minimum Salary]]></field-description>
+  <field-description lang="es_ES"><![CDATA[Salario mínimo]]></field-description>
+  <field-description lang="fr_FR"><![CDATA[Salaire minimum]]></field-description>
+  <field-description lang="ja_JP"><![CDATA[最低給与]]></field-description>
+  <field-description lang="ko_KR"><![CDATA[최저 급여]]></field-description>
+  <field-description lang="pt_BR"><![CDATA[Salário mínimo]]></field-description>
+  <field-description lang="ru_RU"><![CDATA[Минимальный оклад]]></field-description>
+  <field-description lang="zh_CN"><![CDATA[最低工资]]></field-description>
+  </field-definition>
+  <field-definition id="annualSalaryMax" type="currency" required="false" custom="true">
+  <field-label><![CDATA[Annual Salary Max.]]></field-label>
+  <field-label lang="de_DE"><![CDATA[Gehalt max.]]></field-label>
+  <field-label lang="en_GB"><![CDATA[Annual Salary Max.]]></field-label>
+  <field-label lang="en_US"><![CDATA[Annual Salary Max.]]></field-label>
+  <field-label lang="es_ES"><![CDATA[Salario máx.]]></field-label>
+  <field-label lang="fr_FR"><![CDATA[Salaire max.]]></field-label>
+  <field-label lang="ja_JP"><![CDATA[最高給与]]></field-label>
+  <field-label lang="ko_KR"><![CDATA[최고 급여]]></field-label>
+  <field-label lang="pt_BR"><![CDATA[Salário máx.]]></field-label>
+  <field-label lang="ru_RU"><![CDATA[Макс. оклад]]></field-label>
+  <field-label lang="zh_CN"><![CDATA[最高工资]]></field-label>
+  <field-description><![CDATA[Annual Maximum Salary]]></field-description>
+  <field-description lang="de_DE"><![CDATA[Maximalgehalt]]></field-description>
+  <field-description lang="en_GB"><![CDATA[Maximum Salary]]></field-description>
+  <field-description lang="en_US"><![CDATA[Annual Maximum Salary]]></field-description>
+  <field-description lang="es_ES"><![CDATA[Salario máximo]]></field-description>
+  <field-description lang="fr_FR"><![CDATA[Salaire maximum]]></field-description>
+  <field-description lang="ja_JP"><![CDATA[最高給与]]></field-description>
+  <field-description lang="ko_KR"><![CDATA[최고 급여]]></field-description>
+  <field-description lang="pt_BR"><![CDATA[Salário máximo]]></field-description>
+  <field-description lang="ru_RU"><![CDATA[Максимальный оклад]]></field-description>
+  <field-description lang="zh_CN"><![CDATA[最高工资]]></field-description>
+  </field-definition>
   <field-definition id="salRateType" type="enum" required="false" custom="false">
   <field-label><![CDATA[Salary Frequency]]></field-label>
   <field-label lang="de_DE"><![CDATA[Gehaltshäufigkeit]]></field-label>
@@ -1372,13 +1420,13 @@
   <field-label lang="de_DE"><![CDATA[Beschäftigungsstatus]]></field-label>
   <field-label lang="en_GB"><![CDATA[Employment Status]]></field-label>
   <field-label lang="en_US"><![CDATA[Employment Status]]></field-label>
-  <field-label lang="es_ES"><![CDATA[Estado de empleo]]></field-label>
-  <field-label lang="fr_FR"><![CDATA[Statut professionnel]]></field-label>
-  <field-label lang="ja_JP"><![CDATA[雇用ステータス]]></field-label>
-  <field-label lang="ko_KR"><![CDATA[채용 상태]]></field-label>
-  <field-label lang="pt_BR"><![CDATA[Status de trabalho]]></field-label>
-  <field-label lang="ru_RU"><![CDATA[Статус занятости]]></field-label>
-  <field-label lang="zh_CN"><![CDATA[就业状态]]></field-label>
+  <field-label lang="es_ES"><![CDATA[Tipo de empleo]]></field-label>
+  <field-label lang="fr_FR"><![CDATA[Type d'emploi]]></field-label>
+  <field-label lang="ja_JP"><![CDATA[従業員タイプ]]></field-label>
+  <field-label lang="ko_KR"><![CDATA[고용 유형]]></field-label>
+  <field-label lang="pt_BR"><![CDATA[Tipo de emprego]]></field-label>
+  <field-label lang="ru_RU"><![CDATA[Тип трудоустройства]]></field-label>
+  <field-label lang="zh_CN"><![CDATA[雇用类型]]></field-label>
   <field-description><![CDATA[Full time or part time]]></field-description>
   <field-description lang="de_DE"><![CDATA[Wählen Sie einen Wert.]]></field-description>
   <field-description lang="en_GB"><![CDATA[Full time or part time]]></field-description>
@@ -2586,6 +2634,8 @@
     <field refid="salaryBase"/>
     <field refid="salaryMin"/>
     <field refid="salaryMax"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="salRateType"/>
     <field refid="filter3"/>
     <field refid="payType"/>
@@ -2695,6 +2745,8 @@
     <field refid="salaryBase"/>
     <field refid="salaryMin"/>
     <field refid="salaryMax"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="salRateType"/>
     <field refid="filter3"/>
     <field refid="payType"/>
@@ -2804,6 +2856,8 @@
     <field refid="salaryBase"/>
     <field refid="salaryMin"/>
     <field refid="salaryMax"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="salRateType"/>
     <field refid="filter3"/>
     <field refid="payType"/>
@@ -2923,6 +2977,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="instrInvolvedParties"/>
     <field refid="externalPrivatePosting"/>
@@ -3020,6 +3076,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="instrInvolvedParties"/>
     <field refid="externalPrivatePosting"/>
@@ -3144,6 +3202,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="instrInvolvedParties"/>
     <field refid="externalPrivatePosting"/>
@@ -3245,6 +3305,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="instrInvolvedParties"/>
     <field refid="externalPrivatePosting"/>
@@ -3352,6 +3414,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="computertype"/>
     <field refid="payType"/>
@@ -3429,6 +3493,8 @@
     <field refid="salRateType"/>
     <field refid="instrReq"/>
     <field refid="budgeted"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="instrInvolvedParties"/>
     <field refid="instrReqDates"/>
     <field refid="accommo"/>
@@ -3536,6 +3602,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="instrInvolvedParties"/>
     <field refid="externalPrivatePosting"/>
@@ -3646,6 +3714,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="computertype"/>
     <field refid="payType"/>
@@ -3738,6 +3808,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="externalPrivatePosting"/>
     <field refid="computertype"/>
@@ -3834,6 +3906,8 @@
     <field refid="questions"/>
     <field refid="intJobDescHeader"/>
     <field refid="country"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="legentity"/>
     <field refid="instrInvolvedParties"/>
     <field refid="externalPrivatePosting"/>
@@ -3925,6 +3999,8 @@
     <field refid="workHours"/>
     <field refid="experienceReq"/>
     <field refid="salaryBase"/>
+    <field refid="annualSalaryMin"/>
+    <field refid="annualSalaryMax"/>
     <field refid="salRateType"/>
     <field refid="targetBonusAmount"/>
     <field refid="commission"/>
